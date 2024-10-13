@@ -63,7 +63,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="max-w-[2520px] flex-col h-screen flex items-center justify-between mx-auto relative overflow-hidden">
+      <body className="max-w-[2520px] flex-col h-screen flex items-center justify-between mx-auto relative">
         <Header />
         <div className="w-full">{children}</div>
         <Footer />
