@@ -36,9 +36,26 @@
   "projects": {
     "work": [
       {
+        "title": "FM shop",
+        "label": "Software developer",
+        "desc": "I designed, developed both the frontend and backend of the website, with a strong emphasis on user experience and functionality.",
+        "from": "2024",
+        "to": "2024",
+        "url": "https://www.fm-shop.it",
+        "type": "Remote",
+        "stack": [
+          "Typescript",
+          "Next.js",
+          "Tailwindcss",
+          "Framer Motion",
+          "Supabase"
+        ],
+        "link": "https://www.fm-shop.it"
+      },
+      {
         "title": "SF hub",
         "label": "Software developer",
-        "desc": "I built the design, the frontend as well as the backend part of the website, building it from scratch, with a focus on user experience and functionality.",
+        "desc": "I built the design, the frontend as well as the backend part of the website, building it from scratch, with a focus on user experience and functionality such as the live chat.",
         "from": "2024",
         "to": "2024",
         "url": "https://www.sf-hub.net",

@@ -7,6 +7,11 @@ import Title from "@/components/ui/Title";
 import Link from "next/link";
 import data from "@/data/data.json";
 import Button from "@/components/ui/Button";
+import about_image_1 from "../../../assets/about_image_2.jpg";
+import about_image_2 from "../../../assets/about_image_5.jpg";
+import about_image_3 from "../../../assets/about_image_6.jpg";
+import about_image_4 from "../../../assets/about_image_3.jpg";
+import about_image_5 from "../../../assets/about_image_7.jpg";
 
 const page = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -97,14 +102,14 @@ const page = () => {
               }}
             >
               <Image
-                src={"/about_image_1.png"}
+                src={about_image_5}
                 alt="Profile Image 1"
                 width={300}
                 height={300}
-                className="absolute z-[1] lg:-top-52 md:-top-48 sm:-top-40 -top-28 xl:-right-[424px] lg:-right-[342px] md:-right-[312px] sm:-right-[242px] -right-[44px] max-xs:mr-[32px] rounded-2xl 2xl:w-72 xl:w-64 lg:w-60 md:w-56 sm:w-52 w-48"
+                className="absolute z-[1] lg:-top-52 sm:-top-40 top-[420px] xl:-right-[424px] lg:-right-[282px] md:-right-[80px] sm:-right-[60px] right-[84px] max-xs:mr-[32px] rounded-2xl 2xl:w-72 xl:w-64 lg:w-52 md:w-56 sm:w-52 w-40"
               />
             </motion.div>
-            {/* <motion.div
+            <motion.div
               className="relative"
               initial={{
                 transform: "translateY(-308px)",
@@ -122,11 +127,11 @@ const page = () => {
               }}
             >
               <Image
-                src={"/about_image_2.png"}
+                src={about_image_1}
                 alt="Profile Image 2"
                 width={300}
                 height={300}
-                className="absolute z-[2] lg:-top-52 md:-top-48 sm:-top-40 -top-28 xl:-right-[396px] lg:-right-[342px] md:-right-[312px] sm:-right-[242px] -right-[44px] max-xs:mr-[32px] rounded-2xl 2xl:w-72 xl:w-64 lg:w-60 md:w-56 sm:w-52 w-48"
+                className="absolute z-[2] lg:-top-52 md:-top-48 sm:-top-40 top-[400px] xl:-right-[596px] lg:-right-[462px] md:-right-[312px] sm:-right-[282px] -right-[84px] max-xs:mr-[32px] rounded-2xl 2xl:w-72 xl:w-64 lg:w-52 md:w-56 sm:w-52 w-40"
               />
             </motion.div>
             <motion.div
@@ -147,11 +152,11 @@ const page = () => {
               }}
             >
               <Image
-                src={"/about_image_3.png"}
+                src={about_image_2}
                 alt="Profile Image 3"
                 width={300}
                 height={300}
-                className="absolute z-[2] lg:-top-52 md:-top-48 sm:-top-40 -top-28 xl:-right-[346px] lg:-right-[342px] md:-right-[312px] sm:-right-[242px] -right-[44px] max-xs:mr-[32px] rounded-2xl 2xl:w-72 xl:w-64 lg:w-60 md:w-56 sm:w-52 w-48"
+                className="absolute z-[2] md:-top-20 sm:-top-40 top-96 xl:-right-[346px] lg:-right-[202px] md:-right-[56px] sm:-right-[42px] -right-[14px] max-xs:mr-[32px] rounded-2xl 2xl:w-72 xl:w-64 lg:w-52 md:w-56 sm:w-52 w-40"
               />
             </motion.div>
             <motion.div
@@ -172,11 +177,11 @@ const page = () => {
               }}
             >
               <Image
-                src={"/about_image_4.png"}
+                src={about_image_4}
                 alt="Profile Image 4"
                 width={300}
                 height={300}
-                className="absolute z-[2] lg:-top-52 md:-top-48 sm:-top-40 -top-28 xl:-right-[466px] lg:-right-[342px] md:-right-[312px] sm:-right-[242px] -right-[44px] max-xs:mr-[32px] rounded-2xl 2xl:w-72 xl:w-64 lg:w-60 md:w-56 sm:w-52 w-48"
+                className="absolute z-[2] lg:-top-52 md:-top-48 sm:-top-40 top-[480px] xl:-right-[466px] lg:-right-[326px] md:-right-[182px] sm:-right-[132px] right-[64px] max-xs:mr-[32px] rounded-2xl 2xl:w-72 xl:w-64 lg:w-52 md:w-56 sm:w-52 w-40"
               />
             </motion.div>
             <motion.div
@@ -197,11 +202,11 @@ const page = () => {
               }}
             >
               <Image
-                src={"/about_image_5.png"}
+                src={about_image_3}
                 alt="Profile Image 5"
                 width={300}
                 height={300}
-                className="absolute z-[2] lg:-top-52 md:-top-48 sm:-top-40 -top-28 xl:-right-[546px] lg:-right-[342px] md:-right-[312px] sm:-right-[242px] -right-[44px] max-xs:mr-[32px] rounded-2xl 2xl:w-72 xl:w-64 lg:w-60 md:w-56 sm:w-52 w-48"
+                className="absolute z-[2] md:-top-72 sm:-top-40 top-96 xl:-right-[646px] lg:-right-[502px] md:-right-[332px] sm:-right-[202px] -right-[110px] max-xs:mr-[32px] rounded-2xl 2xl:w-72 xl:w-64 lg:w-52 md:w-56 sm:w-52 w-40"
               />
             </motion.div>
             <motion.div
@@ -220,15 +225,7 @@ const page = () => {
                 duration: 0.75,
                 delay: 5.25,
               }}
-            >
-              <Image
-                src={"/about_image_6.png"}
-                alt="Profile Image 6"
-                width={300}
-                height={300}
-                className="absolute z-[2] lg:-top-52 md:-top-48 sm:-top-40 -top-28 xl:-right-[612px] lg:-right-[342px] md:-right-[312px] sm:-right-[242px] -right-[44px] max-xs:mr-[32px] rounded-2xl 2xl:w-72 xl:w-64 lg:w-60 md:w-56 sm:w-52 w-48"
-              />
-            </motion.div> */}
+            ></motion.div>
           </div>
         </div>
       </div>
