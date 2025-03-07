@@ -19,7 +19,7 @@ const age =
     today.getDate() < birthDate.getDate())
     ? 1
     : 0);
-const ageDescription = `I'm Leonardo Parisi. A ${age}-year-old junior frontend developer.`;
+const ageDescription = `I'm Leonardo Parisi. A ${age}-years-old frontend developer.`;
 
 export const metadata: Metadata = {
   title,

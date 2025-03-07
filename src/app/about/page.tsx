@@ -230,7 +230,7 @@ const page = () => {
         </div>
       </div>
       <div className="md:my-[50vh] my-[15vh] flex max-lg:flex-col w-fit mx-auto gap-12 px-8">
-        <div className="flex flex-col gap-3 max-sm:mt-40">
+        <div className="flex flex-col gap-3 max-sm:mt-44">
           <Title
             text="Hi, I'm Leonardo Parisi,"
             reference={titleRef}
