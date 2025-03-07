@@ -68,10 +68,6 @@ export default function Home() {
           outerScale={2}
         />
       )}
-      <div className="fixed bottom-8 left-8 bg-dark/70 rounded-lg h-14 w-72 font-questrial text-[15px] text-light p-4 flex gap-2 items-center select-none text-nowrap">
-        <i className="bi bi-exclamation-circle"></i>
-        site currently under construction.
-      </div>
       <AnimatePresence mode="wait">{isLoading && <Intro />}</AnimatePresence>
       <div className="flex flex-col justify-center items-center select-none">
         <div className="h-screen w-screen 2xl:text-[126px] xl:text-[118px] lg:text-8xl md:text-[78px] text-6xl max-xs:text-[54px] font-source sm:pt-64 pt-56">
