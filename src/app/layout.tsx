@@ -9,21 +9,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const url = new URL("https://leonardoparisi.site");
 const title = "Leonardo Parisi - Portfolio";
 const author = "Leonardo Parisi <parisii.leonardo@gmail.com>";
-const today = new Date();
-const birthDate = new Date("2007-02-15");
-const age =
-  today.getFullYear() -
-  birthDate.getFullYear() -
-  (today.getMonth() < birthDate.getMonth() ||
-  (today.getMonth() === birthDate.getMonth() &&
-    today.getDate() < birthDate.getDate())
-    ? 1
-    : 0);
-const ageDescription = `I'm Leonardo Parisi. A ${age}-years-old frontend developer.`;
-
+const description =
+  "Portfolio of Leonardo Parisi, a Frontend developer based in Italy.";
 export const metadata: Metadata = {
   title,
-  description: ageDescription,
+  description,
   other: {
     image: "https://leonardoparisi.site/images/preview.png",
   },
@@ -43,13 +33,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "it_IT",
     title,
-    description: ageDescription,
+    description,
     siteName: "leonardo Parisi portfolio",
     url,
   },
   twitter: {
     title,
-    description: ageDescription,
+    description,
     site: "@_leoparisi",
     creator: "@_leoparisi",
     card: "summary",
