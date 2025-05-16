@@ -34,7 +34,7 @@ export interface TitleProps {
   className?: string;
   border?: boolean;
   delay?: number;
-  viewMargin?: string;
+  viewMargin?: any;
 }
 
 export interface ContainerProps {
