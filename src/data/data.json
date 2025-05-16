@@ -43,7 +43,12 @@
         "to": "2025",
         "url": "https://www.acs.it/it/",
         "type": "On site",
-        "stack": [""],
+        "stack": [
+          "Kali Linux",
+          "Windows Server",
+          "Cryptography",
+          "Ethical Hacking"
+        ],
         "link": "https://www.acs.it/it/"
       },
       {
