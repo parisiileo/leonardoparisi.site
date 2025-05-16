@@ -36,6 +36,17 @@
   "projects": {
     "work": [
       {
+        "title": "Internship - ACS Data Systems",
+        "label": "Internship",
+        "desc": "Assisted the IT support and system administration team in managing hardware and software installations, worked with Kali Linux and Windows servers, setting up backup services and gaining hands-on experience in cryptography and ethical hacking. Supported the IT department in securing systems, performing vulnerability assessments, and ensuring compliance with security policies.",
+        "from": "2025",
+        "to": "2025",
+        "url": "https://www.acs.it/it/",
+        "type": "On site",
+        "stack": [""],
+        "link": "https://www.acs.it/it/"
+      },
+      {
         "title": "FM shop",
         "label": "Software developer",
         "desc": "I designed, developed both the frontend and backend of the website, with a strong emphasis on user experience and functionality.",
