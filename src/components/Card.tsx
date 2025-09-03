@@ -28,7 +28,7 @@ const Card = ({
         <div className="flex justify-between w-full">
           <div className="w-fit flex flex-col gap-3">
             <div className="relative flex w-fit items-center">
-              <div className="md:text-[44px] text-4xl max-xs:text-[32px] font-semibold font-source text-nowrap">
+              <div className="md:text-[44px] text-4xl max-xs:text-[32px] font-semibold font-source sm:text-nowrap">
                 {title}
               </div>
               <Link

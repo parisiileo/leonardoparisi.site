@@ -35,7 +35,7 @@ export default function Home() {
   });
 
   return (
-    <div className={`flex w-full justify-center items-start`}>
+    <div className={`flex w-screen justify-center items-start`}>
       {!isMobile && (
         <AnimatedCursor
           innerSize={36}
@@ -53,7 +53,7 @@ export default function Home() {
       )}
       <AnimatePresence mode="wait">{isLoading && <Intro />}</AnimatePresence>
       <div className="flex flex-col justify-center items-center select-none">
-        <div className="h-screen w-screen 2xl:text-[126px] xl:text-[118px] lg:text-8xl md:text-[78px] text-6xl max-xs:text-[54px] font-source sm:pt-64 pt-56">
+        <div className="h-screen w-full 2xl:text-[126px] xl:text-[118px] lg:text-8xl md:text-[78px] text-6xl max-xs:text-[54px] font-source sm:pt-64 pt-56">
           <div className="relative flex flex-col items-center justify-center w-full">
             <div className="w-fit">
               <div className="relative">

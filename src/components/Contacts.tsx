@@ -28,7 +28,7 @@ const Contact = () => {
   );
 
   return (
-    <div className="flex flex-col gap-2 w-full" id="contacts">
+    <div className="flex flex-col gap-2 w-screen p-2" id="contacts">
       <div className="flex flex-col">
         <div>
           <Title text="Contacts" reference={titleRef} />

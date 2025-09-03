@@ -9,7 +9,7 @@ const Footer = () => {
     <div>© {new Date().getFullYear()}. Created by Leonardo Parisi</div>
   );
   return (
-    <div className="flex justify-center items-center sm:p-4 p-3 w-full">
+    <div className="flex justify-center items-center sm:p-4 p-3 w-full max-sm:pb-[58px]">
       <div className="flex flex-col gap-8 justify-between md:px-16 px-6 md:py-16 py-10 w-full mt-18 bg-dark sm:rounded-[28px] rounded-lg">
         <div className=" flex flex-col gap-8 w-full">
           <Text
