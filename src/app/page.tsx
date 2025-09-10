@@ -214,7 +214,7 @@ export default function Home() {
         </div>
         <div
           id="work"
-          className="flex flex-col items-center sm:gap-[15vh] gap-[4vh] md:mt-[40vh] mt-[15vh] md:pt-[30vh] pt-[10vh] sm:mb-[50vh] mb-[15vh] 2xl:w-[65%] xl:w-[75%] w-full max-xl:px-28 max-md:px-12 max-sm:px-6"
+          className="flex flex-col items-center sm:gap-[15vh] gap-[4vh] md:mt-[40vh] mt-[15vh] md:pt-[30vh] pt-[10vh] sm:mb-[50vh] mb-[15vh] 2xl:w-[65%] xl:w-[75%] w-screen max-xl:px-28 max-md:px-12 max-sm:px-6"
         >
           <Work />
           <Contact />
