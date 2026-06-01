@@ -131,28 +131,6 @@
         "stack": ["Typescript", "Next.js", "Tailwindcss", "Github"],
         "link": "https://tidal.rip"
       }
-    ],
-    "side": [
-      {
-        "title": "BrainBlitz",
-        "label": "Founder and Full-stack developer",
-        "desc": "BrainBlitz is an online version of the classic party game Scattergories, designed to bring the fun and challenge of the original game to a digital platform. The game is aimed at providing an engaging, interactive experience for players of all ages, allowing them to play with friends and family from anywhere in the world.",
-        "from": "2024",
-        "to": "Present",
-        "url": "",
-        "type": "Remote",
-        "link": ""
-      },
-      {
-        "title": "SplashStats",
-        "label": "Founder and Full-stack developer",
-        "desc": "SplashStats presents a solution for swimmers of all levels. Dive into precision tracking and refine your techniques with unparalleled insights. Our cutting-edge tools empower you to set and surpass goals, unlocking your full potential stroke by stroke. Join us and make waves in your progress – because every lap counts towards greatness.",
-        "from": "2024",
-        "to": "Present",
-        "url": "https://gloab.vercel.app",
-        "type": "Remote",
-        "link": "https://splashstats.vercel.app"
-      }
     ]
   }
 }
