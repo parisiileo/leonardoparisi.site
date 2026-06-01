@@ -42,7 +42,7 @@
         "from": "2025",
         "to": "2025",
         "url": "https://www.acs.it/it/",
-        "type": "On site",
+        "type": "Internship",
         "stack": [
           "Kali Linux",
           "Windows Server",
@@ -58,7 +58,7 @@
         "from": "2024",
         "to": "2025",
         "url": "https://www.fm-shop.it",
-        "type": "Remote",
+        "type": "Client project",
         "stack": [
           "Typescript",
           "Next.js",
@@ -69,30 +69,13 @@
         "link": "https://www.fm-shop.it"
       },
       {
-        "title": "SF hub",
-        "label": "Software developer",
-        "desc": "I built the design, the frontend as well as the backend part of the website, building it from scratch, with a focus on user experience and functionality such as the live chat.",
-        "from": "2024",
-        "to": "2024",
-        "url": "https://www.sf-hub.net",
-        "type": "Remote",
-        "stack": [
-          "Typescript",
-          "Next.js",
-          "Tailwindcss",
-          "Framer Motion",
-          "Supabase"
-        ],
-        "link": "https://www.sf-hub.net"
-      },
-      {
         "title": "Markz3d Shop",
         "label": "Frontend developer",
         "desc": "I contributed to the website development as part of a team of three. My role primarily focused on the development side, infusing creativity into the project, prioritizing user experience, and continuously exploring innovative design and functionality solutions.",
         "from": "2024",
         "to": "2024",
         "url": "https://markz3d.com",
-        "type": "Remote",
+        "type": "Client project",
         "stack": [
           "Typescript",
           "Next.js",
@@ -103,33 +86,15 @@
         "link": "https://markz3d.com"
       },
       {
-        "title": "Craydia",
-        "label": "Frontend developer",
-        "desc": "I contribute to the ongoing development and enhancement of the website, with a primary focus on frontend responsibilities. My role involves infusing creativity into the project while prioritizing user experience, and continuously exploring innovative design and functionality solutions.",
-        "from": "2023",
-        "to": "2024",
-        "url": "https://craydia.com",
-        "type": "Remote",
-        "stack": [
-          "Typescript",
-          "Next.js",
-          "Tailwindcss",
-          "Bitbucket",
-          "Jira",
-          "MongoDB"
-        ],
-        "link": "https://craydia.com"
-      },
-      {
-        "title": "Tidal Network",
-        "label": "Frontend developer",
-        "desc": "I built the frontend side of the website, working in a team of 3 developers, My responsibilities encompassed architecting, designing, and implementing user interfaces, imbuing them with both creativity and functionality.",
-        "from": "2023",
-        "to": "2023",
-        "url": "https://tidal.rip",
-        "type": "Remote",
-        "stack": ["Typescript", "Next.js", "Tailwindcss", "Github"],
-        "link": "https://tidal.rip"
+        "title": "Piccola Italia",
+        "label": "Website",
+        "desc": "Designed and built the restaurant website with responsive layout, polished visuals, and easy navigation to highlight the menu, contact details, and brand story.",
+        "from": "2026",
+        "to": "2026",
+        "url": "https://namastepiccolaitalia.it",
+        "type": "Client project",
+        "stack": ["Next.js", "Tailwindcss", "HTML", "CSS"],
+        "link": "https://namastepiccolaitalia.it"
       }
     ]
   }

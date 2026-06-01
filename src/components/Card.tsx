@@ -16,11 +16,15 @@ const Card = ({
   link,
   ...props
 }: CardProps) => {
+  const isSingleYear = dates.from === dates.to;
+  const formattedDate = isSingleYear
+    ? dates.from
+    : `${dates.from} - ${dates.to}`;
   return (
     <div
       className={classNames(
         "w-full flex flex-col py-8 gap-4",
-        workType == "work" && "border-b-2 border-dark gap-8"
+        workType == "work" && "border-b-2 border-dark gap-8",
       )}
       {...props}
     >
@@ -44,13 +48,7 @@ const Card = ({
             </div>
           </div>
           <div className="w-fit flex flex-col items-end gap-3 font-questrial md:text-[22px] sm:text-xl text-lg py-2">
-            <div className="flex gap-1.5">
-              <div className="w-full">{dates.from}</div>
-              <div>-</div>
-              <div className={classNames(dates.to == "Present" && "underline")}>
-                {dates.to}
-              </div>
-            </div>
+            <div className="w-fit">{formattedDate}</div>
             <div>{type}</div>
           </div>
         </div>
@@ -61,7 +59,7 @@ const Card = ({
         <div
           className={classNames(
             workType == "work" && "md:max-w-[80%]",
-            "font-questrial md:text-xl text-lg w-full"
+            "font-questrial md:text-xl text-lg w-full",
           )}
         >
           {desc}
