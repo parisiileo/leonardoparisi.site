@@ -1,10 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Metadata } from "next";
 import Contact from "@/components/Contacts";
 import Work from "@/components/Work";
 import Intro from "@/components/Intro/intro";
 import AnimatedCursor from "react-animated-cursor";
+
+// This won't work in a client component, export it separately
+// Metadata for the home page is handled in layout.tsx
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);

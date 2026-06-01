@@ -13,17 +13,6 @@ const About = () => {
       to staying updated with the latest web development trends, <br />
       I consistently strive to transform intricate ideas into intuitive, <br />
       visually appealing digital solutions.
-      <br />
-      <br />
-      You can read my resume at{" "}
-      <Link
-        target="__blank"
-        href="https://read.cv/leonardoparisi"
-        className="text-orange font-semibold font-questrial underline  "
-      >
-        read.cv/leonardoparisi
-      </Link>
-      .
     </p>
   );
 

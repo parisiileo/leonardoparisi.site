@@ -1,0 +1,32 @@
+{
+  "name": "Leonardo Parisi - Frontend Developer Portfolio",
+  "short_name": "Leonardo Parisi",
+  "description": "Portfolio of Leonardo Parisi, a Frontend developer specializing in React, Next.js, and modern web technologies.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6b6253",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["technology", "business"],
+  "screenshots": [
+    {
+      "src": "/api/og",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/api/og",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

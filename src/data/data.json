@@ -1,14 +1,9 @@
 {
   "socials": [
     {
-      "name": "X",
-      "icon": "twitter",
-      "url": "https://twitter.com/_leoparisi"
-    },
-    {
       "name": "Github",
       "icon": "github",
-      "url": "https://github.com/leonardoparisii"
+      "url": "https://github.com/parisiileo"
     }
   ],
   "menuLinks": [

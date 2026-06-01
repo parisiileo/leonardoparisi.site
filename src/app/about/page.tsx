@@ -1,5 +1,7 @@
 "use client";
+
 import { useEffect, useRef, useState } from "react";
+import type { Metadata } from "next";
 import AnimatedCursor from "react-animated-cursor";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -12,6 +14,10 @@ import about_image_2 from "../../../assets/about_image_5.jpg";
 import about_image_3 from "../../../assets/about_image_6.jpg";
 import about_image_4 from "../../../assets/about_image_3.jpg";
 import about_image_5 from "../../../assets/about_image_7.jpg";
+
+// Note: Metadata must be exported from a server component
+// This is a client component, so metadata should be handled in a separate file
+// or via the root layout for now
 
 const page = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -248,15 +254,6 @@ const page = () => {
               With a keen eye for design aesthetics and a commitment to staying
               updated with the latest web development trends, I love to turn
               complex ideas into intuitive digital solutions.
-            </div>
-            <div>
-              You can read my resume at 
-              <Link
-                href={"https://read.cv/leonardoparisi"}
-                className="underline"
-              >
-                read.cv/leonardoparisi.
-              </Link>
             </div>
           </div>
         </div>

@@ -47,7 +47,7 @@ const Header = () => {
           delay: -0.75,
         });
     },
-    { scope: container }
+    { scope: container },
   );
 
   useEffect(() => {
@@ -130,8 +130,10 @@ const Header = () => {
               <Link href="mailto:parisii.leonardo@gmail.com" target="_top">
                 parisii.leonardo@gmail.com
               </Link>
-              <Link href="https://www.leonardoparisi.site">
-                www.leonardoparisi.site
+              <Link
+                href={`https://${process.env.NEXT_PUBLIC_DOMAIN || "imleo.it"}`}
+              >
+                {process.env.NEXT_PUBLIC_DOMAIN || "imleo.it"}
               </Link>
             </div>
             <div className="flex flex-col justify-end w-fit">

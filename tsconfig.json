@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "ignoreDeprecations": "6.0",
+    "target": "ES6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -27,6 +26,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.d.ts",
     ".next/types/**/*.ts",
     "src/components/Cursor.js"
   ],
