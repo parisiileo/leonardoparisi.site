@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "title": "Leonardo Parisi — Frontend Developer",
+    "description": "Portfolio di Leonardo Parisi, frontend developer italiano: interfacce dinamiche e coinvolgenti con React, Next.js e le tecnologie web più recenti."
+  },
+  "sections": {
+    "hero": "01 / INDICE",
+    "work": "02 / ESPERIENZA",
+    "projects": "03 / SELEZIONATI",
+    "about": "04 / CHI SONO",
+    "stack": "05 / STACK",
+    "playground": "06 / LABORATORIO",
+    "testimonials": "07 / PAROLE",
+    "contact": "08 / CONTATTI"
+  },
+  "nav": {
+    "label": "NAVIGAZIONE",
+    "menu": "MENU",
+    "close": "CHIUDI",
+    "open": "Apri la navigazione",
+    "work": "LAVORI",
+    "projects": "PROGETTI",
+    "about": "CHI SONO",
+    "playground": "LABORATORIO",
+    "contact": "CONTATTI"
+  },
+  "loader": {
+    "label": "CARICAMENTO PORTFOLIO"
+  },
+  "common": {
+    "italy": "ITALIA",
+    "language": "Lingua"
+  },
+  "hero": {
+    "kicker": "PORTFOLIO / 2026",
+    "based": "CON BASE IN ITALIA · UTC+2",
+    "available": "DISPONIBILE PER LAVORO",
+    "intro": "Ciao, sono Leonardo. Costruisco interfacce che si muovono.",
+    "cta": "GUARDA I LAVORI",
+    "statYears": "ANNI DI PROGETTI",
+    "statProjects": "PROGETTI ONLINE",
+    "statTools": "STRUMENTI NELLO STACK",
+    "scroll": "SCORRI"
+  },
+  "work": {
+    "hint": "ESPERIENZA — SCORRI DI LATO",
+    "headingLine1": "Esperienza",
+    "headingLine2": "Lavorativa",
+    "lead": "Quattro anni tra lavori per clienti, tirocini e prodotti — su una timeline che scorri di lato.",
+    "closing": "Il tuo progetto adesso?",
+    "cta": "SCRIVIMI",
+    "types": {
+      "internship": "TIROCINIO",
+      "client": "PROGETTO CLIENTE"
+    },
+    "items": {
+      "acs": {
+        "role": "Supporto IT e amministrazione di sistema",
+        "desc": "Installazioni hardware e software, Kali Linux e Windows Server, servizi di backup, vulnerability assessment — più crittografia ed ethical hacking sul campo."
+      },
+      "fmshop": {
+        "role": "Sviluppatore software — front e back",
+        "desc": "Ho progettato e sviluppato l'intero store dall'inizio alla fine, con grande attenzione a esperienza utente e funzionalità."
+      },
+      "markz3d": {
+        "role": "Sviluppatore frontend — team di tre",
+        "desc": "Ho gestito la parte di sviluppo, dando priorità all'esperienza utente ed esplorando nuove soluzioni di design e funzionalità."
+      },
+      "piccolaitalia": {
+        "role": "Design e sviluppo — sito ristorante",
+        "desc": "Un sito responsive con visual curati e navigazione semplice, costruito intorno al menu, ai contatti e alla storia del brand."
+      }
+    }
+  },
+  "projects": {
+    "headingLine1": "Progetti",
+    "headingLine2": "Selezionati",
+    "meta": "TRE PROGETTI, DALL'IDEA AL LANCIO",
+    "range": "03 — 2024/2026",
+    "visit": "VISITA IL SITO",
+    "shotPlaceholder": "IMMAGINE PROGETTO — 4:3",
+    "items": {
+      "fmshop": {
+        "category": "E-COMMERCE",
+        "desc": "Uno store completo, progettato e lanciato da solo — catalogo, checkout, gestionale e un layer di animazioni che rende la navigazione veloce."
+      },
+      "markz3d": {
+        "category": "3D COMMERCE",
+        "desc": "Uno shop di stampa 3D costruito con due colleghi. Ho gestito il frontend e spinto l'interaction design oltre il brief."
+      },
+      "piccolaitalia": {
+        "category": "RISTORAZIONE",
+        "desc": "Menu, storia e contatti per un ristorante che doveva funzionare sul telefono come sul desktop."
+      }
+    }
+  },
+  "about": {
+    "kicker": "04 — CHI SONO",
+    "headingA": "Occhio da designer.",
+    "headingB": "Mani da",
+    "headingC": "ingegnere.",
+    "lead": "Sono Leonardo Parisi, frontend developer italiano. Costruisco interfacce dinamiche e coinvolgenti con il meglio del web — e curo l'ultimo 10% quanto il primo 90%.",
+    "secondary": "Lavori freelance per clienti, un tirocinio in sicurezza informatica e l'abitudine di rifare le cose finché non sembrano giuste. L'animazione qui non è decorazione — è come l'interfaccia si spiega.",
+    "statStarted": "HO INIZIATO A CODARE",
+    "statSelfDriven": "AUTODIDATTA",
+    "statBased": "CON BASE IN ITALIA",
+    "figCaption": "FIG. 01 — LEONARDO PARISI",
+    "photoAlt": "Leonardo Parisi"
+  },
+  "stack": {
+    "heading": "Lo Stack",
+    "meta": "14 STRUMENTI · PRIMA I PIÙ USATI"
+  },
+  "playground": {
+    "heading": "Laboratorio",
+    "meta": "ESPERIMENTI, SHADER E COSE CHE SI SONO ROTTE",
+    "notice": "NON ANCORA PUBBLICO — LINK IN ARRIVO",
+    "categories": {
+      "WEBGL": "WEBGL",
+      "TYPE": "TIPOGRAFIA",
+      "3D": "3D",
+      "AUDIO": "AUDIO"
+    },
+    "items": {
+      "shaders": {
+        "title": "Giardino di shader",
+        "subtitle": "GLSL · campi di rumore"
+      },
+      "variableFont": {
+        "title": "Giocattolo variable font",
+        "subtitle": "Canvas · assi allo scroll"
+      },
+      "three": {
+        "title": "Vetrina Three.js",
+        "subtitle": "Scena progetto rotante"
+      },
+      "waveform": {
+        "title": "Waveform UI",
+        "subtitle": "Web Audio · analyser"
+      }
+    }
+  },
+  "testimonials": {
+    "heading": "Belle parole",
+    "notice": "SEGNAPOSTO — MANDAMI CITAZIONI VERE",
+    "items": {
+      "one": "Qui va la citazione di un cliente — una o due frasi su com'è stato lavorare con me.",
+      "two": "Seconda citazione — magari sulla velocità, o sui dettagli che nessuno aveva chiesto.",
+      "three": "Terza citazione — un collega sulla collaborazione."
+    }
+  },
+  "availability": {
+    "one": "Disponibile per lavoro",
+    "two": "Freelance e contratto",
+    "three": "In Italia, remoto ovunque"
+  },
+  "contact": {
+    "kicker": "08 — PARLIAMONE",
+    "replies": "RISPONDO ENTRO 24H",
+    "headingA": "Hai un'idea?",
+    "headingB": "Costruiamola.",
+    "discord": "DISCORD",
+    "form": {
+      "header": "OPPURE SCRIVIMI DA QUI",
+      "required": "TUTTI I CAMPI OBBLIGATORI",
+      "nameLabel": "01 — IL TUO NOME",
+      "namePlaceholder": "Mario Rossi",
+      "emailLabel": "02 — EMAIL",
+      "emailPlaceholder": "tu@azienda.com",
+      "kindLabel": "03 — DI COSA SI TRATTA",
+      "ideaLabel": "04 — L'IDEA",
+      "ideaPlaceholder": "Due righe su cosa vuoi costruire e quando ti serve.",
+      "submit": "INVIA",
+      "kinds": {
+        "website": "SITO WEB",
+        "webapp": "WEB APP",
+        "ecommerce": "E-COMMERCE",
+        "redesign": "RESTYLING",
+        "other": "ALTRO"
+      },
+      "statusIdle": "NIENTE NEWSLETTER, NIENTE CRM. SOLO UNA MAIL.",
+      "statusInvalid": "COMPILA NOME, EMAIL E IDEA.",
+      "statusEmailInvalid": "QUELL'INDIRIZZO EMAIL NON SEMBRA CORRETTO.",
+      "statusSending": "INVIO IN CORSO…",
+      "statusSent": "GRAZIE, {name}. TI RISPONDO ENTRO 24H.",
+      "statusMailto": "APRO LA TUA APP MAIL — GRAZIE, {name}.",
+      "statusError": "QUALCOSA È ANDATO STORTO — SCRIVIMI DIRETTAMENTE."
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 — FATTO IN ITALIA",
+    "backToTop": "TORNA SU",
+    "vat": "P. IVA"
+  }
+}

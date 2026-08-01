@@ -1,22 +1,21 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+import { routing } from "@/i18n/routing";
+import { localeUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const domain = process.env.NEXT_PUBLIC_DOMAIN || "imleo.it";
-  const baseUrl = `https://${domain}`;
   const lastModified = new Date();
 
-  return [
-    {
-      url: baseUrl,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 1,
+  // One entry per locale of the single scrolling page; each points at the
+  // others through hreflang so search engines treat them as one document.
+  return routing.locales.map((locale) => ({
+    url: localeUrl(locale),
+    lastModified,
+    changeFrequency: "weekly" as const,
+    priority: locale === routing.defaultLocale ? 1 : 0.8,
+    alternates: {
+      languages: Object.fromEntries(
+        routing.locales.map((code) => [code, localeUrl(code)]),
+      ),
     },
-    {
-      url: `${baseUrl}/about`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-  ];
+  }));
 }

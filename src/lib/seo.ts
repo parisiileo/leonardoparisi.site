@@ -1,5 +1,11 @@
 const domain = process.env.NEXT_PUBLIC_DOMAIN || "imleo.it";
 
+/** English lives at the root; every other locale gets a path prefix. */
+export function localeUrl(locale: string) {
+  const base = `https://${domain}`;
+  return locale === "en" ? base : `${base}/${locale}`;
+}
+
 export const SEO_CONFIG = {
   baseUrl: `https://${domain}`,
   domain,

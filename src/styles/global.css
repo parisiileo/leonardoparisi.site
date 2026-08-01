@@ -1,51 +1,126 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
-@import url("https://fonts.cdnfonts.com/css/source-serif-pro");
-@import url("https://fonts.cdnfonts.com/css/questrial");
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* ------------------------------------------------------------------
+   Runtime tokens.
 
-* {
-  box-sizing: border-box;
-  cursor: none;
+   `--ac` is the only token that changes at runtime: a per-section
+   IntersectionObserver rewrites its hue on :root, so every accent
+   usage on the page transitions together for free. Lightness and
+   chroma stay pinned at 0.86 / 0.18 so contrast never drifts.
+   ------------------------------------------------------------------ */
+:root {
+  --ac-hue: 95;
+  --ac: oklch(0.86 0.18 var(--ac-hue));
+  --ac-t: rgba(0, 0, 0, 0.92);
 }
 
-html,
-body {
-  scrollbar-gutter: stable;
+@theme {
+  --color-bg: #0a0a0b;
+  --color-bg2: #101012;
+  --color-surf: #151518;
+  --color-ink: #f4f2ee;
+  --color-mut: rgba(244, 242, 238, 0.52);
+  --color-mut2: rgba(244, 242, 238, 0.34);
+  --color-line: rgba(244, 242, 238, 0.13);
+  --color-line2: rgba(244, 242, 238, 0.07);
+
+  /* Indirection through :root's --ac keeps these live as the hue shifts. */
+  --color-ac: var(--ac);
+  --color-ac-t: var(--ac-t);
+
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --animate-marquee: marquee 26s linear infinite;
+  --animate-marquee-slow: marquee 22s linear infinite reverse;
+  --animate-blink: blink 2.4s ease-in-out infinite;
+  --animate-blink-fast: blink 1.8s ease-in-out infinite;
+  --animate-bob: bob 2.2s ease-in-out infinite;
+  --animate-slow-spin: slow-spin 14s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes blink {
+    0%,
+    49% {
+      opacity: 1;
+    }
+    50%,
+    100% {
+      opacity: 0.15;
+    }
+  }
+  @keyframes bob {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(9px);
+    }
+  }
+  @keyframes slow-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }
 
-body {
-  background: #ecbf8c;
-  min-height: 100vh;
-  position: relative;
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    /* Clears the fixed header when jumping to an in-page anchor. */
+    scroll-padding-top: 84px;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--ac);
+    color: var(--color-bg);
+  }
+
+  /* The bespoke cursor is desktop-only and opt-in: <Cursor> adds this class
+     on mount, so touch devices and reduced-motion users keep a real pointer. */
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ac);
+    outline-offset: 3px;
+  }
 }
 
-::selection {
-  background: #be613f;
-  color: #101010;
-}
-
-html::-webkit-scrollbar {
-  width: 0px;
-}
-
-html::-webkit-scrollbar-thumb {
-  background: #505050;
-  border-radius: 100px;
-}
-
-html::-webkit-scrollbar-track {
-  background: #202020;
-}
-
-.animated-text {
-  transform: translateY(115px);
-  width: max-content;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.text-dark {
-  @apply text-[#101010];
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

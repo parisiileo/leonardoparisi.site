@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "title": "Leonardo Parisi — Frontend Developer",
+    "description": "Portfolio of Leonardo Parisi, a frontend developer from Italy building dynamic, engaging interfaces with React, Next.js and modern web technologies."
+  },
+  "sections": {
+    "hero": "01 / INDEX",
+    "work": "02 / EXPERIENCE",
+    "projects": "03 / SELECTED",
+    "about": "04 / ABOUT",
+    "stack": "05 / STACK",
+    "playground": "06 / PLAYGROUND",
+    "testimonials": "07 / WORDS",
+    "contact": "08 / CONTACT"
+  },
+  "nav": {
+    "label": "NAVIGATION",
+    "menu": "MENU",
+    "close": "CLOSE",
+    "open": "Open navigation",
+    "work": "WORK",
+    "projects": "PROJECTS",
+    "about": "ABOUT",
+    "playground": "PLAYGROUND",
+    "contact": "CONTACT"
+  },
+  "loader": {
+    "label": "LOADING PORTFOLIO"
+  },
+  "common": {
+    "italy": "ITALY",
+    "language": "Language"
+  },
+  "hero": {
+    "kicker": "PORTFOLIO / 2026",
+    "based": "BASED IN ITALY · UTC+2",
+    "available": "AVAILABLE FOR WORK",
+    "intro": "Hi, I'm Leonardo. I build interfaces that move.",
+    "cta": "SEE THE WORK",
+    "statYears": "YEARS SHIPPING",
+    "statProjects": "PROJECTS LIVE",
+    "statTools": "TOOLS IN STACK",
+    "scroll": "SCROLL"
+  },
+  "work": {
+    "hint": "EXPERIENCE — DRAG SIDEWAYS AS YOU SCROLL",
+    "headingLine1": "Work",
+    "headingLine2": "Experience",
+    "lead": "Four years of client work, internships and product builds — laid out on a timeline you scroll through sideways.",
+    "closing": "Your project next?",
+    "cta": "GET IN TOUCH",
+    "types": {
+      "internship": "INTERNSHIP",
+      "client": "CLIENT PROJECT"
+    },
+    "items": {
+      "acs": {
+        "role": "IT support & system administration",
+        "desc": "Hardware and software installations, Kali Linux and Windows Server, backup services, vulnerability assessments — plus hands-on cryptography and ethical hacking."
+      },
+      "fmshop": {
+        "role": "Software developer — front & back",
+        "desc": "Designed and built the whole store end to end, with a strong emphasis on user experience and functionality."
+      },
+      "markz3d": {
+        "role": "Frontend developer — team of three",
+        "desc": "Owned the development side, prioritising user experience and constantly exploring new design and functionality solutions."
+      },
+      "piccolaitalia": {
+        "role": "Design & build — restaurant site",
+        "desc": "A responsive site with polished visuals and easy navigation, built around the menu, contact details and the brand story."
+      }
+    }
+  },
+  "projects": {
+    "headingLine1": "Selected",
+    "headingLine2": "Projects",
+    "meta": "THREE BUILDS, START TO SHIP",
+    "range": "03 — 2024/2026",
+    "visit": "VISIT SITE",
+    "shotPlaceholder": "PROJECT SHOT — 4:3",
+    "items": {
+      "fmshop": {
+        "category": "E-COMMERCE",
+        "desc": "A full storefront, designed and shipped solo — product catalogue, checkout, admin, and a motion layer that makes browsing feel fast."
+      },
+      "markz3d": {
+        "category": "3D COMMERCE",
+        "desc": "A 3D-print shop built with two teammates. I ran the frontend and pushed the interaction design past the brief."
+      },
+      "piccolaitalia": {
+        "category": "HOSPITALITY",
+        "desc": "Menu, story and contact for a restaurant that needed to look as good on a phone at the door as on a desktop."
+      }
+    }
+  },
+  "about": {
+    "kicker": "04 — ABOUT ME",
+    "headingA": "Design eye.",
+    "headingB": "Engineer's",
+    "headingC": "hands.",
+    "lead": "I'm Leonardo Parisi, a frontend developer from Italy. I build dynamic, engaging interfaces with the latest of the web — and I care about the last 10% as much as the first 90%.",
+    "secondary": "Freelance client work, an internship in IT security, and a steady habit of rebuilding things until they feel right. Motion isn't decoration here — it's how the interface explains itself.",
+    "statStarted": "STARTED CODING",
+    "statSelfDriven": "SELF-DRIVEN",
+    "statBased": "BASED IN ITALY",
+    "figCaption": "FIG. 01 — LEONARDO PARISI",
+    "photoAlt": "Leonardo Parisi"
+  },
+  "stack": {
+    "heading": "The Stack",
+    "meta": "14 TOOLS · DAILY DRIVERS FIRST"
+  },
+  "playground": {
+    "heading": "Playground",
+    "meta": "EXPERIMENTS, SHADERS AND THINGS THAT BROKE",
+    "notice": "NOT PUBLIC YET — LINKS COMING",
+    "categories": {
+      "WEBGL": "WEBGL",
+      "TYPE": "TYPE",
+      "3D": "3D",
+      "AUDIO": "AUDIO"
+    },
+    "items": {
+      "shaders": {
+        "title": "Shader garden",
+        "subtitle": "GLSL · noise fields"
+      },
+      "variableFont": {
+        "title": "Variable font toy",
+        "subtitle": "Canvas · axes on scroll"
+      },
+      "three": {
+        "title": "Three.js showcase",
+        "subtitle": "Rotating project scene"
+      },
+      "waveform": {
+        "title": "Waveform UI",
+        "subtitle": "Web Audio · analyser"
+      }
+    }
+  },
+  "testimonials": {
+    "heading": "Kind words",
+    "notice": "PLACEHOLDER — SEND ME REAL QUOTES",
+    "items": {
+      "one": "Quote from a client goes here — one or two sentences on what shipping with me felt like.",
+      "two": "Second quote — ideally about speed, or about the details nobody asked for.",
+      "three": "Third quote — a teammate on collaboration."
+    }
+  },
+  "availability": {
+    "one": "Available for work",
+    "two": "Freelance & contract",
+    "three": "Based in Italy, remote anywhere"
+  },
+  "contact": {
+    "kicker": "08 — LET'S TALK",
+    "replies": "REPLIES WITHIN 24H",
+    "headingA": "Got an idea?",
+    "headingB": "Let's build it.",
+    "discord": "DISCORD",
+    "form": {
+      "header": "OR SEND IT STRAIGHT FROM HERE",
+      "required": "ALL FIELDS REQUIRED",
+      "nameLabel": "01 — YOUR NAME",
+      "namePlaceholder": "Mario Rossi",
+      "emailLabel": "02 — EMAIL",
+      "emailPlaceholder": "you@company.com",
+      "kindLabel": "03 — WHAT IS IT",
+      "ideaLabel": "04 — THE IDEA",
+      "ideaPlaceholder": "A couple of lines about what you want to build, and when you need it.",
+      "submit": "SEND IT",
+      "kinds": {
+        "website": "WEBSITE",
+        "webapp": "WEB APP",
+        "ecommerce": "E-COMMERCE",
+        "redesign": "REDESIGN",
+        "other": "SOMETHING ELSE"
+      },
+      "statusIdle": "NO NEWSLETTER, NO CRM. JUST AN EMAIL.",
+      "statusInvalid": "FILL IN NAME, EMAIL AND THE IDEA.",
+      "statusEmailInvalid": "THAT EMAIL ADDRESS DOESN'T LOOK RIGHT.",
+      "statusSending": "SENDING…",
+      "statusSent": "THANKS, {name}. I'LL REPLY WITHIN 24H.",
+      "statusMailto": "OPENING YOUR MAIL APP — THANKS, {name}.",
+      "statusError": "SOMETHING WENT WRONG — EMAIL ME DIRECTLY."
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 — BUILT IN ITALY",
+    "backToTop": "BACK TO TOP",
+    "vat": "VAT"
+  }
+}

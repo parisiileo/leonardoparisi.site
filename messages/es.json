@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "title": "Leonardo Parisi — Desarrollador Frontend",
+    "description": "Portfolio de Leonardo Parisi, desarrollador frontend de Italia: interfaces dinámicas y atractivas con React, Next.js y las tecnologías web más recientes."
+  },
+  "sections": {
+    "hero": "01 / ÍNDICE",
+    "work": "02 / EXPERIENCIA",
+    "projects": "03 / SELECCIÓN",
+    "about": "04 / SOBRE MÍ",
+    "stack": "05 / STACK",
+    "playground": "06 / LABORATORIO",
+    "testimonials": "07 / PALABRAS",
+    "contact": "08 / CONTACTO"
+  },
+  "nav": {
+    "label": "NAVEGACIÓN",
+    "menu": "MENÚ",
+    "close": "CERRAR",
+    "open": "Abrir la navegación",
+    "work": "TRABAJO",
+    "projects": "PROYECTOS",
+    "about": "SOBRE MÍ",
+    "playground": "LABORATORIO",
+    "contact": "CONTACTO"
+  },
+  "loader": {
+    "label": "CARGANDO PORTFOLIO"
+  },
+  "common": {
+    "italy": "ITALIA",
+    "language": "Idioma"
+  },
+  "hero": {
+    "kicker": "PORTFOLIO / 2026",
+    "based": "CON BASE EN ITALIA · UTC+2",
+    "available": "DISPONIBLE PARA TRABAJAR",
+    "intro": "Hola, soy Leonardo. Construyo interfaces que se mueven.",
+    "cta": "VER LOS TRABAJOS",
+    "statYears": "AÑOS PUBLICANDO",
+    "statProjects": "PROYECTOS ONLINE",
+    "statTools": "HERRAMIENTAS EN EL STACK",
+    "scroll": "DESLIZA"
+  },
+  "work": {
+    "hint": "EXPERIENCIA — DESLIZA DE LADO",
+    "headingLine1": "Experiencia",
+    "headingLine2": "Laboral",
+    "lead": "Cuatro años de proyectos para clientes, prácticas y producto — en una línea de tiempo que se desliza de lado.",
+    "closing": "¿Tu proyecto ahora?",
+    "cta": "ESCRÍBEME",
+    "types": {
+      "internship": "PRÁCTICAS",
+      "client": "PROYECTO DE CLIENTE"
+    },
+    "items": {
+      "acs": {
+        "role": "Soporte IT y administración de sistemas",
+        "desc": "Instalaciones de hardware y software, Kali Linux y Windows Server, servicios de backup, evaluaciones de vulnerabilidad — más criptografía y hacking ético en la práctica."
+      },
+      "fmshop": {
+        "role": "Desarrollador de software — front y back",
+        "desc": "Diseñé y construí toda la tienda de principio a fin, con gran atención a la experiencia de usuario y la funcionalidad."
+      },
+      "markz3d": {
+        "role": "Desarrollador frontend — equipo de tres",
+        "desc": "Me encargué del desarrollo, priorizando la experiencia de usuario y explorando nuevas soluciones de diseño y funcionalidad."
+      },
+      "piccolaitalia": {
+        "role": "Diseño y desarrollo — sitio de restaurante",
+        "desc": "Un sitio responsive con visuales cuidados y navegación sencilla, centrado en el menú, los contactos y la historia de la marca."
+      }
+    }
+  },
+  "projects": {
+    "headingLine1": "Proyectos",
+    "headingLine2": "Seleccionados",
+    "meta": "TRES PROYECTOS, DE LA IDEA AL LANZAMIENTO",
+    "range": "03 — 2024/2026",
+    "visit": "VER EL SITIO",
+    "shotPlaceholder": "IMAGEN DEL PROYECTO — 4:3",
+    "items": {
+      "fmshop": {
+        "category": "E-COMMERCE",
+        "desc": "Una tienda completa, diseñada y lanzada en solitario — catálogo, checkout, admin y una capa de movimiento que hace la navegación rápida."
+      },
+      "markz3d": {
+        "category": "3D COMMERCE",
+        "desc": "Una tienda de impresión 3D con dos compañeros. Llevé el frontend y empujé el diseño de interacción más allá del brief."
+      },
+      "piccolaitalia": {
+        "category": "HOSTELERÍA",
+        "desc": "Menú, historia y contacto para un restaurante que debía verse igual de bien en el móvil que en escritorio."
+      }
+    }
+  },
+  "about": {
+    "kicker": "04 — SOBRE MÍ",
+    "headingA": "Ojo de diseñador.",
+    "headingB": "Manos de",
+    "headingC": "ingeniero.",
+    "lead": "Soy Leonardo Parisi, desarrollador frontend de Italia. Construyo interfaces dinámicas y atractivas con lo último de la web — y el último 10% me importa tanto como el primer 90%.",
+    "secondary": "Proyectos freelance para clientes, unas prácticas en seguridad informática y la costumbre de rehacer las cosas hasta que encajan. El movimiento aquí no es decoración — es cómo la interfaz se explica.",
+    "statStarted": "EMPECÉ A PROGRAMAR",
+    "statSelfDriven": "AUTODIDACTA",
+    "statBased": "CON BASE EN ITALIA",
+    "figCaption": "FIG. 01 — LEONARDO PARISI",
+    "photoAlt": "Leonardo Parisi"
+  },
+  "stack": {
+    "heading": "El Stack",
+    "meta": "14 HERRAMIENTAS · LAS DIARIAS PRIMERO"
+  },
+  "playground": {
+    "heading": "Laboratorio",
+    "meta": "EXPERIMENTOS, SHADERS Y COSAS QUE SE ROMPIERON",
+    "notice": "AÚN NO PÚBLICO — ENLACES EN CAMINO",
+    "categories": {
+      "WEBGL": "WEBGL",
+      "TYPE": "TIPOGRAFÍA",
+      "3D": "3D",
+      "AUDIO": "AUDIO"
+    },
+    "items": {
+      "shaders": {
+        "title": "Jardín de shaders",
+        "subtitle": "GLSL · campos de ruido"
+      },
+      "variableFont": {
+        "title": "Juguete de variable fonts",
+        "subtitle": "Canvas · ejes al hacer scroll"
+      },
+      "three": {
+        "title": "Escaparate Three.js",
+        "subtitle": "Escena de proyecto rotatoria"
+      },
+      "waveform": {
+        "title": "Waveform UI",
+        "subtitle": "Web Audio · analizador"
+      }
+    }
+  },
+  "testimonials": {
+    "heading": "Buenas palabras",
+    "notice": "MARCADOR — MÁNDAME CITAS REALES",
+    "items": {
+      "one": "Aquí va la cita de un cliente — una o dos frases sobre cómo fue lanzar conmigo.",
+      "two": "Segunda cita — idealmente sobre la velocidad, o sobre los detalles que nadie pidió.",
+      "three": "Tercera cita — un compañero sobre la colaboración."
+    }
+  },
+  "availability": {
+    "one": "Disponible para trabajar",
+    "two": "Freelance y contrato",
+    "three": "En Italia, remoto donde sea"
+  },
+  "contact": {
+    "kicker": "08 — HABLEMOS",
+    "replies": "RESPONDO EN 24H",
+    "headingA": "¿Tienes una idea?",
+    "headingB": "Construyámosla.",
+    "discord": "DISCORD",
+    "form": {
+      "header": "O ESCRÍBEME DESDE AQUÍ",
+      "required": "TODOS LOS CAMPOS OBLIGATORIOS",
+      "nameLabel": "01 — TU NOMBRE",
+      "namePlaceholder": "Juan Pérez",
+      "emailLabel": "02 — EMAIL",
+      "emailPlaceholder": "tu@empresa.com",
+      "kindLabel": "03 — DE QUÉ SE TRATA",
+      "ideaLabel": "04 — LA IDEA",
+      "ideaPlaceholder": "Dos líneas sobre qué quieres construir y cuándo lo necesitas.",
+      "submit": "ENVIAR",
+      "kinds": {
+        "website": "SITIO WEB",
+        "webapp": "WEB APP",
+        "ecommerce": "E-COMMERCE",
+        "redesign": "REDISEÑO",
+        "other": "OTRA COSA"
+      },
+      "statusIdle": "SIN NEWSLETTER, SIN CRM. SOLO UN EMAIL.",
+      "statusInvalid": "COMPLETA NOMBRE, EMAIL E IDEA.",
+      "statusEmailInvalid": "ESA DIRECCIÓN DE EMAIL NO PARECE CORRECTA.",
+      "statusSending": "ENVIANDO…",
+      "statusSent": "GRACIAS, {name}. TE RESPONDO EN 24H.",
+      "statusMailto": "ABRIENDO TU APP DE CORREO — GRACIAS, {name}.",
+      "statusError": "ALGO SALIÓ MAL — ESCRÍBEME DIRECTAMENTE."
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 — HECHO EN ITALIA",
+    "backToTop": "VOLVER ARRIBA",
+    "vat": "NIF"
+  }
+}

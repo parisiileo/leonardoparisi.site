@@ -1,96 +1,162 @@
 {
+  "contact": {
+    "email": "parisii.leonardo@gmail.com",
+    "discord": "https://discord.com/users/657671413947301959",
+    "domain": "imleo.it",
+    "vat": "03356630214"
+  },
   "socials": [
+    { "name": "GITHUB", "url": "https://github.com/parisiileo" },
+    { "name": "X", "url": "https://twitter.com/_leoparisi" },
     {
-      "name": "Github",
-      "icon": "github",
-      "url": "https://github.com/parisiileo"
+      "name": "LINKEDIN",
+      "url": "https://www.linkedin.com/in/leonardo-parisi-4a0121237/"
+    },
+    {
+      "name": "INSTAGRAM",
+      "url": "https://www.instagram.com/leonardo.parisi__/"
     }
   ],
-  "menuLinks": [
-    { "path": "/", "label": "Home" },
-    { "path": "/#work", "label": "Work" },
-    { "path": "/about", "label": "About" },
-    { "path": "/#contacts", "label": "Contacts" }
+  "stats": {
+    "yearsShipping": 4,
+    "projectsLive": 12,
+    "toolsInStack": 14,
+    "startedCoding": 2021
+  },
+  "nav": [
+    { "id": "work", "href": "#work" },
+    { "id": "projects", "href": "#projects" },
+    { "id": "about", "href": "#about" },
+    { "id": "playground", "href": "#play" },
+    { "id": "contact", "href": "#contact" }
   ],
-  "tech_stack": [
+  "work": [
+    {
+      "id": "acs",
+      "company": "ACS Data Systems",
+      "type": "internship",
+      "from": "2025",
+      "to": "2025",
+      "url": "https://www.acs.it/it/",
+      "stack": [
+        "Kali Linux",
+        "Windows Server",
+        "Cryptography",
+        "Ethical Hacking"
+      ]
+    },
+    {
+      "id": "fmshop",
+      "company": "FM Shop",
+      "type": "client",
+      "from": "2024",
+      "to": "2025",
+      "url": "https://www.fm-shop.it",
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "Tailwind",
+        "Framer Motion",
+        "Supabase"
+      ]
+    },
+    {
+      "id": "markz3d",
+      "company": "Markz3d Shop",
+      "type": "client",
+      "from": "2024",
+      "to": "2024",
+      "url": "https://markz3d.com",
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "Tailwind",
+        "Framer Motion",
+        "Supabase"
+      ]
+    },
+    {
+      "id": "piccolaitalia",
+      "company": "Piccola Italia",
+      "type": "client",
+      "from": "2026",
+      "to": "2026",
+      "url": "https://namastepiccolaitalia.it",
+      "stack": ["Next.js", "Tailwind", "HTML", "CSS"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "fmshop",
+      "title": "FM Shop",
+      "url": "https://www.fm-shop.it",
+      "stack": ["Next.js", "TypeScript", "Supabase"],
+      "shot": null,
+      "hatch": 115,
+      "mediaFirst": false,
+      "stickyTop": 96
+    },
+    {
+      "id": "markz3d",
+      "title": "Markz3d",
+      "url": "https://markz3d.com",
+      "stack": ["Next.js", "Tailwind", "Framer Motion"],
+      "shot": null,
+      "hatch": 65,
+      "mediaFirst": true,
+      "stickyTop": 114
+    },
+    {
+      "id": "piccolaitalia",
+      "title": "Piccola Italia",
+      "url": "https://namastepiccolaitalia.it",
+      "stack": ["Next.js", "Tailwind", "CSS"],
+      "shot": null,
+      "hatch": 115,
+      "mediaFirst": false,
+      "stickyTop": 132
+    }
+  ],
+  "stack": [
     "React.js",
     "Next.js",
+    "TypeScript",
+    "Javascript",
     "Tailwindcss",
+    "Framer Motion",
     "HTML",
     "CSS3",
-    "Javascript",
-    "Typescript",
     "MongoDB",
     "Supabase",
-    "Framer Motion",
     "Figma",
     "Github",
     "Jira",
     "Bitbucket"
   ],
-  "projects": {
-    "work": [
-      {
-        "title": "Internship - ACS Data Systems",
-        "label": "Internship",
-        "desc": "Assisted the IT support and system administration team in managing hardware and software installations, worked with Kali Linux and Windows servers, setting up backup services and gaining hands-on experience in cryptography and ethical hacking. Supported the IT department in securing systems, performing vulnerability assessments, and ensuring compliance with security policies.",
-        "from": "2025",
-        "to": "2025",
-        "url": "https://www.acs.it/it/",
-        "type": "Internship",
-        "stack": [
-          "Kali Linux",
-          "Windows Server",
-          "Cryptography",
-          "Ethical Hacking"
-        ],
-        "link": "https://www.acs.it/it/"
-      },
-      {
-        "title": "FM shop",
-        "label": "Software developer",
-        "desc": "I designed, developed both the frontend and backend of the website, with a strong emphasis on user experience and functionality.",
-        "from": "2024",
-        "to": "2025",
-        "url": "https://www.fm-shop.it",
-        "type": "Client project",
-        "stack": [
-          "Typescript",
-          "Next.js",
-          "Tailwindcss",
-          "Framer Motion",
-          "Supabase"
-        ],
-        "link": "https://www.fm-shop.it"
-      },
-      {
-        "title": "Markz3d Shop",
-        "label": "Frontend developer",
-        "desc": "I contributed to the website development as part of a team of three. My role primarily focused on the development side, infusing creativity into the project, prioritizing user experience, and continuously exploring innovative design and functionality solutions.",
-        "from": "2024",
-        "to": "2024",
-        "url": "https://markz3d.com",
-        "type": "Client project",
-        "stack": [
-          "Typescript",
-          "Next.js",
-          "Tailwindcss",
-          "Framer Motion",
-          "Supabase"
-        ],
-        "link": "https://markz3d.com"
-      },
-      {
-        "title": "Piccola Italia",
-        "label": "Website",
-        "desc": "Designed and built the restaurant website with responsive layout, polished visuals, and easy navigation to highlight the menu, contact details, and brand story.",
-        "from": "2026",
-        "to": "2026",
-        "url": "https://namastepiccolaitalia.it",
-        "type": "Client project",
-        "stack": ["Next.js", "Tailwindcss", "HTML", "CSS"],
-        "link": "https://namastepiccolaitalia.it"
-      }
+  "marquee": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Motion",
+    "Three.js",
+    "Tailwind",
+    "Supabase"
+  ],
+  "playground": [
+    { "id": "shaders", "category": "WEBGL", "graphic": "conic" },
+    { "id": "variableFont", "category": "TYPE", "graphic": "dots" },
+    { "id": "three", "category": "3D", "graphic": "glow" },
+    { "id": "waveform", "category": "AUDIO", "graphic": "bars" }
+  ],
+  "testimonials": {
+    "enabled": false,
+    "items": [
+      { "id": "one", "name": "NAME", "company": "COMPANY" },
+      { "id": "two", "name": "NAME", "company": "COMPANY" },
+      { "id": "three", "name": "NAME", "company": "COMPANY" }
     ]
+  },
+  "about": {
+    "portrait": "about_portrait.jpg"
   }
 }

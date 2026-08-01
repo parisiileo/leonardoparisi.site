@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "title": "Leonardo Parisi — Frontend-Entwickler",
+    "description": "Portfolio von Leonardo Parisi, Frontend-Entwickler aus Italien: dynamische, packende Interfaces mit React, Next.js und modernen Web-Technologien."
+  },
+  "sections": {
+    "hero": "01 / INDEX",
+    "work": "02 / ERFAHRUNG",
+    "projects": "03 / AUSGEWÄHLT",
+    "about": "04 / ÜBER MICH",
+    "stack": "05 / STACK",
+    "playground": "06 / SPIELWIESE",
+    "testimonials": "07 / STIMMEN",
+    "contact": "08 / KONTAKT"
+  },
+  "nav": {
+    "label": "NAVIGATION",
+    "menu": "MENÜ",
+    "close": "SCHLIESSEN",
+    "open": "Navigation öffnen",
+    "work": "ARBEIT",
+    "projects": "PROJEKTE",
+    "about": "ÜBER MICH",
+    "playground": "SPIELWIESE",
+    "contact": "KONTAKT"
+  },
+  "loader": {
+    "label": "PORTFOLIO WIRD GELADEN"
+  },
+  "common": {
+    "italy": "ITALIEN",
+    "language": "Sprache"
+  },
+  "hero": {
+    "kicker": "PORTFOLIO / 2026",
+    "based": "SITZ IN ITALIEN · UTC+2",
+    "available": "VERFÜGBAR FÜR PROJEKTE",
+    "intro": "Hi, ich bin Leonardo. Ich baue Interfaces, die sich bewegen.",
+    "cta": "ARBEITEN ANSEHEN",
+    "statYears": "JAHRE IM EINSATZ",
+    "statProjects": "PROJEKTE LIVE",
+    "statTools": "TOOLS IM STACK",
+    "scroll": "SCROLLEN"
+  },
+  "work": {
+    "hint": "ERFAHRUNG — SEITLICH SCROLLEN",
+    "headingLine1": "Berufliche",
+    "headingLine2": "Erfahrung",
+    "lead": "Vier Jahre Kundenprojekte, Praktika und Produktarbeit — auf einer Zeitachse, die seitlich scrollt.",
+    "closing": "Dein Projekt als Nächstes?",
+    "cta": "SCHREIB MIR",
+    "types": {
+      "internship": "PRAKTIKUM",
+      "client": "KUNDENPROJEKT"
+    },
+    "items": {
+      "acs": {
+        "role": "IT-Support & Systemadministration",
+        "desc": "Hardware- und Software-Installationen, Kali Linux und Windows Server, Backup-Dienste, Vulnerability Assessments — plus Kryptografie und Ethical Hacking in der Praxis."
+      },
+      "fmshop": {
+        "role": "Softwareentwickler — Front & Back",
+        "desc": "Den kompletten Shop von Anfang bis Ende entworfen und gebaut, mit starkem Fokus auf User Experience und Funktionalität."
+      },
+      "markz3d": {
+        "role": "Frontend-Entwickler — Team von drei",
+        "desc": "Habe die Entwicklung verantwortet, User Experience priorisiert und ständig neue Design- und Funktionslösungen erkundet."
+      },
+      "piccolaitalia": {
+        "role": "Design & Umsetzung — Restaurant-Website",
+        "desc": "Eine responsive Website mit sauberen Visuals und einfacher Navigation, rund um Menü, Kontakt und Markengeschichte."
+      }
+    }
+  },
+  "projects": {
+    "headingLine1": "Ausgewählte",
+    "headingLine2": "Projekte",
+    "meta": "DREI PROJEKTE, VON IDEE BIS LAUNCH",
+    "range": "03 — 2024/2026",
+    "visit": "ZUR WEBSITE",
+    "shotPlaceholder": "PROJEKTBILD — 4:3",
+    "items": {
+      "fmshop": {
+        "category": "E-COMMERCE",
+        "desc": "Ein kompletter Store, allein entworfen und gelauncht — Katalog, Checkout, Admin und eine Motion-Ebene, die das Stöbern schnell macht."
+      },
+      "markz3d": {
+        "category": "3D COMMERCE",
+        "desc": "Ein 3D-Druck-Shop mit zwei Teamkollegen. Ich habe das Frontend geführt und das Interaction Design über das Briefing hinaus getrieben."
+      },
+      "piccolaitalia": {
+        "category": "GASTRONOMIE",
+        "desc": "Menü, Story und Kontakt für ein Restaurant, das auf dem Handy so gut aussehen musste wie am Desktop."
+      }
+    }
+  },
+  "about": {
+    "kicker": "04 — ÜBER MICH",
+    "headingA": "Designer-Auge.",
+    "headingB": "Hände eines",
+    "headingC": "Entwicklers.",
+    "lead": "Ich bin Leonardo Parisi, Frontend-Entwickler aus Italien. Ich baue dynamische, packende Interfaces mit dem Neuesten aus dem Web — und die letzten 10% sind mir so wichtig wie die ersten 90%.",
+    "secondary": "Freelance-Kundenprojekte, ein Praktikum in IT-Sicherheit und die Angewohnheit, Dinge neu zu bauen, bis sie stimmen. Motion ist hier keine Deko — so erklärt sich das Interface selbst.",
+    "statStarted": "START MIT CODE",
+    "statSelfDriven": "EIGENANTRIEB",
+    "statBased": "SITZ IN ITALIEN",
+    "figCaption": "ABB. 01 — LEONARDO PARISI",
+    "photoAlt": "Leonardo Parisi"
+  },
+  "stack": {
+    "heading": "Der Stack",
+    "meta": "14 TOOLS · TÄGLICHE ZUERST"
+  },
+  "playground": {
+    "heading": "Spielwiese",
+    "meta": "EXPERIMENTE, SHADER UND KAPUTTES",
+    "notice": "NOCH NICHT ÖFFENTLICH — LINKS FOLGEN",
+    "categories": {
+      "WEBGL": "WEBGL",
+      "TYPE": "TYPO",
+      "3D": "3D",
+      "AUDIO": "AUDIO"
+    },
+    "items": {
+      "shaders": {
+        "title": "Shader-Garten",
+        "subtitle": "GLSL · Noise-Felder"
+      },
+      "variableFont": {
+        "title": "Variable-Font-Spielzeug",
+        "subtitle": "Canvas · Achsen beim Scrollen"
+      },
+      "three": {
+        "title": "Three.js Showcase",
+        "subtitle": "Rotierende Projektszene"
+      },
+      "waveform": {
+        "title": "Waveform UI",
+        "subtitle": "Web Audio · Analyser"
+      }
+    }
+  },
+  "testimonials": {
+    "heading": "Schöne Worte",
+    "notice": "PLATZHALTER — SCHICK MIR ECHTE ZITATE",
+    "items": {
+      "one": "Hier steht ein Kundenzitat — ein bis zwei Sätze dazu, wie es war, mit mir zu launchen.",
+      "two": "Zweites Zitat — idealerweise über Tempo oder über die Details, nach denen niemand gefragt hat.",
+      "three": "Drittes Zitat — ein Teamkollege über die Zusammenarbeit."
+    }
+  },
+  "availability": {
+    "one": "Verfügbar für Projekte",
+    "two": "Freelance & Vertrag",
+    "three": "In Italien, remote überall"
+  },
+  "contact": {
+    "kicker": "08 — SPRECHEN WIR",
+    "replies": "ANTWORT INNERHALB 24H",
+    "headingA": "Hast du eine Idee?",
+    "headingB": "Bauen wir sie.",
+    "discord": "DISCORD",
+    "form": {
+      "header": "ODER SCHREIB DIREKT HIER",
+      "required": "ALLE FELDER ERFORDERLICH",
+      "nameLabel": "01 — DEIN NAME",
+      "namePlaceholder": "Max Mustermann",
+      "emailLabel": "02 — E-MAIL",
+      "emailPlaceholder": "du@firma.de",
+      "kindLabel": "03 — WORUM GEHT ES",
+      "ideaLabel": "04 — DIE IDEE",
+      "ideaPlaceholder": "Zwei Sätze dazu, was du bauen willst und wann du es brauchst.",
+      "submit": "ABSENDEN",
+      "kinds": {
+        "website": "WEBSITE",
+        "webapp": "WEB APP",
+        "ecommerce": "E-COMMERCE",
+        "redesign": "REDESIGN",
+        "other": "ETWAS ANDERES"
+      },
+      "statusIdle": "KEIN NEWSLETTER, KEIN CRM. NUR EINE MAIL.",
+      "statusInvalid": "NAME, E-MAIL UND IDEE AUSFÜLLEN.",
+      "statusEmailInvalid": "DIESE E-MAIL-ADRESSE SIEHT NICHT RICHTIG AUS.",
+      "statusSending": "WIRD GESENDET…",
+      "statusSent": "DANKE, {name}. ICH ANTWORTE INNERHALB 24H.",
+      "statusMailto": "MAIL-APP WIRD GEÖFFNET — DANKE, {name}.",
+      "statusError": "DA IST ETWAS SCHIEFGELAUFEN — SCHREIB MIR DIREKT."
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 — GEBAUT IN ITALIEN",
+    "backToTop": "NACH OBEN",
+    "vat": "USt-IdNr."
+  }
+}
