@@ -76,8 +76,16 @@ export default function Header() {
           className="flex items-center gap-[11px]"
         >
           <span className="bg-ac animate-blink block h-[11px] w-[11px] flex-none rounded-full" />
-          <span className="font-display text-[15px] font-extrabold tracking-[-0.02em] uppercase">
-            Leonardo Parisi
+          {/* Below 420px the full name, the language switcher and MENU stop
+              fitting on one line, so the wordmark contracts to a monogram.
+              The accessible name stays the same at every width. */}
+          <span className="sr-only">Leonardo Parisi</span>
+          <span
+            aria-hidden
+            className="font-display text-[15px] font-extrabold tracking-[-0.02em] whitespace-nowrap uppercase"
+          >
+            <span className="min-[420px]:hidden">LP</span>
+            <span className="hidden min-[420px]:inline">Leonardo Parisi</span>
           </span>
         </LogoTag>
       </Magnetic>

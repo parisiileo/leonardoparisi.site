@@ -13,6 +13,45 @@ export default function LanguageSwitcher() {
   const [open, setOpen] = useState(false);
   const [pending, startTransition] = useTransition();
   const wrapRef = useRef<HTMLDivElement>(null);
+  const listRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  // Moves real focus between the options: a listbox is expected to answer the
+  // arrow keys, and until now it only answered Tab.
+  const focusOption = (index: number) => {
+    const options = listRef.current?.querySelectorAll<HTMLButtonElement>(
+      '[role="option"]',
+    );
+    if (!options?.length) return;
+    const wrapped = (index + options.length) % options.length;
+    options[wrapped]?.focus();
+  };
+
+  // Opening with the keyboard lands on the current language, so the list
+  // starts where the user already is.
+  useEffect(() => {
+    if (!open) return;
+    focusOption(routing.locales.indexOf(locale));
+  }, [open, locale]);
+
+  const onListKeyDown = (event: React.KeyboardEvent) => {
+    const options = Array.from(
+      listRef.current?.querySelectorAll<HTMLButtonElement>('[role="option"]') ??
+        [],
+    );
+    const current = options.indexOf(document.activeElement as HTMLButtonElement);
+
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      focusOption(current + (event.key === "ArrowDown" ? 1 : -1));
+    } else if (event.key === "Home" || event.key === "End") {
+      event.preventDefault();
+      focusOption(event.key === "Home" ? 0 : options.length - 1);
+    } else if (event.key === "Escape" || event.key === "Tab") {
+      setOpen(false);
+      buttonRef.current?.focus();
+    }
+  };
 
   useEffect(() => {
     if (!open) return;
@@ -34,6 +73,7 @@ export default function LanguageSwitcher() {
   // next visit is server-rendered in the right language straight away.
   const select = (next: Locale) => {
     setOpen(false);
+    buttonRef.current?.focus();
     if (next === locale) return;
     startTransition(() => router.replace(pathname, { locale: next }));
   };
@@ -41,6 +81,7 @@ export default function LanguageSwitcher() {
   return (
     <div ref={wrapRef} className="relative">
       <button
+        ref={buttonRef}
         type="button"
         aria-label={t("language")}
         aria-expanded={open}
@@ -48,6 +89,12 @@ export default function LanguageSwitcher() {
         onClick={(event) => {
           event.stopPropagation();
           setOpen((v) => !v);
+        }}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+            event.preventDefault();
+            setOpen(true);
+          }
         }}
         className="border-line text-ink flex cursor-pointer items-center gap-2 rounded-full border bg-transparent px-[14px] py-[9px] font-mono text-[11px] tracking-[0.2em]"
         style={{ opacity: pending ? 0.5 : 1 }}
@@ -59,7 +106,10 @@ export default function LanguageSwitcher() {
 
       {open && (
         <div
+          ref={listRef}
           role="listbox"
+          aria-label={t("language")}
+          onKeyDown={onListKeyDown}
           className="border-line bg-surf absolute top-[calc(100%+9px)] right-0 z-10 flex min-w-[154px] flex-col overflow-hidden rounded-[9px] border shadow-[0_18px_40px_rgba(0,0,0,.5)]"
         >
           {routing.locales.map((code) => {

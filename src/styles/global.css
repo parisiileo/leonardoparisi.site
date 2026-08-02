@@ -19,8 +19,11 @@
   --color-bg2: #101012;
   --color-surf: #151518;
   --color-ink: #f4f2ee;
-  --color-mut: rgba(244, 242, 238, 0.52);
-  --color-mut2: rgba(244, 242, 238, 0.34);
+  /* Both tiers carry body-size copy, so both have to clear WCAG AA (4.5:1)
+     against the darkest surface they sit on. Worst case, over --color-surf:
+     .62 → 6.82:1, .48 → 4.57:1. Lowering either one breaks AA. */
+  --color-mut: rgba(244, 242, 238, 0.62);
+  --color-mut2: rgba(244, 242, 238, 0.48);
   --color-line: rgba(244, 242, 238, 0.13);
   --color-line2: rgba(244, 242, 238, 0.07);
 

@@ -41,6 +41,38 @@ export default function Work() {
     return () => observer.disconnect();
   }, []);
 
+  /**
+   * The track is moved by page scroll, not by its own scrollbar, so a link
+   * inside an off-screen card can take focus while staying invisible. Tabbing
+   * into a panel therefore has to drive the page scroll to the position that
+   * brings that panel into view.
+   */
+  const revealFocused = (event: React.FocusEvent<HTMLDivElement>) => {
+    const section = sectionRef.current;
+    const track = trackRef.current;
+    if (!isWide || !section || !track || distance <= 0) return;
+
+    const panel = (event.target as HTMLElement).closest<HTMLElement>(
+      "[data-work-panel]",
+    );
+    if (!panel) return;
+
+    const margin = window.innerWidth * 0.06;
+    const wanted = Math.min(
+      Math.max(panel.offsetLeft - margin, 0),
+      distance,
+    );
+    const travel = section.offsetHeight - window.innerHeight;
+    if (travel <= 0) return;
+
+    window.scrollTo({
+      top: section.offsetTop + (wanted / distance) * travel,
+      // Instant: the sticky track is redrawn from the scroll position, and a
+      // smooth scroll would drag the card across the screen under the caret.
+      behavior: "auto",
+    });
+  };
+
   useMotionValueEvent(scrollYProgress, "change", (p) => {
     if (barRef.current) barRef.current.style.width = `${(p * 100).toFixed(1)}%`;
 
@@ -77,6 +109,7 @@ export default function Work() {
 
         <motion.div
           ref={trackRef}
+          onFocus={revealFocused}
           style={{ x: isWide ? x : 0 }}
           className="flex snap-x snap-mandatory items-stretch overflow-x-auto px-[clamp(16px,3vw,40px)] pb-6 md:h-full md:snap-none md:overflow-visible md:pb-0"
         >
@@ -84,7 +117,10 @@ export default function Work() {
               per line, so it has to be measured against this panel rather than
               the viewport — otherwise it overflows and the first card paints
               on top of it. */}
-          <div className="@container flex w-[min(88vw,720px)] flex-none snap-start flex-col justify-center pr-[clamp(24px,5vw,80px)]">
+          <div
+            data-work-panel
+            className="@container flex w-[min(88vw,720px)] flex-none snap-start flex-col justify-center pr-[clamp(24px,5vw,80px)]"
+          >
             <div className="text-ac mb-5 font-mono text-[11px] tracking-[0.22em]">
               02
             </div>
@@ -107,7 +143,10 @@ export default function Work() {
             />
           ))}
 
-          <div className="flex w-[min(60vw,380px)] flex-none snap-start flex-col justify-center gap-[18px]">
+          <div
+            data-work-panel
+            className="flex w-[min(60vw,380px)] flex-none snap-start flex-col justify-center gap-[18px]"
+          >
             <p className="font-display m-0 text-[clamp(31px,4.1vw,61px)] leading-[0.9] font-black tracking-[-0.04em] uppercase">
               {t("closing")}
             </p>
@@ -139,6 +178,7 @@ function WorkCard({
 
   return (
     <article
+      data-work-panel
       className="relative mr-[clamp(18px,2.4vw,34px)] flex w-[min(84vw,660px)] flex-none snap-start flex-col justify-between self-center overflow-hidden rounded-lg border p-[clamp(22px,3vw,40px)] transition-[border-color,background] duration-400 md:h-[min(62vh,560px)]"
       style={{
         borderColor: active ? "var(--ac)" : "var(--color-line)",
