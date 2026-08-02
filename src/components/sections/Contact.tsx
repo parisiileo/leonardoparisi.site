@@ -4,8 +4,15 @@ import { useTranslations } from "next-intl";
 import Magnetic from "@/components/ui/Magnetic";
 import Scramble from "@/components/ui/Scramble";
 import data from "@/data/data.json";
+import { Link } from "@/i18n/navigation";
 import { SECTION_HUES } from "@/lib/sections";
 import ContactForm from "./ContactForm";
+
+const LEGAL_LINKS = [
+  { href: "/privacy", key: "privacy" },
+  { href: "/cookie", key: "cookie" },
+  { href: "/terms", key: "terms" },
+] as const;
 
 export default function Contact() {
   const t = useTranslations("contact");
@@ -70,6 +77,18 @@ export default function Contact() {
           <span className="tabular-nums">
             {tFooter("vat")} {data.contact.vat}
           </span>
+          {/* Required disclosures live one click away, on every page. */}
+          <div className="mt-[6px] flex flex-wrap gap-4">
+            {LEGAL_LINKS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="hover:text-ac transition-colors"
+              >
+                {tFooter(item.key)}
+              </Link>
+            ))}
+          </div>
         </div>
         <div className="flex flex-wrap gap-5">
           {data.socials.map((social) => (

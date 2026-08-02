@@ -48,14 +48,17 @@ export function generatePersonSchema() {
     image: `${SEO_CONFIG.baseUrl}/api/og`,
     sameAs: Object.values(SEO_CONFIG.socialLinks),
     knowsAbout: SEO_CONFIG.skills,
-    location: {
-      "@type": "Place",
-      name: SEO_CONFIG.location,
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "IT",
-      },
+    // Matches the address published in the legal pages, which is what search
+    // engines cross-check for a business entity.
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Via Palermo 46",
+      postalCode: "39100",
+      addressLocality: "Bolzano",
+      addressRegion: "BZ",
+      addressCountry: "IT",
     },
+    vatID: "IT03356630214",
   };
 }
 
@@ -66,46 +69,5 @@ export function generateWebsiteSchema() {
     name: "Leonardo Parisi Portfolio",
     description: SEO_CONFIG.description,
     url: SEO_CONFIG.baseUrl,
-  };
-}
-
-export function generateProjectSchema(
-  projectTitle: string,
-  projectDescription: string,
-  projectUrl: string,
-  technologies: string[],
-) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: projectTitle,
-    description: projectDescription,
-    url: projectUrl,
-    applicationCategory: "WebApplication",
-    creator: {
-      "@type": "Person",
-      name: SEO_CONFIG.author,
-    },
-    keywords: [...technologies, "web development"],
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      price: "0",
-    },
-  };
-}
-
-export function generateBreadcrumbSchema(
-  items: Array<{ name: string; url: string }>,
-) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.name,
-      item: item.url,
-    })),
   };
 }

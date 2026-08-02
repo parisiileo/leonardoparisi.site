@@ -102,10 +102,6 @@ export default function Hero() {
       <div className="text-mut relative flex flex-wrap justify-between gap-[18px] font-mono text-[11px] tracking-[0.2em]">
         <Scramble text={t("kicker")} />
         <Scramble text={t("based")} />
-        <span className="text-ac flex items-center gap-2">
-          <span className="bg-ac animate-blink-fast h-[7px] w-[7px] rounded-full" />
-          {t("available")}
-        </span>
       </div>
 
       <div className="relative flex flex-col gap-[clamp(10px,2vh,22px)] py-[clamp(24px,6vh,60px)]">
@@ -179,9 +175,8 @@ export default function Hero() {
       </div>
 
       <div className="border-line relative grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-5 border-t pt-5">
-        <Stat value={data.stats.yearsShipping} suffix="+" label={t("statYears")} />
+        <Stat value={data.stats.yearsShipping} label={t("statYears")} />
         <Stat value={data.stats.projectsLive} label={t("statProjects")} />
-        <Stat value={data.stats.toolsInStack} label={t("statTools")} />
         <div className="text-mut flex items-end justify-start gap-[10px] font-mono text-[10.5px] tracking-[0.2em]">
           <span className="animate-bob inline-block">↓</span>
           {t("scroll")}
@@ -191,20 +186,11 @@ export default function Hero() {
   );
 }
 
-function Stat({
-  value,
-  label,
-  suffix = "",
-}: {
-  value: number;
-  label: string;
-  suffix?: string;
-}) {
+function Stat({ value, label }: { value: number; label: string }) {
   return (
     <div>
       <div className="font-display text-[clamp(25px,3.1vw,41px)] leading-none font-extrabold tracking-[-0.03em] tabular-nums">
         <Counter value={value} />
-        {suffix}
       </div>
       <div className="text-mut mt-[7px] font-mono text-[10.5px] tracking-[0.2em]">
         {label}

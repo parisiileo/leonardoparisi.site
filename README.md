@@ -1,24 +1,54 @@
-This portfolio website has been crafted using the power of Next.js 13. The driving force behind its creation was to encapsulate my diverse skill set and competencies in one digital space.
+Personal portfolio of Leonardo Parisi — a single scrolling page in four
+languages, built with Next.js (App Router), Tailwind CSS v4, next-intl and
+Framer Motion.
 
-Technologies and Enhancements:
-Embracing the latest in web technologies, my portfolio leverages:
--
-- HTML5
+## Running it
 
-- CSS3
+```bash
+npm install
+cp .env.example .env.local   # fill in the values you need
+npm run dev
+```
 
-- Tailwind
+Nothing in `.env.local` is required to render the site: with Resend
+unconfigured, the contact form falls back to opening the visitor's own mail
+client with the message prefilled.
 
-- TypeScript
+## Contact form
 
-- Bootstrap-icons
+Enquiries are emailed straight to the inbox — no database, nothing to log
+into. `POST /api/contact` validates the payload, drops anything that filled
+the hidden honeypot field, rate-limits the caller and hands the message to
+Resend with `reply_to` set to the sender, so replying happens in one click.
 
-- React-icons
+1. Verify the domain in Resend (DNS records for SPF and DKIM), otherwise mail
+   from `@imleo.it` will not send.
+2. Set `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` and
+   `CONTACT_IP_SALT`.
 
-- React.js
+Rate limiting lives in `src/lib/rateLimit.ts` and counts in process memory: it
+throttles per warm serverless instance rather than globally, which blunts a
+burst but is not a hard quota. Swapping it for a shared counter (Upstash Redis
+free tier) means changing that one file.
 
-- Next.js
+## Legal pages
 
-- React-spring
+`/privacy`, `/cookie` and `/terms` exist in all four languages. The copy lives
+under the `legal` key of `messages/<locale>.json` and is rendered by
+`src/components/layout/LegalPage.tsx`; adding a clause means editing four
+files and nothing else. They are listed in the sitemap and linked from the
+footer of every page.
 
-Explore my portfolio to dive into a world where technology and creativity converge to bring my skills and accomplishments to life. Your journey through my website will provide insights into my capabilities, projects, and aspirations.
+The site sets no profiling cookies and loads no third-party scripts, which is
+why there is no consent banner — see the cookie policy. Adding analytics that
+does set cookies would change that.
+
+## Structure
+
+```
+src/app/[locale]        the scrolling page and the legal routes
+src/app/api/contact     form endpoint: validation, rate limit, send
+src/components/sections one component per section of the page
+src/lib/sections.ts     section registry: accent hue and running number
+messages/               all copy, four languages
+```

@@ -3,8 +3,7 @@ import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
 import Hero from "@/components/sections/Hero";
 import Marquee from "@/components/sections/Marquee";
-import Playground from "@/components/sections/Playground";
-import Projects from "@/components/sections/Projects";
+import Process from "@/components/sections/Process";
 import Stack from "@/components/sections/Stack";
 import Testimonials from "@/components/sections/Testimonials";
 import Work from "@/components/sections/Work";
@@ -25,10 +24,9 @@ export default async function HomePage({
       <Hero />
       <Marquee items={data.marquee} separator="✦" />
       <Work />
-      <Projects />
+      <Process />
       <About />
       <Stack />
-      <Playground />
       <Testimonials />
       <Marquee
         items={[t("one"), t("two"), t("three")]}

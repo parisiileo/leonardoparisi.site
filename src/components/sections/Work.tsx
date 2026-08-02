@@ -3,6 +3,7 @@
 import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
+import CardArt, { type CardArtName } from "@/components/ui/CardArt";
 import Magnetic from "@/components/ui/Magnetic";
 import Scramble from "@/components/ui/Scramble";
 import data from "@/data/data.json";
@@ -79,11 +80,15 @@ export default function Work() {
           style={{ x: isWide ? x : 0 }}
           className="flex snap-x snap-mandatory items-stretch overflow-x-auto px-[clamp(16px,3vw,40px)] pb-6 md:h-full md:snap-none md:overflow-visible md:pb-0"
         >
-          <div className="flex w-[min(78vw,520px)] flex-none snap-start flex-col justify-center pr-[clamp(24px,5vw,80px)]">
+          {/* @container + cqw sizing: the headline is one long unbreakable word
+              per line, so it has to be measured against this panel rather than
+              the viewport — otherwise it overflows and the first card paints
+              on top of it. */}
+          <div className="@container flex w-[min(88vw,720px)] flex-none snap-start flex-col justify-center pr-[clamp(24px,5vw,80px)]">
             <div className="text-ac mb-5 font-mono text-[11px] tracking-[0.22em]">
               02
             </div>
-            <h2 className="font-display m-0 text-[clamp(43px,6.7vw,101px)] leading-[0.86] font-black tracking-[-0.05em] uppercase">
+            <h2 className="font-display m-0 text-[clamp(34px,12cqw,88px)] leading-[0.86] font-black tracking-[-0.05em] uppercase">
               {t("headingLine1")}
               <br />
               {t("headingLine2")}
@@ -131,11 +136,10 @@ function WorkCard({
   active: boolean;
 }) {
   const t = useTranslations("work");
-  const period = item.from === item.to ? item.from : `${item.from} — ${item.to}`;
 
   return (
     <article
-      className="mr-[clamp(18px,2.4vw,34px)] flex w-[min(84vw,660px)] flex-none snap-start flex-col justify-between self-center rounded-lg border p-[clamp(22px,3vw,40px)] transition-[border-color,background] duration-400 md:h-[min(62vh,560px)]"
+      className="relative mr-[clamp(18px,2.4vw,34px)] flex w-[min(84vw,660px)] flex-none snap-start flex-col justify-between self-center overflow-hidden rounded-lg border p-[clamp(22px,3vw,40px)] transition-[border-color,background] duration-400 md:h-[min(62vh,560px)]"
       style={{
         borderColor: active ? "var(--ac)" : "var(--color-line)",
         background: active
@@ -143,16 +147,35 @@ function WorkCard({
           : "var(--color-surf)",
       }}
     >
-      <div>
-        <div className="text-mut flex items-start justify-between gap-4 font-mono text-[11px] tracking-[0.2em]">
+      {/* Barely-there plate behind the copy. It lifts a little on the active
+          card, which is the only moment there is room for it to be noticed. */}
+      <CardArt
+        name={item.art as CardArtName}
+        className={`transition-opacity duration-500 ${active ? "text-ac opacity-[0.09]" : "text-ink opacity-[0.05]"}`}
+      />
+
+      <div className="relative">
+        <div className="text-mut font-mono text-[11px] tracking-[0.2em]">
           <span>
             {String(index + 1).padStart(2, "0")} —{" "}
             {t(`types.${item.type}` as "types.client")}
           </span>
-          <span className="text-ac">{period}</span>
         </div>
+        {/* The live-site links used to live in the projects section; the title
+            carries them now, which costs the card no vertical space. */}
         <h3 className="font-display mt-[26px] mb-[10px] text-[clamp(25px,3.2vw,45px)] leading-[0.96] font-extrabold tracking-[-0.035em]">
-          {item.company}
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${item.company} — ${t("visit")}`}
+            className="hover:text-ac inline-flex items-baseline gap-[0.25em] transition-colors"
+          >
+            {item.company}
+            <span aria-hidden className="text-ac text-[0.5em]">
+              ↗
+            </span>
+          </a>
         </h3>
         <p className="text-ac mb-5 text-[clamp(14px,1.2vw,17px)]">
           {t(`items.${item.id}.role` as "items.acs.role")}
@@ -161,7 +184,7 @@ function WorkCard({
           {t(`items.${item.id}.desc` as "items.acs.desc")}
         </p>
       </div>
-      <div className="mt-6 flex flex-wrap gap-2">
+      <div className="relative mt-6 flex flex-wrap gap-2">
         {item.stack.map((tech) => (
           <span
             key={tech}

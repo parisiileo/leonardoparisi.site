@@ -1,39 +1,28 @@
 import { NextResponse } from "next/server";
+import { hashIp, take } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const WINDOW_MS = 60_000;
-const MAX_PER_WINDOW = 5;
 
-/**
- * Best-effort rate limit. This is per-instance memory, so on serverless it
- * throttles a burst from one warm instance rather than acting as a global
- * quota — enough to blunt casual abuse. Move to Upstash/KV if it matters.
- */
-const hits = new Map<string, { count: number; resetAt: number }>();
-
-function rateLimited(ip: string) {
-  const now = Date.now();
-  const entry = hits.get(ip);
-
-  if (!entry || now > entry.resetAt) {
-    hits.set(ip, { count: 1, resetAt: now + WINDOW_MS });
-    return false;
-  }
-  entry.count += 1;
-  return entry.count > MAX_PER_WINDOW;
-}
+// Two windows: a short one to stop a burst, a long one to stop a slow drip.
+const LIMITS = [
+  { suffix: "burst", max: 3, windowSeconds: 60 },
+  { suffix: "daily", max: 15, windowSeconds: 60 * 60 * 24 },
+];
 
 export async function POST(request: Request) {
   const ip =
     request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+  const ipHash = hashIp(ip);
 
-  if (rateLimited(ip)) {
-    return NextResponse.json(
-      { ok: false, code: "RATE_LIMITED" },
-      { status: 429 },
-    );
+  for (const limit of LIMITS) {
+    if (!take(`contact:${limit.suffix}:${ipHash}`, limit.max, limit.windowSeconds)) {
+      return NextResponse.json(
+        { ok: false, code: "RATE_LIMITED" },
+        { status: 429 },
+      );
+    }
   }
 
   let payload: Record<string, unknown>;
@@ -49,13 +38,25 @@ export async function POST(request: Request) {
   const name = String(payload.name ?? "").trim();
   const email = String(payload.email ?? "").trim();
   const message = String(payload.message ?? "").trim();
-  const kind = String(payload.kind ?? "PROJECT").trim();
+  const kind = String(payload.kind ?? "PROJECT")
+    .trim()
+    .slice(0, 60);
+  const locale = String(payload.locale ?? "en")
+    .trim()
+    .slice(0, 8);
   const honeypot = String(payload.company ?? "").trim();
 
   // A bot filled the hidden field. Accept and discard, so it learns nothing.
   if (honeypot) return NextResponse.json({ ok: true });
 
-  if (!name || !message || !EMAIL_RE.test(email) || message.length > 5000) {
+  if (
+    !name ||
+    name.length > 120 ||
+    !message ||
+    message.length > 5000 ||
+    email.length > 254 ||
+    !EMAIL_RE.test(email)
+  ) {
     return NextResponse.json(
       { ok: false, code: "VALIDATION_FAILED" },
       { status: 422 },
@@ -83,9 +84,16 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       from,
       to: [to],
+      // Hitting reply in the mail client answers the visitor directly.
       reply_to: email,
       subject: `New ${kind.toLowerCase()} enquiry — ${name}`,
-      text: `From: ${name} <${email}>\nType: ${kind}\n\n${message}`,
+      text: [
+        `From: ${name} <${email}>`,
+        `Type: ${kind}`,
+        `Locale: ${locale}`,
+        "",
+        message,
+      ].join("\n"),
     }),
   });
 

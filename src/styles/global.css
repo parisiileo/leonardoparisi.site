@@ -37,7 +37,6 @@
   --animate-blink: blink 2.4s ease-in-out infinite;
   --animate-blink-fast: blink 1.8s ease-in-out infinite;
   --animate-bob: bob 2.2s ease-in-out infinite;
-  --animate-slow-spin: slow-spin 14s linear infinite;
 
   @keyframes marquee {
     from {
@@ -66,9 +65,165 @@
       transform: translateY(9px);
     }
   }
-  @keyframes slow-spin {
-    to {
-      transform: rotate(360deg);
+}
+
+/* ------------------------------------------------------------------
+   Process card artwork.
+
+   The scenes are drawn in ProcessArt.tsx; their motion lives here so a
+   single hover on the whole card (`.step-card:hover`) drives every part
+   at once, with no React state and no per-frame work. Stagger comes
+   from an inline `--i` on each element. Paths that draw themselves use
+   `pathLength="100"`, so the dash maths never depends on real geometry.
+   ------------------------------------------------------------------ */
+@layer components {
+  /* Parallax shell. --px/--py are written by the card's tilt handler. */
+  .art-parallax {
+    transform: translate3d(
+      calc(var(--px, 0) * 14px),
+      calc(var(--py, 0) * 14px),
+      0
+    );
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .art-draw {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    transition: stroke-dashoffset 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: calc(var(--i, 0) * 90ms);
+  }
+  .step-card:hover .art-draw {
+    stroke-dashoffset: 0;
+  }
+
+  /* Idle: settled but dim. Hover: lifts into place and gains contrast. */
+  .art-rise {
+    opacity: 0.4;
+    transform: translateY(10px);
+    transform-box: fill-box;
+    transition:
+      opacity 0.5s ease,
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: calc(var(--i, 0) * 60ms);
+  }
+  .step-card:hover .art-rise {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .art-fade {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transition-delay: calc(var(--i, 0) * 60ms);
+  }
+  .step-card:hover .art-fade {
+    opacity: 1;
+  }
+
+  /* Code rows typing in from the left. */
+  .art-type {
+    transform-box: fill-box;
+    transform-origin: left center;
+    transform: scaleX(0.12);
+    opacity: 0.35;
+    transition:
+      transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.4s ease;
+    transition-delay: calc(var(--i, 0) * 80ms);
+  }
+  .step-card:hover .art-type {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+  /* Equalizer bars: flat until hover, then a staggered loop. */
+  .art-bar {
+    transform-box: fill-box;
+    transform-origin: center bottom;
+    transform: scaleY(0.2);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .step-card:hover .art-bar {
+    animation: art-eq 1.15s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 110ms);
+  }
+
+  .art-pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    opacity: 0;
+  }
+  .step-card:hover .art-pulse {
+    animation: art-ping 2.2s ease-out infinite;
+    animation-delay: calc(var(--i, 0) * 260ms);
+  }
+
+  .step-card:hover .art-dot {
+    animation: art-blink 1.2s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 200ms);
+  }
+
+  /* Travels the trajectory via offset-path (set inline, same `d`). */
+  .art-travel {
+    opacity: 0;
+    offset-rotate: 0deg;
+  }
+  .step-card:hover .art-travel {
+    animation: art-travel 2.4s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  }
+
+  .art-spread {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .step-card:hover .art-spread-l {
+    transform: translateX(-14px);
+  }
+  .step-card:hover .art-spread-r {
+    transform: translateX(14px);
+  }
+
+  @keyframes art-eq {
+    0%,
+    100% {
+      transform: scaleY(0.22);
+    }
+    50% {
+      transform: scaleY(1);
+    }
+  }
+  @keyframes art-ping {
+    0% {
+      transform: scale(0.55);
+      opacity: 0.75;
+    }
+    70%,
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  @keyframes art-blink {
+    0%,
+    100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes art-travel {
+    0% {
+      offset-distance: 0%;
+      opacity: 0;
+    }
+    12%,
+    88% {
+      opacity: 1;
+    }
+    100% {
+      offset-distance: 100%;
+      opacity: 0;
     }
   }
 }

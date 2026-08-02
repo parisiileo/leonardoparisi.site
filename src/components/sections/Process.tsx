@@ -1,24 +1,23 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
-import Magnetic from "@/components/ui/Magnetic";
+import ProcessArt, { type ProcessArtName } from "@/components/ui/ProcessArt";
 import Scramble from "@/components/ui/Scramble";
 import data from "@/data/data.json";
 import { useIsDesktop } from "@/hooks/useMediaQuery";
 import { SECTION_HUES } from "@/lib/sections";
 
-type Project = (typeof data.projects)[number];
+type Step = (typeof data.process)[number];
 
-export default function Projects() {
-  const t = useTranslations("projects");
+export default function Process() {
+  const t = useTranslations("process");
 
   return (
     <section
-      id="projects"
-      data-sec="projects"
-      data-hue={SECTION_HUES.projects}
+      id="process"
+      data-sec="process"
+      data-hue={SECTION_HUES.process}
       className="bg-bg relative px-[clamp(16px,3vw,40px)] pt-[clamp(60px,10vh,120px)]"
     >
       <div className="border-line flex flex-wrap items-end justify-between gap-5 border-b pb-[22px]">
@@ -35,8 +34,8 @@ export default function Projects() {
       </div>
 
       <div className="pt-[clamp(30px,6vh,70px)]">
-        {data.projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+        {data.process.map((step, i) => (
+          <StepCard key={step.id} step={step} index={i} />
         ))}
       </div>
 
@@ -45,10 +44,17 @@ export default function Projects() {
   );
 }
 
-function ProjectCard({ project }: { project: Project }) {
-  const t = useTranslations("projects");
+function StepCard({ step, index }: { step: Step; index: number }) {
+  const t = useTranslations("process");
   const ref = useRef<HTMLElement>(null);
   const isDesktop = useIsDesktop();
+  const number = String(index + 1).padStart(2, "0");
+
+  // Copy lives in the messages files; `raw` is how next-intl hands back the
+  // deliverables array untouched.
+  const deliverables = t.raw(
+    `items.${step.id}.deliverables` as "items.brief.deliverables",
+  ) as string[];
 
   const applyTilt = (event: React.MouseEvent) => {
     const el = ref.current;
@@ -58,6 +64,9 @@ function ProjectCard({ project }: { project: Project }) {
     const py = (event.clientY - rect.top) / rect.height - 0.5;
     el.style.transform = `perspective(1400px) rotateY(${(px * 5).toFixed(2)}deg) rotateX(${(-py * 4).toFixed(2)}deg) scale(1.005)`;
     el.style.borderColor = "var(--ac)";
+    // The artwork reads these to drift against the tilt (see .art-parallax).
+    el.style.setProperty("--px", (-px).toFixed(3));
+    el.style.setProperty("--py", (-py).toFixed(3));
   };
 
   const resetTilt = () => {
@@ -66,80 +75,66 @@ function ProjectCard({ project }: { project: Project }) {
     el.style.transform =
       "perspective(1400px) rotateY(0deg) rotateX(0deg) scale(1)";
     el.style.borderColor = "var(--color-line)";
+    el.style.setProperty("--px", "0");
+    el.style.setProperty("--py", "0");
   };
 
   const textColumn = (
     <div
       className={`flex flex-col justify-between gap-6 p-[clamp(22px,3vw,44px)] ${
-        project.mediaFirst ? "min-[860px]:order-2" : ""
+        step.mediaFirst ? "min-[860px]:order-2" : ""
       }`}
     >
       <div className="text-mut flex justify-between font-mono text-[11px] tracking-[0.2em]">
-        <span>
-          {String(data.projects.indexOf(project) + 1).padStart(2, "0")}
-        </span>
+        <span>{number}</span>
         <span className="text-ac">
-          {t(`items.${project.id}.category` as "items.fmshop.category")}
+          {t(`items.${step.id}.tag` as "items.brief.tag")}
         </span>
       </div>
       <div>
         <h3 className="font-display m-0 mb-[14px] text-[clamp(31px,4.7vw,72px)] leading-[0.86] font-black tracking-[-0.045em] uppercase">
-          {project.title}
+          {t(`items.${step.id}.title` as "items.brief.title")}
         </h3>
         <p className="text-mut m-0 mb-[22px] max-w-[44ch] text-[clamp(14px,1.2vw,17px)] leading-[1.6] text-pretty">
-          {t(`items.${project.id}.desc` as "items.fmshop.desc")}
+          {t(`items.${step.id}.desc` as "items.brief.desc")}
         </p>
-        <div className="flex flex-wrap gap-2">
-          {project.stack.map((tech) => (
-            <span
-              key={tech}
+        <ul className="flex list-none flex-wrap gap-2 p-0">
+          {deliverables.map((item) => (
+            <li
+              key={item}
               className="border-line text-mut rounded-full border px-[13px] py-[7px] font-mono text-[11px]"
             >
-              {tech}
-            </span>
+              {item}
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
-      <Magnetic>
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noreferrer"
-          className="border-ac text-ac flex w-fit items-center gap-[10px] rounded-full border px-5 py-[13px] font-mono text-[11.5px] tracking-[0.18em]"
-        >
-          {t("visit")} →
-        </a>
-      </Magnetic>
     </div>
   );
 
   const mediaColumn = (
     <div
-      className={`relative flex items-end p-[18px] ${
-        project.mediaFirst ? "min-[860px]:order-1" : ""
+      className={`relative flex items-center justify-center overflow-hidden p-[18px] ${
+        step.mediaFirst ? "min-[860px]:order-1" : ""
       }`}
-      style={
-        project.shot
-          ? undefined
-          : {
-              background: "#0e0e10",
-              backgroundImage: `repeating-linear-gradient(${project.hatch}deg, rgba(244,242,238,.055) 0 2px, transparent 2px 13px)`,
-            }
-      }
+      style={{
+        background: "#0e0e10",
+        backgroundImage: `repeating-linear-gradient(${step.hatch}deg, rgba(244,242,238,.055) 0 2px, transparent 2px 13px)`,
+      }}
     >
-      {project.shot ? (
-        <Image
-          src={project.shot}
-          alt={project.title}
-          fill
-          sizes="(max-width: 860px) 100vw, 50vw"
-          className="object-cover grayscale transition-[filter] duration-500 hover:grayscale-0"
-        />
-      ) : (
-        <span className="border-line text-mut2 rounded border border-dashed px-[11px] py-[7px] font-mono text-[10.5px] tracking-[0.2em]">
-          {t("shotPlaceholder")}
-        </span>
-      )}
+      {/* A generated scene instead of a screenshot — a step has nothing to
+          photograph. It comes alive on hover; the outlined numeral sits
+          behind it as a watermark. */}
+      <span
+        aria-hidden
+        className="font-display text-[clamp(120px,20vw,300px)] leading-none font-black tracking-[-0.06em] text-transparent opacity-60"
+        style={{ WebkitTextStroke: "1.5px var(--color-line2)" }}
+      >
+        {number}
+      </span>
+      <div className="absolute inset-[9%]">
+        <ProcessArt name={step.id as ProcessArtName} className="text-ink/50" />
+      </div>
     </div>
   );
 
@@ -149,13 +144,13 @@ function ProjectCard({ project }: { project: Project }) {
       data-tilt
       onMouseMove={applyTilt}
       onMouseLeave={resetTilt}
-      className={`border-line bg-surf relative mb-[26px] grid min-h-[min(72vh,620px)] overflow-hidden rounded-[10px] border transition-[transform,border-color] duration-500 md:sticky ${
-        project.mediaFirst
+      className={`step-card border-line bg-surf relative mb-[26px] grid min-h-[min(72vh,620px)] overflow-hidden rounded-[10px] border transition-[transform,border-color] duration-500 md:sticky ${
+        step.mediaFirst
           ? "min-[860px]:grid-cols-[.95fr_1.05fr]"
           : "min-[860px]:grid-cols-[1.05fr_.95fr]"
       }`}
       style={{
-        top: `${project.stickyTop}px`,
+        top: `${step.stickyTop}px`,
         transitionTimingFunction: "cubic-bezier(.16,1,.3,1)",
       }}
     >

@@ -44,7 +44,7 @@ export default function About() {
               label={t("statStarted")}
               value={<Counter value={data.stats.startedCoding} />}
             />
-            <AboutStat label={t("statSelfDriven")} value={<>100%</>} />
+            <AboutStat label={t("statReply")} value={<>24H</>} />
             <AboutStat label={t("statBased")} value={<>IT</>} />
           </div>
         </div>

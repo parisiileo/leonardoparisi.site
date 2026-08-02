@@ -1,9 +1,10 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import Magnetic from "@/components/ui/Magnetic";
 import data from "@/data/data.json";
+import { Link } from "@/i18n/navigation";
 
 const KINDS = ["website", "webapp", "ecommerce", "redesign", "other"] as const;
 type Kind = (typeof KINDS)[number];
@@ -15,6 +16,7 @@ const FIELD_CLASS =
 
 export default function ContactForm() {
   const t = useTranslations("contact.form");
+  const locale = useLocale();
   const [kind, setKind] = useState<Kind | null>(null);
   const [status, setStatus] = useState<{ text: string; accent: boolean }>({
     text: "",
@@ -55,6 +57,7 @@ export default function ContactForm() {
           email,
           message,
           company,
+          locale,
           kind: kind ? t(`kinds.${kind}`) : "PROJECT",
         }),
       });
@@ -70,7 +73,10 @@ export default function ContactForm() {
       // rather than dead-ending them.
       const body = await response.json().catch(() => null);
       if (body?.code === "EMAIL_NOT_CONFIGURED") {
-        setStatus({ text: t("statusMailto", { name: firstName }), accent: true });
+        setStatus({
+          text: t("statusMailto", { name: firstName }),
+          accent: true,
+        });
         const subject = encodeURIComponent(
           `New ${(kind ? t(`kinds.${kind}`) : "project").toLowerCase()} enquiry`,
         );
@@ -105,7 +111,10 @@ export default function ContactForm() {
       </div>
 
       {/* Honeypot: real people never see it, bots fill it in. */}
-      <div aria-hidden className="absolute -left-[9999px] h-px w-px overflow-hidden">
+      <div
+        aria-hidden
+        className="absolute -left-[9999px] h-px w-px overflow-hidden"
+      >
         <label>
           Company
           <input name="company" type="text" tabIndex={-1} autoComplete="off" />
@@ -142,11 +151,11 @@ export default function ContactForm() {
         </label>
       </div>
 
-      <fieldset className="flex flex-col gap-[11px] border-0 p-0">
-        <legend className="text-mut font-mono text-[10.5px] tracking-[0.2em]">
+      <fieldset className="flex flex-col gap-3 border-0">
+        <legend className="flex text-mut font-mono text-[10.5px] tracking-[0.2em]">
           {t("kindLabel")}
         </legend>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 py-3">
           {KINDS.map((option) => {
             const selected = kind === option;
             return (
@@ -201,6 +210,22 @@ export default function ContactForm() {
           {idle}
         </span>
       </div>
+
+      {/* Notice, not a checkbox: the lawful basis here is a pre-contractual
+          measure you asked for, so a forced tick-box would be neither
+          required nor a valid consent. */}
+      <p className="text-mut2 m-0 max-w-[52ch] font-mono text-[10.5px] leading-[1.8] tracking-[0.06em]">
+        {t.rich("consent", {
+          link: (chunks) => (
+            <Link
+              href="/privacy"
+              className="hover:text-ac underline underline-offset-4 transition-colors"
+            >
+              {chunks}
+            </Link>
+          ),
+        })}
+      </p>
     </form>
   );
 }

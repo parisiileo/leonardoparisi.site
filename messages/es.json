@@ -4,14 +4,13 @@
     "description": "Portfolio de Leonardo Parisi, desarrollador frontend de Italia: interfaces dinámicas y atractivas con React, Next.js y las tecnologías web más recientes."
   },
   "sections": {
-    "hero": "01 / ÍNDICE",
-    "work": "02 / EXPERIENCIA",
-    "projects": "03 / SELECCIÓN",
-    "about": "04 / SOBRE MÍ",
-    "stack": "05 / STACK",
-    "playground": "06 / LABORATORIO",
-    "testimonials": "07 / PALABRAS",
-    "contact": "08 / CONTACTO"
+    "hero": "ÍNDICE",
+    "work": "EXPERIENCIA",
+    "process": "PROCESO",
+    "about": "SOBRE MÍ",
+    "stack": "STACK",
+    "testimonials": "PALABRAS",
+    "contact": "CONTACTO"
   },
   "nav": {
     "label": "NAVEGACIÓN",
@@ -19,10 +18,17 @@
     "close": "CERRAR",
     "open": "Abrir la navegación",
     "work": "TRABAJO",
-    "projects": "PROYECTOS",
+    "process": "PROCESO",
     "about": "SOBRE MÍ",
-    "playground": "LABORATORIO",
-    "contact": "CONTACTO"
+    "contact": "CONTACTO",
+    "skip": "IR AL CONTENIDO"
+  },
+  "notFound": {
+    "kicker": "ERROR 404",
+    "headingA": "Se perdió",
+    "headingB": "el hilo.",
+    "body": "Esta página no existe — puede que se moviera cuando el sitio pasó a ser una sola página.",
+    "cta": "VOLVER AL INICIO"
   },
   "loader": {
     "label": "CARGANDO PORTFOLIO"
@@ -39,19 +45,18 @@
     "cta": "VER LOS TRABAJOS",
     "statYears": "AÑOS PUBLICANDO",
     "statProjects": "PROYECTOS ONLINE",
-    "statTools": "HERRAMIENTAS EN EL STACK",
     "scroll": "DESLIZA"
   },
   "work": {
     "hint": "EXPERIENCIA — DESLIZA DE LADO",
     "headingLine1": "Experiencia",
     "headingLine2": "Laboral",
-    "lead": "Cuatro años de proyectos para clientes, prácticas y producto — en una línea de tiempo que se desliza de lado.",
+    "lead": "Dos años de proyectos para clientes, prácticas y producto — en una línea de tiempo que se desliza de lado.",
     "closing": "¿Tu proyecto ahora?",
     "cta": "ESCRÍBEME",
     "types": {
-      "internship": "PRÁCTICAS",
-      "client": "PROYECTO DE CLIENTE"
+      "internship": "PRÁCTICAS EN EMPRESA",
+      "client": "TRABAJO POR ENCARGO"
     },
     "items": {
       "acs": {
@@ -70,75 +75,73 @@
         "role": "Diseño y desarrollo — sitio de restaurante",
         "desc": "Un sitio responsive con visuales cuidados y navegación sencilla, centrado en el menú, los contactos y la historia de la marca."
       }
-    }
+    },
+    "visit": "VER EL SITIO"
   },
-  "projects": {
-    "headingLine1": "Proyectos",
-    "headingLine2": "Seleccionados",
-    "meta": "TRES PROYECTOS, DE LA IDEA AL LANZAMIENTO",
-    "range": "03 — 2024/2026",
-    "visit": "VER EL SITIO",
-    "shotPlaceholder": "IMAGEN DEL PROYECTO — 4:3",
+  "process": {
+    "headingLine1": "Cómo",
+    "headingLine2": "Trabajo",
+    "meta": "CUATRO FASES, DEL PRIMER MENSAJE AL SITIO EN LÍNEA",
+    "range": "03 — PROCESO",
     "items": {
-      "fmshop": {
-        "category": "E-COMMERCE",
-        "desc": "Una tienda completa, diseñada y lanzada en solitario — catálogo, checkout, admin y una capa de movimiento que hace la navegación rápida."
+      "brief": {
+        "tag": "ESCUCHA",
+        "title": "Entender el proyecto",
+        "desc": "Empezamos con una conversación: qué necesitas, a quién se dirige el sitio y qué tiene que hacer. Después pongo por escrito objetivos, plazos y coste, para que los dos sepamos hacia dónde vamos.",
+        "deliverables": [
+          "Llamada inicial",
+          "Objetivos y requisitos",
+          "Presupuesto y plazos"
+        ]
       },
-      "markz3d": {
-        "category": "3D COMMERCE",
-        "desc": "Una tienda de impresión 3D con dos compañeros. Llevé el frontend y empujé el diseño de interacción más allá del brief."
+      "design": {
+        "tag": "ESTRUCTURA",
+        "title": "Estructura y diseño",
+        "desc": "Primero la estructura de las páginas, luego el diseño en Figma. Ves las pantallas antes de que escriba una línea de código, así los cambios se hacen cuando cuestan poco.",
+        "deliverables": [
+          "Estructura de páginas",
+          "Diseño en Figma",
+          "Rondas de revisión"
+        ]
       },
-      "piccolaitalia": {
-        "category": "HOSTELERÍA",
-        "desc": "Menú, historia y contacto para un restaurante que debía verse igual de bien en el móvil que en escritorio."
+      "build": {
+        "tag": "CONSTRUCCIÓN",
+        "title": "Desarrollo",
+        "desc": "Construyo el sitio con Next.js, cuidando la velocidad y cómo se ve en el móvil. Durante el trabajo tienes un enlace de vista previa siempre actualizado, así no hay sorpresas al final.",
+        "deliverables": [
+          "Desarrollo frontend",
+          "Responsive",
+          "Vista previa siempre activa"
+        ]
+      },
+      "launch": {
+        "tag": "LANZAMIENTO",
+        "title": "Puesta en línea",
+        "desc": "Publicación, dominio y comprobaciones finales de SEO y rendimiento. Luego te explico cómo gestionar los contenidos y sigo disponible para los ajustes de los primeros días.",
+        "deliverables": [
+          "Despliegue y dominio",
+          "SEO básico",
+          "Soporte tras el lanzamiento"
+        ]
       }
     }
   },
   "about": {
     "kicker": "04 — SOBRE MÍ",
-    "headingA": "Ojo de diseñador.",
-    "headingB": "Manos de",
-    "headingC": "ingeniero.",
-    "lead": "Soy Leonardo Parisi, desarrollador frontend de Italia. Construyo interfaces dinámicas y atractivas con lo último de la web — y el último 10% me importa tanto como el primer 90%.",
-    "secondary": "Proyectos freelance para clientes, unas prácticas en seguridad informática y la costumbre de rehacer las cosas hasta que encajan. El movimiento aquí no es decoración — es cómo la interfaz se explica.",
-    "statStarted": "EMPECÉ A PROGRAMAR",
-    "statSelfDriven": "AUTODIDACTA",
+    "headingA": "Construyo interfaces.",
+    "headingB": "y cuido",
+    "headingC": "los detalles.",
+    "lead": "Soy Leonardo Parisi, desarrollador frontend de Italia. Trabajo sobre todo con React y Next.js, en sitios web e interfaces — del diseño al desarrollo.",
+    "secondary": "Hasta ahora: algunos trabajos para clientes, unas prácticas en IT y seguridad, y muchas horas rehaciendo cosas hasta que funcionan como deben. Sigo aprendiendo, y me parece bien.",
+    "statStarted": "EN LA WEB DESDE",
+    "statReply": "TIEMPO DE RESPUESTA",
     "statBased": "CON BASE EN ITALIA",
     "figCaption": "FIG. 01 — LEONARDO PARISI",
     "photoAlt": "Leonardo Parisi"
   },
   "stack": {
     "heading": "El Stack",
-    "meta": "14 HERRAMIENTAS · LAS DIARIAS PRIMERO"
-  },
-  "playground": {
-    "heading": "Laboratorio",
-    "meta": "EXPERIMENTOS, SHADERS Y COSAS QUE SE ROMPIERON",
-    "notice": "AÚN NO PÚBLICO — ENLACES EN CAMINO",
-    "categories": {
-      "WEBGL": "WEBGL",
-      "TYPE": "TIPOGRAFÍA",
-      "3D": "3D",
-      "AUDIO": "AUDIO"
-    },
-    "items": {
-      "shaders": {
-        "title": "Jardín de shaders",
-        "subtitle": "GLSL · campos de ruido"
-      },
-      "variableFont": {
-        "title": "Juguete de variable fonts",
-        "subtitle": "Canvas · ejes al hacer scroll"
-      },
-      "three": {
-        "title": "Escaparate Three.js",
-        "subtitle": "Escena de proyecto rotatoria"
-      },
-      "waveform": {
-        "title": "Waveform UI",
-        "subtitle": "Web Audio · analizador"
-      }
-    }
+    "meta": "18 HERRAMIENTAS · LAS DIARIAS PRIMERO"
   },
   "testimonials": {
     "heading": "Buenas palabras",
@@ -184,12 +187,268 @@
       "statusSending": "ENVIANDO…",
       "statusSent": "GRACIAS, {name}. TE RESPONDO EN 24H.",
       "statusMailto": "ABRIENDO TU APP DE CORREO — GRACIAS, {name}.",
-      "statusError": "ALGO SALIÓ MAL — ESCRÍBEME DIRECTAMENTE."
+      "statusError": "ALGO SALIÓ MAL — ESCRÍBEME DIRECTAMENTE.",
+      "consent": "Al enviarlo aceptas el tratamiento de datos descrito en la <link>Política de Privacidad</link>."
     }
   },
   "footer": {
     "copyright": "© 2026 — HECHO EN ITALIA",
     "backToTop": "VOLVER ARRIBA",
-    "vat": "NIF"
+    "vat": "NIF",
+    "legal": "LEGAL",
+    "privacy": "PRIVACIDAD",
+    "cookie": "COOKIES",
+    "terms": "TÉRMINOS"
+  },
+  "legal": {
+    "meta": {
+      "kicker": "AVISO LEGAL",
+      "updatedLabel": "ÚLTIMA ACTUALIZACIÓN",
+      "back": "VOLVER AL SITIO",
+      "contactHeading": "Contacto",
+      "contactBody": "Leonardo Parisi — NIF/IVA 03356630214 · Via Palermo 46, 39100 Bolzano (BZ), Italia · Email parisii.leonardo@gmail.com · Email certificado parisileonardo15@pec.it"
+    },
+    "privacy": {
+      "title": "Política de Privacidad",
+      "updated": "2 de agosto de 2026",
+      "intro": "Esta página explica qué datos personales recojo a través de imleo.it, por qué los recojo y qué derechos tienes. Es la información prevista en los artículos 13 y 14 del Reglamento (UE) 2016/679 (RGPD).",
+      "sections": [
+        {
+          "heading": "Responsable del tratamiento",
+          "body": [
+            "El responsable del tratamiento es Leonardo Parisi, con número de IVA 03356630214, con domicilio en Via Palermo 46, 39100 Bolzano (BZ), Italia, que trabaja como desarrollador freelance.",
+            "Puedes escribirme en cualquier momento a parisii.leonardo@gmail.com o al correo certificado parisileonardo15@pec.it. No se ha designado un delegado de protección de datos, al no concurrir los supuestos legales que lo exigen."
+          ]
+        },
+        {
+          "heading": "Datos que recojo",
+          "body": [
+            "Solo recojo lo necesario para responderte y para mantener el sitio en funcionamiento. No hay cuentas, ni boletín, ni elaboración de perfiles, ni venta de datos a terceros."
+          ],
+          "list": [
+            "Lo que escribes en el formulario de contacto: nombre, dirección de email, tipo de proyecto seleccionado y texto del mensaje.",
+            "El idioma de navegación, guardado junto al mensaje para poder responderte en tu idioma.",
+            "Datos técnicos de la solicitud: una versión cifrada (hash SHA-256 con clave secreta) de tu dirección IP, usada solo para contar los envíos seguidos y bloquear abusos. La IP en claro nunca se conserva.",
+            "Registros técnicos generados automáticamente por el proveedor de alojamiento por seguridad y diagnóstico.",
+            "Estadísticas de tráfico agregadas y anónimas, recogidas sin cookies y sin identificadores persistentes."
+          ]
+        },
+        {
+          "heading": "Finalidades y bases jurídicas",
+          "list": [
+            "Responder a las solicitudes enviadas por el formulario o por email y, en su caso, preparar un presupuesto: medidas precontractuales a petición tuya, art. 6.1.b RGPD.",
+            "Proteger el sitio frente a envíos automatizados y abusos, mediante limitación de solicitudes y un campo trampa antibots: interés legítimo, art. 6.1.f RGPD.",
+            "Conocer de forma agregada qué contenidos funcionan, sin cookies ni elaboración de perfiles: interés legítimo, art. 6.1.f RGPD.",
+            "Cumplir obligaciones fiscales y legales, si el contacto se convierte en un encargo: obligación legal, art. 6.1.c RGPD."
+          ]
+        },
+        {
+          "heading": "Plazos de conservación",
+          "list": [
+            "Mensajes recibidos por el formulario: llegan a mi buzón de correo y permanecen allí hasta 24 meses desde el último intercambio, después se eliminan. Si el contacto se convierte en un encargo, los datos exigidos por la normativa contable y fiscal se conservan 10 años.",
+            "Datos antiabuso vinculados a la limitación de envíos: permanecen unos minutos en la memoria temporal del servidor y no se archivan en ningún sitio.",
+            "Registros de sistema del proveedor de alojamiento: según su propio plazo técnico, normalmente unos pocos días."
+          ]
+        },
+        {
+          "heading": "Quién trata los datos por mi cuenta",
+          "body": [
+            "Para que el sitio funcione recurro a proveedores seleccionados, que actúan como encargados del tratamiento conforme al art. 28 RGPD. Los datos no se comunican a nadie más ni se difunden."
+          ],
+          "list": [
+            "Vercel Inc. — alojamiento del sitio y red de distribución de contenidos.",
+            "Resend (Plus Five Five, Inc.) — servicio que entrega en mi buzón el email generado por el formulario.",
+            "Google Ireland Ltd. — proveedor del buzón donde recibo y conservo tus mensajes.",
+            "Autoridades públicas, cuando la comunicación sea obligatoria por ley."
+          ]
+        },
+        {
+          "heading": "Transferencias fuera de la Unión Europea",
+          "body": [
+            "Algunos proveedores tienen su sede en Estados Unidos. Las transferencias se amparan en las Cláusulas Contractuales Tipo aprobadas por la Comisión Europea y, cuando corresponde, en la adhesión del proveedor al EU-U.S. Data Privacy Framework, junto con medidas adicionales como el cifrado en tránsito."
+          ]
+        },
+        {
+          "heading": "Cookies y estadísticas",
+          "body": [
+            "El sitio usa exclusivamente cookies técnicas, que no requieren consentimiento previo conforme al art. 122 del Código de Privacidad italiano: por eso no verás ningún banner. Las estadísticas de tráfico se recogen de forma agregada, sin cookies ni identificadores persistentes.",
+            "Las tipografías se sirven directamente desde este sitio: tu navegador no realiza ninguna petición a servidores de Google para mostrarlas.",
+            "El detalle completo está en la Política de Cookies."
+          ]
+        },
+        {
+          "heading": "Tus derechos",
+          "body": [
+            "Puedes ejercer en cualquier momento los derechos de los artículos 15-22 del RGPD escribiendo a las direcciones indicadas arriba. Respondo en un plazo de 30 días."
+          ],
+          "list": [
+            "Acceder a los datos que te conciernen y obtener una copia.",
+            "Solicitar su rectificación si son inexactos o incompletos.",
+            "Solicitar su supresión, por ejemplo cuando el mensaje ya no sea necesario.",
+            "Solicitar la limitación del tratamiento u oponerte al basado en el interés legítimo.",
+            "Recibir tus datos en un formato estructurado y legible por máquina (portabilidad).",
+            "Presentar una reclamación ante la autoridad italiana de protección de datos (garanteprivacy.it) o ante tu autoridad de control local."
+          ]
+        },
+        {
+          "heading": "Seguridad",
+          "body": [
+            "El sitio se sirve exclusivamente sobre conexión cifrada HTTPS. Los mensajes no se guardan en ninguna base de datos: van del formulario directamente a mi buzón, protegido con contraseña y verificación en dos pasos. Las claves de los servicios permanecen en el servidor y nunca forman parte del código enviado al navegador. La dirección IP se trata solo de forma cifrada y no reversible."
+          ]
+        },
+        {
+          "heading": "Menores",
+          "body": [
+            "El sitio se dirige a profesionales y empresas y no está destinado a menores de 14 años. No recojo conscientemente datos de menores: si detectas que ha ocurrido, escríbeme y procederé a eliminarlos."
+          ]
+        },
+        {
+          "heading": "Decisiones automatizadas",
+          "body": [
+            "No realizo elaboración de perfiles ni decisiones automatizadas que produzcan efectos jurídicos sobre tu persona."
+          ]
+        },
+        {
+          "heading": "Cambios en esta información",
+          "body": [
+            "Si el sitio cambia de herramientas o finalidades, actualizo esta página y la fecha que figura arriba. Conviene releerla de vez en cuando."
+          ]
+        }
+      ]
+    },
+    "cookie": {
+      "title": "Política de Cookies",
+      "updated": "2 de agosto de 2026",
+      "intro": "Este sitio usa lo mínimo imprescindible: ninguna cookie de perfilado, ninguna cookie de terceros, ningún banner que cerrar. Aquí tienes la lista completa de lo que se guarda en tu dispositivo, y por qué.",
+      "sections": [
+        {
+          "heading": "Qué son las cookies",
+          "body": [
+            "Las cookies son pequeños archivos de texto que un sitio guarda en tu dispositivo para recordar algo entre una página y otra. Se llaman técnicas cuando permiten que el sitio funcione o recuerdan una elección tuya, y de perfilado cuando sirven para construir un perfil de tus intereses. Este sitio solo usa las primeras."
+          ]
+        },
+        {
+          "heading": "Cookies utilizadas",
+          "list": [
+            "NEXT_LOCALE — cookie técnica de preferencia. Recuerda el idioma elegido para que no tengas que seleccionarlo de nuevo. Duración: 1 año. Origen: primera parte (imleo.it). Es la única cookie que instala este sitio."
+          ]
+        },
+        {
+          "heading": "Por qué no hay banner de consentimiento",
+          "body": [
+            "Las cookies técnicas y de preferencia están exentas del consentimiento previo conforme al art. 122 del Código de Privacidad italiano y a las directrices sobre cookies de la autoridad italiana de 8 de julio de 2021. Dado que el sitio no instala cookies de perfilado ni rastreadores de terceros, no hay nada para lo que pedir consentimiento: basta con esta información."
+          ]
+        },
+        {
+          "heading": "Estadísticas de tráfico",
+          "body": [
+            "Uso Vercel Web Analytics y Vercel Speed Insights para saber cuántas visitas recibe el sitio y con qué rapidez carga. Ambos funcionan sin cookies y sin identificadores persistentes: no construyen un perfil, no te siguen entre sitios y los datos son agregados.",
+            "No hay Google Analytics, ni píxeles publicitarios, ni mapas de calor, ni botones sociales que rastreen."
+          ]
+        },
+        {
+          "heading": "Contenidos de terceros",
+          "body": [
+            "El sitio no incrusta vídeos, mapas, calendarios ni widgets externos. Las tipografías se descargan y se sirven directamente desde imleo.it, de modo que tu navegador nunca contacta con servidores de Google para mostrar la página.",
+            "Los enlaces a GitHub, LinkedIn, X, Instagram y Discord son simples enlaces: no se carga nada hasta que los abres tú."
+          ]
+        },
+        {
+          "heading": "Cómo gestionar o eliminar las cookies",
+          "body": [
+            "Puedes eliminar las cookies guardadas y bloquear las futuras desde las preferencias de tu navegador, normalmente en la sección de Privacidad y seguridad de Chrome, Firefox, Safari o Edge.",
+            "Bloquear las cookies técnicas no te impide navegar: solo perderás el idioma guardado, que volverá a ser el que indique tu navegador."
+          ]
+        },
+        {
+          "heading": "Cambios en esta política",
+          "body": [
+            "Si en el futuro incorporo herramientas que requieran consentimiento, esta página se actualizará y aparecerá un banner con bloqueo previo de los scripts. Hasta entonces, lo escrito aquí es la lista completa."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Términos del Servicio",
+      "updated": "2 de agosto de 2026",
+      "intro": "Estas condiciones regulan el acceso y el uso de imleo.it. Al navegar por el sitio las aceptas. No regulan los encargos profesionales, que nacen de un presupuesto escrito aceptado por separado.",
+      "sections": [
+        {
+          "heading": "Titular del sitio",
+          "body": [
+            "El sitio está gestionado por Leonardo Parisi, número de IVA 03356630214, desarrollador freelance con domicilio en Via Palermo 46, 39100 Bolzano (BZ), Italia. Contacto: parisii.leonardo@gmail.com — email certificado parisileonardo15@pec.it."
+          ]
+        },
+        {
+          "heading": "Objeto del sitio",
+          "body": [
+            "imleo.it es un sitio de presentación: muestra experiencia, método de trabajo y competencias, y ofrece un formulario para ponerse en contacto. No vende productos ni servicios en línea y no requiere crear una cuenta."
+          ]
+        },
+        {
+          "heading": "Uso permitido",
+          "body": [
+            "Puedes consultar, guardar y compartir estas páginas para uso personal o profesional. Te pido que no:"
+          ],
+          "list": [
+            "utilices el formulario de contacto para envíos automatizados, publicidad no solicitada o contenidos ilícitos;",
+            "intentes acceder a áreas privadas, eludir la limitación de solicitudes o comprometer la seguridad del sitio;",
+            "extraigas los contenidos de forma masiva con herramientas automáticas, más allá de la indexación habitual de los buscadores;",
+            "reproduzcas el sitio o partes sustanciales del mismo para crear uno competidor."
+          ]
+        },
+        {
+          "heading": "Propiedad intelectual",
+          "body": [
+            "Los textos, gráficos, ilustraciones, código fuente, estructura y maquetación del sitio son de mi titularidad y están protegidos por la ley de derechos de autor. No se concede ninguna licencia de forma implícita.",
+            "Los nombres, marcas y logotipos de los clientes citados pertenecen a sus respectivos titulares y aparecen únicamente para describir los trabajos realizados. Los casos mostrados se publican con el consentimiento de los clientes o se refieren a información ya pública."
+          ]
+        },
+        {
+          "heading": "Contenidos y disponibilidad",
+          "body": [
+            "Cuido que la información publicada esté actualizada, pero no garantizo que sea siempre completa o esté libre de errores, ni que el sitio sea accesible sin interrupciones. El servicio se presta «tal cual» y puedo modificarlo, suspenderlo o interrumpirlo en cualquier momento."
+          ]
+        },
+        {
+          "heading": "Limitación de responsabilidad",
+          "body": [
+            "En los límites permitidos por la ley, no respondo de los daños derivados del uso o de la imposibilidad de uso del sitio, de interrupciones del servicio o de la confianza depositada en la información publicada. Queda a salvo la responsabilidad por dolo y culpa grave, así como los derechos irrenunciables reconocidos a los consumidores."
+          ]
+        },
+        {
+          "heading": "Enlaces a sitios externos",
+          "body": [
+            "El sitio enlaza a páginas de terceros, incluidos trabajos para clientes y perfiles sociales. No tengo control sobre sus contenidos ni sobre sus prácticas de datos: cuando los abres, se aplican sus propias condiciones e informaciones."
+          ]
+        },
+        {
+          "heading": "Solicitudes y presupuestos",
+          "body": [
+            "La información del sitio y las respuestas a las solicitudes no constituyen una oferta contractual vinculante. Una relación profesional nace únicamente con un presupuesto escrito aceptado por ambas partes, que define objeto, plazos, costes y condiciones.",
+            "Los tiempos de respuesta indicativos, la disponibilidad y cualquier importe mencionado en el sitio tienen valor meramente informativo."
+          ]
+        },
+        {
+          "heading": "Datos personales",
+          "body": [
+            "Los datos que envías mediante el formulario de contacto se tratan según lo descrito en la Política de Privacidad, que forma parte integrante de estas condiciones."
+          ]
+        },
+        {
+          "heading": "Modificaciones de las condiciones",
+          "body": [
+            "Puedo actualizar estas condiciones para adaptarlas a cambios del sitio o de la normativa. La versión aplicable es la publicada en esta página, con la fecha de última actualización indicada arriba."
+          ]
+        },
+        {
+          "heading": "Ley aplicable y jurisdicción",
+          "body": [
+            "Estas condiciones se rigen por la ley italiana. Para las controversias con quienes actúan en el ámbito de su actividad empresarial o profesional es competente en exclusiva el tribunal de Bolzano (Italia).",
+            "Si eres consumidor, sigue siendo competente el tribunal de tu lugar de residencia o domicilio, y puedes recurrir a la plataforma europea de resolución de litigios en línea disponible en ec.europa.eu/consumers/odr."
+          ]
+        }
+      ]
+    }
   }
 }

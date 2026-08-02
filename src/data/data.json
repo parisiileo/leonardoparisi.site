@@ -6,8 +6,14 @@
     "vat": "03356630214"
   },
   "socials": [
-    { "name": "GITHUB", "url": "https://github.com/parisiileo" },
-    { "name": "X", "url": "https://twitter.com/_leoparisi" },
+    {
+      "name": "GITHUB",
+      "url": "https://github.com/parisiileo"
+    },
+    {
+      "name": "X",
+      "url": "https://twitter.com/_leoparisi"
+    },
     {
       "name": "LINKEDIN",
       "url": "https://www.linkedin.com/in/leonardo-parisi-4a0121237/"
@@ -18,23 +24,34 @@
     }
   ],
   "stats": {
-    "yearsShipping": 4,
+    "yearsShipping": 2,
     "projectsLive": 12,
-    "toolsInStack": 14,
-    "startedCoding": 2021
+    "startedCoding": 2022
   },
   "nav": [
-    { "id": "work", "href": "#work" },
-    { "id": "projects", "href": "#projects" },
-    { "id": "about", "href": "#about" },
-    { "id": "playground", "href": "#play" },
-    { "id": "contact", "href": "#contact" }
+    {
+      "id": "work",
+      "href": "#work"
+    },
+    {
+      "id": "process",
+      "href": "#process"
+    },
+    {
+      "id": "about",
+      "href": "#about"
+    },
+    {
+      "id": "contact",
+      "href": "#contact"
+    }
   ],
   "work": [
     {
       "id": "acs",
       "company": "ACS Data Systems",
       "type": "internship",
+      "art": "network",
       "from": "2025",
       "to": "2025",
       "url": "https://www.acs.it/it/",
@@ -49,6 +66,7 @@
       "id": "fmshop",
       "company": "FM Shop",
       "type": "client",
+      "art": "storefront",
       "from": "2024",
       "to": "2025",
       "url": "https://www.fm-shop.it",
@@ -64,6 +82,7 @@
       "id": "markz3d",
       "company": "Markz3d Shop",
       "type": "client",
+      "art": "layers",
       "from": "2024",
       "to": "2024",
       "url": "https://markz3d.com",
@@ -79,42 +98,42 @@
       "id": "piccolaitalia",
       "company": "Piccola Italia",
       "type": "client",
+      "art": "dining",
       "from": "2026",
       "to": "2026",
       "url": "https://namastepiccolaitalia.it",
-      "stack": ["Next.js", "Tailwind", "HTML", "CSS"]
+      "stack": [
+        "Next.js",
+        "Tailwind",
+        "HTML",
+        "CSS"
+      ]
     }
   ],
-  "projects": [
+  "process": [
     {
-      "id": "fmshop",
-      "title": "FM Shop",
-      "url": "https://www.fm-shop.it",
-      "stack": ["Next.js", "TypeScript", "Supabase"],
-      "shot": null,
+      "id": "brief",
       "hatch": 115,
       "mediaFirst": false,
       "stickyTop": 96
     },
     {
-      "id": "markz3d",
-      "title": "Markz3d",
-      "url": "https://markz3d.com",
-      "stack": ["Next.js", "Tailwind", "Framer Motion"],
-      "shot": null,
+      "id": "design",
       "hatch": 65,
       "mediaFirst": true,
       "stickyTop": 114
     },
     {
-      "id": "piccolaitalia",
-      "title": "Piccola Italia",
-      "url": "https://namastepiccolaitalia.it",
-      "stack": ["Next.js", "Tailwind", "CSS"],
-      "shot": null,
+      "id": "build",
       "hatch": 115,
       "mediaFirst": false,
       "stickyTop": 132
+    },
+    {
+      "id": "launch",
+      "hatch": 65,
+      "mediaFirst": true,
+      "stickyTop": 150
     }
   ],
   "stack": [
@@ -124,12 +143,16 @@
     "Javascript",
     "Tailwindcss",
     "Framer Motion",
+    "GSAP",
+    "Three.js",
     "HTML",
     "CSS3",
     "MongoDB",
     "Supabase",
+    "Node.js",
     "Figma",
     "Github",
+    "Vercel",
     "Jira",
     "Bitbucket"
   ],
@@ -142,18 +165,24 @@
     "Tailwind",
     "Supabase"
   ],
-  "playground": [
-    { "id": "shaders", "category": "WEBGL", "graphic": "conic" },
-    { "id": "variableFont", "category": "TYPE", "graphic": "dots" },
-    { "id": "three", "category": "3D", "graphic": "glow" },
-    { "id": "waveform", "category": "AUDIO", "graphic": "bars" }
-  ],
   "testimonials": {
     "enabled": false,
     "items": [
-      { "id": "one", "name": "NAME", "company": "COMPANY" },
-      { "id": "two", "name": "NAME", "company": "COMPANY" },
-      { "id": "three", "name": "NAME", "company": "COMPANY" }
+      {
+        "id": "one",
+        "name": "NAME",
+        "company": "COMPANY"
+      },
+      {
+        "id": "two",
+        "name": "NAME",
+        "company": "COMPANY"
+      },
+      {
+        "id": "three",
+        "name": "NAME",
+        "company": "COMPANY"
+      }
     ]
   },
   "about": {

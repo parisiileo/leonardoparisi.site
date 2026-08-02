@@ -4,6 +4,8 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import Magnetic from "@/components/ui/Magnetic";
 import { useIsWide } from "@/hooks/useMediaQuery";
+import { Link, usePathname } from "@/i18n/navigation";
+import { SECTION_NUMBERS, type SectionId } from "@/lib/sections";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useUI } from "./UIProvider";
 
@@ -39,6 +41,8 @@ export default function Header() {
   const t = useTranslations("nav");
   const tSections = useTranslations("sections");
   const { menuOpen, setMenuOpen, loaderDone, activeSection } = useUI();
+  const onHome = usePathname() === "/";
+  const LogoTag = onHome ? "a" : Link;
   const isWide = useIsWide();
   const [scrolled, setScrolled] = useState(false);
 
@@ -49,7 +53,9 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const showMeta = isWide && loaderDone;
+  // The section chip tracks the scrolling page, so it means nothing on the
+  // legal routes — those have no [data-sec] for the observer to follow.
+  const showMeta = isWide && loaderDone && onHome;
 
   return (
     <header
@@ -64,17 +70,22 @@ export default function Header() {
       }}
     >
       <Magnetic>
-        <a href="#top" className="flex items-center gap-[11px]">
+        {/* An anchor on the scrolling page, a route home from anywhere else. */}
+        <LogoTag
+          href={onHome ? "#top" : "/"}
+          className="flex items-center gap-[11px]"
+        >
           <span className="bg-ac animate-blink block h-[11px] w-[11px] flex-none rounded-full" />
           <span className="font-display text-[15px] font-extrabold tracking-[-0.02em] uppercase">
             Leonardo Parisi
           </span>
-        </a>
+        </LogoTag>
       </Magnetic>
 
       <div className="flex items-center gap-[26px]">
         {showMeta && (
           <span className="text-mut font-mono text-[11px] tracking-[0.22em]">
+            {SECTION_NUMBERS[activeSection as SectionId]} /{" "}
             {tSections(activeSection)}
           </span>
         )}

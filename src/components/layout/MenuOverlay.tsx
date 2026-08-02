@@ -5,13 +5,17 @@ import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
 import Magnetic from "@/components/ui/Magnetic";
 import data from "@/data/data.json";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useUI } from "./UIProvider";
 
 const EASE_OUT = [0.16, 1, 0.3, 1] as const;
 
+const MotionLink = motion.create(Link);
+
 export default function MenuOverlay() {
   const t = useTranslations("nav");
   const { menuOpen, setMenuOpen } = useUI();
+  const onHome = usePathname() === "/";
   const closeRef = useRef<HTMLButtonElement>(null);
   const restoreRef = useRef<HTMLElement | null>(null);
 
@@ -38,7 +42,9 @@ export default function MenuOverlay() {
     <div
       id="site-menu"
       aria-hidden={!menuOpen}
-      aria-modal={menuOpen}
+      // Only meaningful while the dialog is open; `false` reads as a dialog
+      // that deliberately lets focus escape.
+      aria-modal={menuOpen || undefined}
       role="dialog"
       className="bg-bg2 fixed inset-0 z-[120] flex flex-col justify-between p-[clamp(18px,3vw,40px)]"
       style={{
@@ -67,27 +73,41 @@ export default function MenuOverlay() {
       <nav className="flex flex-col gap-[clamp(2px,1vw,10px)] py-6">
         <AnimatePresence>
           {menuOpen &&
-            data.nav.map((item, i) => (
-              <motion.a
-                key={item.id}
-                href={item.href}
-                onClick={() => setTimeout(() => setMenuOpen(false), 120)}
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 60 }}
-                transition={{
+            data.nav.map((item, i) => {
+              // On the scrolling page these are in-page anchors. From a legal
+              // page there is no #work to jump to, so they have to route home
+              // first — through the locale-aware Link, which keeps the prefix.
+              const props = {
+                // The overlay stays mounted, so without this the links keep
+                // taking keyboard focus inside an aria-hidden container.
+                tabIndex: menuOpen ? 0 : -1,
+                onClick: () => setTimeout(() => setMenuOpen(false), 120),
+                initial: { opacity: 0, y: 60 },
+                animate: { opacity: 1, y: 0 },
+                exit: { opacity: 0, y: 60 },
+                transition: {
                   duration: 0.8,
                   delay: 0.18 + i * 0.07,
                   ease: EASE_OUT,
-                }}
-                className="font-display hover:text-ac flex items-baseline gap-[18px] text-[clamp(38px,8.1vw,112px)] leading-[0.94] font-extrabold tracking-[-0.045em] transition-colors"
-              >
-                <span className="text-ac font-mono text-[12px] font-normal tracking-[0.2em]">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                {t(item.id)}
-              </motion.a>
-            ))}
+                },
+                className:
+                  "font-display hover:text-ac flex items-baseline gap-[18px] text-[clamp(38px,8.1vw,112px)] leading-[0.94] font-extrabold tracking-[-0.045em] transition-colors",
+                children: (
+                  <>
+                    <span className="text-ac font-mono text-[12px] font-normal tracking-[0.2em]">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {t(item.id)}
+                  </>
+                ),
+              };
+
+              return onHome ? (
+                <motion.a key={item.id} href={item.href} {...props} />
+              ) : (
+                <MotionLink key={item.id} href={`/${item.href}`} {...props} />
+              );
+            })}
         </AnimatePresence>
       </nav>
 

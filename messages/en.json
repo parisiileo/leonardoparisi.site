@@ -4,14 +4,13 @@
     "description": "Portfolio of Leonardo Parisi, a frontend developer from Italy building dynamic, engaging interfaces with React, Next.js and modern web technologies."
   },
   "sections": {
-    "hero": "01 / INDEX",
-    "work": "02 / EXPERIENCE",
-    "projects": "03 / SELECTED",
-    "about": "04 / ABOUT",
-    "stack": "05 / STACK",
-    "playground": "06 / PLAYGROUND",
-    "testimonials": "07 / WORDS",
-    "contact": "08 / CONTACT"
+    "hero": "INDEX",
+    "work": "EXPERIENCE",
+    "process": "PROCESS",
+    "about": "ABOUT",
+    "stack": "STACK",
+    "testimonials": "WORDS",
+    "contact": "CONTACT"
   },
   "nav": {
     "label": "NAVIGATION",
@@ -19,10 +18,17 @@
     "close": "CLOSE",
     "open": "Open navigation",
     "work": "WORK",
-    "projects": "PROJECTS",
+    "process": "PROCESS",
     "about": "ABOUT",
-    "playground": "PLAYGROUND",
-    "contact": "CONTACT"
+    "contact": "CONTACT",
+    "skip": "SKIP TO CONTENT"
+  },
+  "notFound": {
+    "kicker": "ERROR 404",
+    "headingA": "Lost the",
+    "headingB": "thread.",
+    "body": "That page does not exist — it may have moved when the site became a single scroll.",
+    "cta": "BACK TO THE HOMEPAGE"
   },
   "loader": {
     "label": "LOADING PORTFOLIO"
@@ -35,23 +41,23 @@
     "kicker": "PORTFOLIO / 2026",
     "based": "BASED IN ITALY · UTC+2",
     "available": "AVAILABLE FOR WORK",
-    "intro": "Hi, I'm Leonardo. I build interfaces that move.",
+    "intro": "Ciao, sono Leonardo. Progetto interfacce che prendono vita.",
     "cta": "SEE THE WORK",
     "statYears": "YEARS SHIPPING",
     "statProjects": "PROJECTS LIVE",
-    "statTools": "TOOLS IN STACK",
     "scroll": "SCROLL"
   },
   "work": {
     "hint": "EXPERIENCE — DRAG SIDEWAYS AS YOU SCROLL",
     "headingLine1": "Work",
     "headingLine2": "Experience",
-    "lead": "Four years of client work, internships and product builds — laid out on a timeline you scroll through sideways.",
+    "lead": "Two years of client work, internships and product builds — laid out on a timeline you scroll through sideways.",
+    "visit": "VISIT SITE",
     "closing": "Your project next?",
     "cta": "GET IN TOUCH",
     "types": {
-      "internship": "INTERNSHIP",
-      "client": "CLIENT PROJECT"
+      "internship": "IN-HOUSE INTERNSHIP",
+      "client": "COMMISSIONED WORK"
     },
     "items": {
       "acs": {
@@ -72,73 +78,70 @@
       }
     }
   },
-  "projects": {
-    "headingLine1": "Selected",
-    "headingLine2": "Projects",
-    "meta": "THREE BUILDS, START TO SHIP",
-    "range": "03 — 2024/2026",
-    "visit": "VISIT SITE",
-    "shotPlaceholder": "PROJECT SHOT — 4:3",
+  "process": {
+    "headingLine1": "How I",
+    "headingLine2": "Work",
+    "meta": "FOUR STEPS, FROM FIRST MESSAGE TO LIVE SITE",
+    "range": "03 — PROCESS",
     "items": {
-      "fmshop": {
-        "category": "E-COMMERCE",
-        "desc": "A full storefront, designed and shipped solo — product catalogue, checkout, admin, and a motion layer that makes browsing feel fast."
+      "brief": {
+        "tag": "LISTENING",
+        "title": "Understanding the project",
+        "desc": "We start with a conversation: what you need, who the site is for, what it has to do. Then I put the goals, timeline and cost in writing, so we both know where we're heading.",
+        "deliverables": [
+          "Kickoff call",
+          "Goals and requirements",
+          "Quote and timeline"
+        ]
       },
-      "markz3d": {
-        "category": "3D COMMERCE",
-        "desc": "A 3D-print shop built with two teammates. I ran the frontend and pushed the interaction design past the brief."
+      "design": {
+        "tag": "STRUCTURE",
+        "title": "Structure and design",
+        "desc": "Page structure first, then the visual design in Figma. You see the screens before I write a line of code, so changes happen while they're still cheap.",
+        "deliverables": [
+          "Page structure",
+          "Figma design",
+          "Rounds of feedback"
+        ]
       },
-      "piccolaitalia": {
-        "category": "HOSPITALITY",
-        "desc": "Menu, story and contact for a restaurant that needed to look as good on a phone at the door as on a desktop."
+      "build": {
+        "tag": "BUILD",
+        "title": "Development",
+        "desc": "I build the site with Next.js, keeping an eye on speed and how it holds up on a phone. You get a preview link that stays up to date, so there are no surprises at the end.",
+        "deliverables": [
+          "Frontend development",
+          "Responsive",
+          "Always-on preview"
+        ]
+      },
+      "launch": {
+        "tag": "LAUNCH",
+        "title": "Going live",
+        "desc": "Deployment, domain and final checks on SEO and performance. Then I walk you through managing the content, and I stay available for the fixes that come up early on.",
+        "deliverables": [
+          "Deploy and domain",
+          "Basic SEO",
+          "Post-launch support"
+        ]
       }
     }
   },
   "about": {
     "kicker": "04 — ABOUT ME",
-    "headingA": "Design eye.",
-    "headingB": "Engineer's",
-    "headingC": "hands.",
-    "lead": "I'm Leonardo Parisi, a frontend developer from Italy. I build dynamic, engaging interfaces with the latest of the web — and I care about the last 10% as much as the first 90%.",
-    "secondary": "Freelance client work, an internship in IT security, and a steady habit of rebuilding things until they feel right. Motion isn't decoration here — it's how the interface explains itself.",
-    "statStarted": "STARTED CODING",
-    "statSelfDriven": "SELF-DRIVEN",
+    "headingA": "I build interfaces.",
+    "headingB": "and I mind",
+    "headingC": "the details.",
+    "lead": "I'm Leonardo Parisi, a frontend developer from Italy. I work mostly with React and Next.js, on websites and interfaces — from design through to build.",
+    "secondary": "So far: a handful of client jobs, an internship in IT and security, and a lot of hours spent redoing things until they work the way they should. Still learning, and that suits me fine.",
+    "statStarted": "ON THE WEB SINCE",
+    "statReply": "REPLY TIME",
     "statBased": "BASED IN ITALY",
     "figCaption": "FIG. 01 — LEONARDO PARISI",
     "photoAlt": "Leonardo Parisi"
   },
   "stack": {
     "heading": "The Stack",
-    "meta": "14 TOOLS · DAILY DRIVERS FIRST"
-  },
-  "playground": {
-    "heading": "Playground",
-    "meta": "EXPERIMENTS, SHADERS AND THINGS THAT BROKE",
-    "notice": "NOT PUBLIC YET — LINKS COMING",
-    "categories": {
-      "WEBGL": "WEBGL",
-      "TYPE": "TYPE",
-      "3D": "3D",
-      "AUDIO": "AUDIO"
-    },
-    "items": {
-      "shaders": {
-        "title": "Shader garden",
-        "subtitle": "GLSL · noise fields"
-      },
-      "variableFont": {
-        "title": "Variable font toy",
-        "subtitle": "Canvas · axes on scroll"
-      },
-      "three": {
-        "title": "Three.js showcase",
-        "subtitle": "Rotating project scene"
-      },
-      "waveform": {
-        "title": "Waveform UI",
-        "subtitle": "Web Audio · analyser"
-      }
-    }
+    "meta": "18 TOOLS · DAILY DRIVERS FIRST"
   },
   "testimonials": {
     "heading": "Kind words",
@@ -184,12 +187,268 @@
       "statusSending": "SENDING…",
       "statusSent": "THANKS, {name}. I'LL REPLY WITHIN 24H.",
       "statusMailto": "OPENING YOUR MAIL APP — THANKS, {name}.",
-      "statusError": "SOMETHING WENT WRONG — EMAIL ME DIRECTLY."
+      "statusError": "SOMETHING WENT WRONG — EMAIL ME DIRECTLY.",
+      "consent": "By sending this you agree to your data being handled as described in the <link>Privacy Policy</link>."
     }
   },
   "footer": {
     "copyright": "© 2026 — BUILT IN ITALY",
     "backToTop": "BACK TO TOP",
-    "vat": "VAT"
+    "vat": "VAT",
+    "legal": "LEGAL",
+    "privacy": "PRIVACY",
+    "cookie": "COOKIES",
+    "terms": "TERMS"
+  },
+  "legal": {
+    "meta": {
+      "kicker": "LEGAL",
+      "updatedLabel": "LAST UPDATED",
+      "back": "BACK TO THE SITE",
+      "contactHeading": "Contact",
+      "contactBody": "Leonardo Parisi — VAT 03356630214 · Via Palermo 46, 39100 Bolzano (BZ), Italy · Email parisii.leonardo@gmail.com · Certified email parisileonardo15@pec.it"
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "updated": "2 August 2026",
+      "intro": "This page explains which personal data I collect through imleo.it, why I collect it and what rights you have. It is the notice required by Articles 13 and 14 of Regulation (EU) 2016/679 (GDPR).",
+      "sections": [
+        {
+          "heading": "Data controller",
+          "body": [
+            "The data controller is Leonardo Parisi, VAT number 03356630214, established at Via Palermo 46, 39100 Bolzano (BZ), Italy, working as a freelance developer.",
+            "You can reach me at any time at parisii.leonardo@gmail.com or by certified email at parisileonardo15@pec.it. No Data Protection Officer has been appointed, as the legal conditions requiring one do not apply."
+          ]
+        },
+        {
+          "heading": "Data I collect",
+          "body": [
+            "I only collect what I need to reply to you and to keep the site running. There are no accounts, no newsletter, no profiling and no sale of data to third parties."
+          ],
+          "list": [
+            "What you type into the contact form: name, email address, the project type you picked and the text of your message.",
+            "The language you were browsing in, stored with the message so I can reply in your language.",
+            "Technical details of the request: an encrypted version (SHA-256 hash with a secret key) of your IP address, used only to count submissions in quick succession and block abuse. The plain IP address is never kept.",
+            "Technical logs generated automatically by the hosting provider for security and diagnostics.",
+            "Aggregated, anonymous traffic statistics, collected without cookies and without persistent identifiers."
+          ]
+        },
+        {
+          "heading": "Why I process it, and on what legal basis",
+          "list": [
+            "To answer enquiries sent through the form or by email, and to prepare a quote where relevant: pre-contractual measures taken at your request, Art. 6(1)(b) GDPR.",
+            "To protect the site from automated submissions and abuse, through rate limiting and an anti-bot honeypot field: legitimate interest, Art. 6(1)(f) GDPR.",
+            "To understand in aggregate which pages work, with no cookies and no profiling: legitimate interest, Art. 6(1)(f) GDPR.",
+            "To meet tax and legal obligations, should the enquiry turn into an engagement: legal obligation, Art. 6(1)(c) GDPR."
+          ]
+        },
+        {
+          "heading": "How long I keep it",
+          "list": [
+            "Messages received through the form: they arrive in my mailbox and stay there for up to 24 months from our last exchange, then they are deleted. If the enquiry becomes an engagement, the data required by accounting and tax rules is kept for 10 years.",
+            "Anti-abuse data tied to rate limiting: it lives in the server's temporary memory for a few minutes and is never stored anywhere.",
+            "System logs held by the hosting provider: for their own technical retention period, usually a few days."
+          ]
+        },
+        {
+          "heading": "Who processes data on my behalf",
+          "body": [
+            "A few selected providers keep the site running. They act as processors under Art. 28 GDPR. Data is not disclosed to anyone else and is never published."
+          ],
+          "list": [
+            "Vercel Inc. — website hosting and content delivery network.",
+            "Resend (Plus Five Five, Inc.) — the service that delivers the email generated by the form to my mailbox.",
+            "Google Ireland Ltd. — provider of the mailbox where I receive and keep your messages.",
+            "Public authorities, where disclosure is required by law."
+          ]
+        },
+        {
+          "heading": "Transfers outside the European Union",
+          "body": [
+            "Some providers are based in the United States. Transfers rely on the Standard Contractual Clauses approved by the European Commission and, where applicable, on the provider's certification under the EU-U.S. Data Privacy Framework, together with supplementary measures such as encryption in transit."
+          ]
+        },
+        {
+          "heading": "Cookies and analytics",
+          "body": [
+            "The site uses strictly technical cookies only, which do not require prior consent under Art. 122 of the Italian Privacy Code — which is why you see no banner. Traffic statistics are collected in aggregate, without cookies and without persistent identifiers.",
+            "Typefaces are served directly from this site: your browser makes no request to Google servers to display them.",
+            "The full detail is in the Cookie Policy."
+          ]
+        },
+        {
+          "heading": "Your rights",
+          "body": [
+            "You can exercise the rights granted by Articles 15-22 GDPR at any time by writing to the addresses above. I reply within 30 days."
+          ],
+          "list": [
+            "Access the data concerning you and obtain a copy of it.",
+            "Ask for it to be corrected if it is inaccurate or incomplete.",
+            "Ask for it to be erased — for instance once a message is no longer needed.",
+            "Ask for processing to be restricted, or object to processing based on legitimate interest.",
+            "Receive your data in a structured, machine-readable format (portability).",
+            "Lodge a complaint with the Italian Data Protection Authority (garanteprivacy.it), or your local supervisory authority, if you believe the processing breaches the law."
+          ]
+        },
+        {
+          "heading": "Security",
+          "body": [
+            "The site is served over encrypted HTTPS only. Messages are stored in no database: they travel from the form straight to my mailbox, which is protected by a password and two-step verification. Service keys stay on the server and are never part of the code sent to your browser. Your IP address is only ever handled in an encrypted, non-reversible form."
+          ]
+        },
+        {
+          "heading": "Children",
+          "body": [
+            "The site addresses professionals and companies and is not intended for children under 14. I do not knowingly collect data from children: if you notice that this has happened, write to me and I will delete it."
+          ]
+        },
+        {
+          "heading": "Automated decision-making",
+          "body": [
+            "There is no profiling and no automated decision-making producing legal effects concerning you."
+          ]
+        },
+        {
+          "heading": "Changes to this notice",
+          "body": [
+            "If the site changes tools or purposes, I update this page along with the last-updated date at the top. It is worth re-reading it from time to time."
+          ]
+        }
+      ]
+    },
+    "cookie": {
+      "title": "Cookie Policy",
+      "updated": "2 August 2026",
+      "intro": "This site uses the bare minimum: no profiling cookies, no third-party cookies, no banner to dismiss. Below is the complete list of what gets stored on your device, and why.",
+      "sections": [
+        {
+          "heading": "What cookies are",
+          "body": [
+            "Cookies are small text files a site stores on your device to remember something between pages. They are called technical when they make the site work or remember a choice you made, and profiling cookies when they build a picture of your interests. This site only uses the former."
+          ]
+        },
+        {
+          "heading": "Cookies in use",
+          "list": [
+            "NEXT_LOCALE — technical preference cookie. Remembers the language you picked so you do not have to choose it again. Duration: 1 year. Origin: first party (imleo.it). It is the only cookie this site sets."
+          ]
+        },
+        {
+          "heading": "Why there is no consent banner",
+          "body": [
+            "Technical and preference cookies are exempt from prior consent under Art. 122 of the Italian Privacy Code and the Italian DPA's cookie guidelines of 8 July 2021. Since the site installs no profiling cookies and no third-party tracking, there is nothing to ask consent for: this notice is enough."
+          ]
+        },
+        {
+          "heading": "Traffic statistics",
+          "body": [
+            "I use Vercel Web Analytics and Vercel Speed Insights to know how many visits the site gets and how fast it is. Both work without cookies and without persistent identifiers: they build no profile, they do not follow you across sites, and the data is aggregated.",
+            "There is no Google Analytics, no advertising pixel, no heatmap and no tracking social button."
+          ]
+        },
+        {
+          "heading": "Third-party content",
+          "body": [
+            "The site embeds no videos, maps, calendars or external widgets. Typefaces are downloaded and served directly from imleo.it, so your browser never contacts Google servers to render the page.",
+            "Links to GitHub, LinkedIn, X, Instagram and Discord are plain links: nothing loads until you open them yourself."
+          ]
+        },
+        {
+          "heading": "Managing or deleting cookies",
+          "body": [
+            "You can delete stored cookies and block future ones from your browser preferences, usually under Privacy and security in Chrome, Firefox, Safari or Edge.",
+            "Blocking technical cookies does not stop you browsing: you only lose the saved language, which goes back to the one your browser reports."
+          ]
+        },
+        {
+          "heading": "Changes to this policy",
+          "body": [
+            "Should I ever add tools that require consent, this page will be updated and a banner with prior script blocking will appear. Until then, what is written here is the complete list."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "updated": "2 August 2026",
+      "intro": "These terms govern access to and use of imleo.it. By browsing the site you accept them. They do not govern professional engagements, which arise from a separate written quote accepted by both parties.",
+      "sections": [
+        {
+          "heading": "Site owner",
+          "body": [
+            "The site is run by Leonardo Parisi, VAT number 03356630214, a freelance developer established at Via Palermo 46, 39100 Bolzano (BZ), Italy. Contact: parisii.leonardo@gmail.com — certified email parisileonardo15@pec.it."
+          ]
+        },
+        {
+          "heading": "What this site is",
+          "body": [
+            "imleo.it is a showcase: it presents experience, working method and skills, and offers a form to get in touch. It sells nothing online and requires no account."
+          ]
+        },
+        {
+          "heading": "Acceptable use",
+          "body": [
+            "You may read, save and share these pages for personal or professional use. Please do not:"
+          ],
+          "list": [
+            "use the contact form for automated submissions, unsolicited advertising or unlawful content;",
+            "attempt to reach private areas, circumvent rate limiting or otherwise compromise the security of the site;",
+            "harvest the content in bulk with automated tools, beyond ordinary search-engine indexing;",
+            "reproduce the site or substantial parts of it to build a competing one."
+          ]
+        },
+        {
+          "heading": "Intellectual property",
+          "body": [
+            "Text, graphics, illustrations, source code, structure and layout of the site are mine and protected by copyright law. No licence is granted by implication.",
+            "Client names, trademarks and logos belong to their respective owners and appear solely to describe work carried out. The cases shown are published with the clients' consent or concern information that is already public."
+          ]
+        },
+        {
+          "heading": "Content and availability",
+          "body": [
+            "I take care to keep the published information current, but I do not guarantee that it is always complete or free of errors, nor that the site will be reachable without interruption. The service is provided “as is” and I may change, suspend or discontinue it at any time."
+          ]
+        },
+        {
+          "heading": "Limitation of liability",
+          "body": [
+            "To the extent permitted by law, I am not liable for damages arising from the use or the inability to use the site, from service interruptions, or from reliance on published information. Liability for wilful misconduct and gross negligence, and any mandatory consumer rights, remain unaffected."
+          ]
+        },
+        {
+          "heading": "Links to external sites",
+          "body": [
+            "The site links to third-party sites, including client work and social profiles. I have no control over their content or their data practices: once you open them, their own terms and notices apply."
+          ]
+        },
+        {
+          "heading": "Enquiries and quotes",
+          "body": [
+            "Information on the site and replies to enquiries are not a binding contractual offer. A professional relationship only starts with a written quote accepted by both parties, setting out scope, timing, cost and conditions.",
+            "Indicative response times, availability and any figures mentioned on the site are informational only."
+          ]
+        },
+        {
+          "heading": "Personal data",
+          "body": [
+            "Data you send through the contact form is processed as described in the Privacy Policy, which forms an integral part of these terms."
+          ]
+        },
+        {
+          "heading": "Changes to these terms",
+          "body": [
+            "I may update these terms to reflect changes to the site or to the law. The applicable version is the one published on this page, with the last-updated date shown at the top."
+          ]
+        },
+        {
+          "heading": "Governing law and jurisdiction",
+          "body": [
+            "These terms are governed by Italian law. For disputes with parties acting in the course of their business or profession, the courts of Bolzano, Italy, have exclusive jurisdiction.",
+            "If you are a consumer, the courts of your place of residence or domicile remain competent, and you may use the European online dispute resolution platform at ec.europa.eu/consumers/odr."
+          ]
+        }
+      ]
+    }
   }
 }

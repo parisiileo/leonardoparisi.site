@@ -3,7 +3,6 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Archivo, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { notFound } from "next/navigation";
 import Cursor from "@/components/layout/Cursor";
 import Header from "@/components/layout/Header";
@@ -12,6 +11,7 @@ import MenuOverlay from "@/components/layout/MenuOverlay";
 import SectionTracker from "@/components/layout/SectionTracker";
 import UIProvider from "@/components/layout/UIProvider";
 import { type Locale, routing } from "@/i18n/routing";
+import { fontVars } from "@/lib/fonts";
 import {
   generatePersonSchema,
   generateWebsiteSchema,
@@ -19,25 +19,6 @@ import {
   SEO_CONFIG,
 } from "@/lib/seo";
 import "@/styles/global.css";
-
-const archivo = Archivo({
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-  variable: "--font-archivo",
-  display: "swap",
-});
-
-const grotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-grotesk",
-  display: "swap",
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains",
-  display: "swap",
-});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -70,12 +51,10 @@ export async function generateMetadata({
     authors: [{ name: SEO_CONFIG.author, url: SEO_CONFIG.baseUrl }],
     creator: SEO_CONFIG.author,
     publisher: SEO_CONFIG.author,
-    manifest: "/site.webmanifest",
-    icons: {
-      icon: "/favicon.ico",
-      shortcut: "/favicon.ico",
-      apple: "/apple-touch-icon.png",
-    },
+    // The manifest and every icon come from file conventions
+    // (app/manifest.ts, app/icon.tsx, app/apple-icon.tsx, app/favicon.ico),
+    // so Next injects the tags itself. Declaring them here would override
+    // the generated routes and reintroduce the missing-file 404s.
     appleWebApp: {
       capable: true,
       statusBarStyle: "black-translucent",
@@ -95,9 +74,13 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: url,
-      languages: Object.fromEntries(
-        routing.locales.map((code) => [code, localeUrl(code)]),
-      ),
+      languages: {
+        ...Object.fromEntries(
+          routing.locales.map((code) => [code, localeUrl(code)]),
+        ),
+        // Where to send a visitor whose language matches none of the four.
+        "x-default": localeUrl(routing.defaultLocale),
+      },
     },
     openGraph: {
       type: "website",
@@ -139,12 +122,10 @@ export default async function LocaleLayout({
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale as Locale);
+  const t = await getTranslations("nav");
 
   return (
-    <html
-      lang={locale}
-      className={`${archivo.variable} ${grotesk.variable} ${jetbrains.variable}`}
-    >
+    <html lang={locale} className={fontVars}>
       <head>
         <script
           type="application/ld+json"
@@ -164,12 +145,20 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider>
           <UIProvider>
+            {/* First stop for keyboard and screen-reader users: the header and
+                the overlay menu sit before the content in the DOM. */}
+            <a
+              href="#main"
+              className="focus:bg-ac focus:text-ac-t sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-300 focus:rounded-full focus:px-5 focus:py-3 focus:font-mono focus:text-[12px] focus:tracking-[0.18em]"
+            >
+              {t("skip")}
+            </a>
             <Loader />
             <Cursor />
             <Header />
             <MenuOverlay />
             <SectionTracker />
-            <main>{children}</main>
+            <main id="main">{children}</main>
           </UIProvider>
         </NextIntlClientProvider>
         <Analytics />
