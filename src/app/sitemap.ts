@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { LEGAL_PATHS } from "@/lib/legal";
-import { localeUrl } from "@/lib/seo";
+import { languageAlternates, localeUrl, SEO_CONFIG } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -13,14 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
     changeFrequency: "weekly" as const,
     priority: locale === routing.defaultLocale ? 1 : 0.8,
-    alternates: {
-      languages: {
-        ...Object.fromEntries(
-          routing.locales.map((code) => [code, localeUrl(code)]),
-        ),
-        "x-default": localeUrl(routing.defaultLocale),
-      },
-    },
+    alternates: { languages: languageAlternates() },
+    // Gives the share card a shot at Google Images for "Leonardo Parisi".
+    images: [`${SEO_CONFIG.baseUrl}/opengraph-image`],
   }));
 
   // The legal pages change rarely and should never compete with the portfolio
@@ -31,14 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "yearly" as const,
       priority: 0.3,
-      alternates: {
-        languages: {
-          ...Object.fromEntries(
-            routing.locales.map((code) => [code, `${localeUrl(code)}/${slug}`]),
-          ),
-          "x-default": `${localeUrl(routing.defaultLocale)}/${slug}`,
-        },
-      },
+      alternates: { languages: languageAlternates(`/${slug}`) },
     })),
   );
 

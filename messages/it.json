@@ -1,7 +1,13 @@
 {
   "meta": {
-    "title": "Leonardo Parisi — Frontend Developer",
-    "description": "Portfolio di Leonardo Parisi, frontend developer italiano: interfacce dinamiche e coinvolgenti con React, Next.js e le tecnologie web più recenti."
+    "title": "Leonardo Parisi — Sviluppatore Front-End a Bolzano",
+    "description": "Sviluppatore front-end a Bolzano: siti web e interfacce veloci e accessibili con React, Next.js e TypeScript. Realizzazione siti web in Alto Adige.",
+    "jobTitle": "Sviluppatore Front-End",
+    "businessName": "Leonardo Parisi — Sviluppatore Front-End, Bolzano",
+    "keywords": "sviluppatore front-end Bolzano, sviluppatore web Bolzano, creazione siti web Bolzano, realizzazione siti internet Alto Adige, web designer Bolzano, programmatore React Bolzano, sviluppatore Next.js Italia, Leonardo Parisi",
+    "ogHeadline": "FRONT–END",
+    "ogHeadlineItalic": "Developer",
+    "ogTagline": "Siti web e interfacce — Bolzano, Italia"
   },
   "sections": {
     "hero": "INDICE",
@@ -34,18 +40,19 @@
     "label": "CARICAMENTO PORTFOLIO"
   },
   "common": {
-    "italy": "ITALIA",
+    "italy": "BOLZANO",
     "language": "Lingua"
   },
   "hero": {
     "kicker": "PORTFOLIO / 2026",
-    "based": "CON BASE IN ITALIA · UTC+2",
+    "based": "DA BOLZANO, ITALIA · UTC+2",
     "available": "DISPONIBILE PER LAVORO",
     "intro": "Ciao, sono Leonardo. Progetto interfacce che prendono vita.",
     "cta": "GUARDA I LAVORI",
     "statYears": "ANNI DI PROGETTI",
     "statProjects": "PROGETTI ONLINE",
-    "scroll": "SCORRI"
+    "scroll": "SCORRI",
+    "h1": "Leonardo Parisi — Sviluppatore Front-End a Bolzano"
   },
   "work": {
     "hint": "ESPERIENZA — SCORRI DI LATO",
@@ -131,11 +138,11 @@
     "headingA": "Costruisco interfacce.",
     "headingB": "e curo",
     "headingC": "i dettagli.",
-    "lead": "Sono Leonardo Parisi, frontend developer italiano. Lavoro soprattutto con React e Next.js, su siti e interfacce — dal design allo sviluppo.",
+    "lead": "Sono Leonardo Parisi, sviluppatore front-end a Bolzano. Lavoro soprattutto con React e Next.js, su siti web e interfacce — dal design fino allo sviluppo.",
     "secondary": "Finora: qualche lavoro per clienti, un tirocinio in ambito IT e sicurezza, e parecchie ore passate a rifare le cose finché non funzionano come dovrebbero. Sto ancora imparando, e va bene così.",
     "statStarted": "NEL WEB DAL",
     "statReply": "TEMPO DI RISPOSTA",
-    "statBased": "CON BASE IN ITALIA",
+    "statBased": "SEDE A BOLZANO",
     "figCaption": "FIG. 01 — LEONARDO PARISI",
     "photoAlt": "Leonardo Parisi"
   },
@@ -155,7 +162,7 @@
   "availability": {
     "one": "Disponibile per lavoro",
     "two": "Freelance e contratto",
-    "three": "In Italia, remoto ovunque"
+    "three": "A Bolzano, da remoto ovunque"
   },
   "contact": {
     "kicker": "08 — PARLIAMONE",

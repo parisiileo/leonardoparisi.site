@@ -13,8 +13,8 @@ import UIProvider from "@/components/layout/UIProvider";
 import { type Locale, routing } from "@/i18n/routing";
 import { fontVars } from "@/lib/fonts";
 import {
-  generatePersonSchema,
-  generateWebsiteSchema,
+  generateGraph,
+  languageAlternates,
   localeUrl,
   SEO_CONFIG,
 } from "@/lib/seo";
@@ -33,6 +33,14 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+/** Open Graph wants the underscored form, not the bare language code. */
+const OG_LOCALES: Record<string, string> = {
+  en: "en_GB",
+  it: "it_IT",
+  de: "de_DE",
+  es: "es_ES",
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -41,16 +49,19 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
   const url = localeUrl(locale);
-  const ogImage = `${SEO_CONFIG.baseUrl}/api/og`;
 
   return {
     metadataBase: new URL(SEO_CONFIG.baseUrl),
     title: { default: t("title"), template: "%s | Leonardo Parisi" },
     description: t("description"),
-    keywords: SEO_CONFIG.keywords,
+    applicationName: "Leonardo Parisi",
+    keywords: t("keywords")
+      .split(",")
+      .map((k) => k.trim()),
     authors: [{ name: SEO_CONFIG.author, url: SEO_CONFIG.baseUrl }],
     creator: SEO_CONFIG.author,
     publisher: SEO_CONFIG.author,
+    category: "technology",
     // The manifest and every icon come from file conventions
     // (app/manifest.ts, app/icon.tsx, app/apple-icon.tsx, app/favicon.ico),
     // so Next injects the tags itself. Declaring them here would override
@@ -74,29 +85,25 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: url,
-      languages: {
-        ...Object.fromEntries(
-          routing.locales.map((code) => [code, localeUrl(code)]),
-        ),
-        // Where to send a visitor whose language matches none of the four.
-        "x-default": localeUrl(routing.defaultLocale),
-      },
+      // `x-default` inside: where to send a visitor whose language matches
+      // none of the four.
+      languages: languageAlternates(),
     },
     openGraph: {
-      type: "website",
-      locale,
+      type: "profile",
+      firstName: "Leonardo",
+      lastName: "Parisi",
+      username: "imleo",
+      locale: OG_LOCALES[locale] ?? locale,
+      alternateLocale: routing.locales
+        .filter((code) => code !== locale)
+        .map((code) => OG_LOCALES[code]),
       url,
       siteName: "Leonardo Parisi",
       title: t("title"),
       description: t("description"),
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: "Leonardo Parisi — Frontend Developer",
-        },
-      ],
+      // No `images` key on purpose: app/[locale]/opengraph-image.tsx supplies
+      // it, and anything listed here would replace that pre-rendered card.
     },
     twitter: {
       card: "summary_large_image",
@@ -104,11 +111,25 @@ export async function generateMetadata({
       description: t("description"),
       site: SEO_CONFIG.twitter,
       creator: SEO_CONFIG.twitter,
-      images: [ogImage],
     },
-    ...(process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION && {
-      verification: { google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION },
-    }),
+    verification: {
+      ...(process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION && {
+        google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+      }),
+      ...(process.env.NEXT_PUBLIC_YANDEX_VERIFICATION && {
+        yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
+      }),
+      ...(process.env.NEXT_PUBLIC_BING_VERIFICATION && {
+        other: { "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION },
+      }),
+    },
+    other: {
+      // Read by a few regional crawlers and by Bing for local intent.
+      "geo.region": "IT-BZ",
+      "geo.placename": "Bolzano",
+      "geo.position": `${SEO_CONFIG.geo.latitude};${SEO_CONFIG.geo.longitude}`,
+      ICBM: `${SEO_CONFIG.geo.latitude}, ${SEO_CONFIG.geo.longitude}`,
+    },
   };
 }
 
@@ -123,22 +144,22 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale as Locale);
   const t = await getTranslations("nav");
+  const meta = await getTranslations("meta");
+
+  const graph = generateGraph({
+    locale,
+    title: meta("title"),
+    description: meta("description"),
+    jobTitle: meta("jobTitle"),
+    businessName: meta("businessName"),
+  });
 
   return (
     <html lang={locale} className={fontVars}>
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generatePersonSchema()),
-          }}
-          suppressHydrationWarning
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateWebsiteSchema()),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
           suppressHydrationWarning
         />
       </head>

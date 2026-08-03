@@ -1,5 +1,7 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { LEGAL_PATHS } from "@/lib/legal";
+import { generateLegalGraph, SEO_CONFIG } from "@/lib/seo";
 
 /**
  * Shared shell for the privacy, cookie and terms pages.
@@ -21,9 +23,23 @@ export default async function LegalPage({ doc }: { doc: LegalDoc }) {
   const t = await getTranslations(`legal.${doc}`);
   const tMeta = await getTranslations("legal.meta");
   const sections = t.raw("sections") as Section[];
+  const locale = await getLocale();
+
+  const graph = generateLegalGraph({
+    locale,
+    slug: LEGAL_PATHS[doc],
+    title: t("title"),
+    description: t("intro"),
+    homeLabel: SEO_CONFIG.author,
+  });
 
   return (
-    <main className="bg-bg mx-auto flex w-full max-w-[820px] flex-col gap-[clamp(30px,5vh,52px)] px-[clamp(16px,4vw,40px)] pt-[clamp(90px,14vh,150px)] pb-[clamp(60px,10vh,120px)]">
+    <article className="bg-bg mx-auto flex w-full max-w-[820px] flex-col gap-[clamp(30px,5vh,52px)] px-[clamp(16px,4vw,40px)] pt-[clamp(90px,14vh,150px)] pb-[clamp(60px,10vh,120px)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
+        suppressHydrationWarning
+      />
       <header className="border-line flex flex-col gap-4 border-b pb-[clamp(22px,4vh,38px)]">
         <span className="text-ac font-mono text-[11px] tracking-[0.22em]">
           {tMeta("kicker")}
@@ -88,6 +104,6 @@ export default async function LegalPage({ doc }: { doc: LegalDoc }) {
           ← {tMeta("back")}
         </Link>
       </footer>
-    </main>
+    </article>
   );
 }

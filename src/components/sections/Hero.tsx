@@ -118,7 +118,10 @@ export default function Hero() {
           className="font-display m-0 flex flex-wrap overflow-hidden text-[clamp(52px,11.9vw,193px)] leading-[0.82] font-black tracking-[-0.055em] uppercase"
           style={maskShift}
         >
-          <span className="sr-only">Front–End {ROLE}</span>
+          {/* The animated letters are aria-hidden, so this is the real H1 —
+              spelled out with the name and the city rather than the two words
+              the layout can fit. */}
+          <span className="sr-only">{t("h1")}</span>
           {HEADLINE.map((char, i) => (
             <motion.span
               key={`${char}-${i}`}

@@ -1,7 +1,13 @@
 {
   "meta": {
-    "title": "Leonardo Parisi — Desarrollador Frontend",
-    "description": "Portfolio de Leonardo Parisi, desarrollador frontend de Italia: interfaces dinámicas y atractivas con React, Next.js y las tecnologías web más recientes."
+    "title": "Leonardo Parisi — Desarrollador Front-End en Bolzano, Italia",
+    "description": "Desarrollador front-end italiano en Bolzano: sitios web e interfaces rápidas y accesibles con React, Next.js y TypeScript.",
+    "jobTitle": "Desarrollador Front-End",
+    "businessName": "Leonardo Parisi — Desarrollador Front-End, Bolzano",
+    "keywords": "desarrollador front-end Bolzano, desarrollador web Italia, desarrollador React, desarrollador Next.js, diseño web Bolzano, Leonardo Parisi",
+    "ogHeadline": "FRONT–END",
+    "ogHeadlineItalic": "Developer",
+    "ogTagline": "Webs e interfaces — Bolzano, Italia"
   },
   "sections": {
     "hero": "ÍNDICE",
@@ -34,18 +40,19 @@
     "label": "CARGANDO PORTFOLIO"
   },
   "common": {
-    "italy": "ITALIA",
+    "italy": "BOLZANO",
     "language": "Idioma"
   },
   "hero": {
     "kicker": "PORTFOLIO / 2026",
-    "based": "CON BASE EN ITALIA · UTC+2",
+    "based": "CON BASE EN BOLZANO, ITALIA · UTC+2",
     "available": "DISPONIBLE PARA TRABAJAR",
     "intro": "Hola, soy Leonardo. Construyo interfaces que se mueven.",
     "cta": "VER LOS TRABAJOS",
     "statYears": "AÑOS PUBLICANDO",
     "statProjects": "PROYECTOS ONLINE",
-    "scroll": "DESLIZA"
+    "scroll": "DESLIZA",
+    "h1": "Leonardo Parisi — Desarrollador Front-End en Bolzano, Italia"
   },
   "work": {
     "hint": "EXPERIENCIA — DESLIZA DE LADO",
@@ -131,11 +138,11 @@
     "headingA": "Construyo interfaces.",
     "headingB": "y cuido",
     "headingC": "los detalles.",
-    "lead": "Soy Leonardo Parisi, desarrollador frontend de Italia. Trabajo sobre todo con React y Next.js, en sitios web e interfaces — del diseño al desarrollo.",
+    "lead": "Soy Leonardo Parisi, desarrollador front-end en Bolzano, Italia. Trabajo sobre todo con React y Next.js, en sitios web e interfaces — del diseño al desarrollo.",
     "secondary": "Hasta ahora: algunos trabajos para clientes, unas prácticas en IT y seguridad, y muchas horas rehaciendo cosas hasta que funcionan como deben. Sigo aprendiendo, y me parece bien.",
     "statStarted": "EN LA WEB DESDE",
     "statReply": "TIEMPO DE RESPUESTA",
-    "statBased": "CON BASE EN ITALIA",
+    "statBased": "CON BASE EN BOLZANO",
     "figCaption": "FIG. 01 — LEONARDO PARISI",
     "photoAlt": "Leonardo Parisi"
   },
@@ -155,7 +162,7 @@
   "availability": {
     "one": "Disponible para trabajar",
     "two": "Freelance y contrato",
-    "three": "En Italia, remoto donde sea"
+    "three": "En Bolzano, remoto donde sea"
   },
   "contact": {
     "kicker": "08 — HABLEMOS",

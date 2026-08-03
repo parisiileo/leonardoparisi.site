@@ -1,7 +1,13 @@
 {
   "meta": {
-    "title": "Leonardo Parisi — Frontend-Entwickler",
-    "description": "Portfolio von Leonardo Parisi, Frontend-Entwickler aus Italien: dynamische, packende Interfaces mit React, Next.js und modernen Web-Technologien."
+    "title": "Leonardo Parisi — Frontend-Entwickler in Bozen (Südtirol)",
+    "description": "Frontend-Entwickler in Bozen, Südtirol: schnelle, barrierefreie Websites und Interfaces mit React, Next.js und TypeScript. Webentwicklung aus Südtirol.",
+    "jobTitle": "Frontend-Entwickler",
+    "businessName": "Leonardo Parisi — Frontend-Entwickler, Bozen",
+    "keywords": "Frontend-Entwickler Bozen, Webentwickler Bozen, Webentwicklung Südtirol, Website erstellen Bozen, Webdesign Südtirol, React Entwickler Bozen, Next.js Entwickler Italien, Leonardo Parisi",
+    "ogHeadline": "FRONT–END",
+    "ogHeadlineItalic": "Developer",
+    "ogTagline": "Websites & Interfaces — Bozen, Südtirol"
   },
   "sections": {
     "hero": "INDEX",
@@ -34,18 +40,19 @@
     "label": "PORTFOLIO WIRD GELADEN"
   },
   "common": {
-    "italy": "ITALIEN",
+    "italy": "BOZEN",
     "language": "Sprache"
   },
   "hero": {
     "kicker": "PORTFOLIO / 2026",
-    "based": "SITZ IN ITALIEN · UTC+2",
+    "based": "SITZ IN BOZEN, SÜDTIROL · UTC+2",
     "available": "VERFÜGBAR FÜR PROJEKTE",
     "intro": "Hi, ich bin Leonardo. Ich baue Interfaces, die sich bewegen.",
     "cta": "ARBEITEN ANSEHEN",
     "statYears": "JAHRE IM EINSATZ",
     "statProjects": "PROJEKTE LIVE",
-    "scroll": "SCROLLEN"
+    "scroll": "SCROLLEN",
+    "h1": "Leonardo Parisi — Frontend-Entwickler in Bozen, Südtirol"
   },
   "work": {
     "hint": "ERFAHRUNG — SEITLICH SCROLLEN",
@@ -131,11 +138,11 @@
     "headingA": "Ich baue Interfaces.",
     "headingB": "und achte auf",
     "headingC": "die Details.",
-    "lead": "Ich bin Leonardo Parisi, Frontend-Entwickler aus Italien. Ich arbeite vor allem mit React und Next.js, an Websites und Interfaces — vom Design bis zur Umsetzung.",
+    "lead": "Ich bin Leonardo Parisi, Frontend-Entwickler in Bozen, Südtirol. Ich arbeite vor allem mit React und Next.js, an Websites und Interfaces — vom Design bis zur Umsetzung.",
     "secondary": "Bisher: ein paar Kundenprojekte, ein Praktikum in IT und Sicherheit, und viele Stunden damit verbracht, Dinge neu zu machen, bis sie so laufen, wie sie sollen. Ich lerne noch — und das ist gut so.",
     "statStarted": "IM WEB SEIT",
     "statReply": "ANTWORTZEIT",
-    "statBased": "SITZ IN ITALIEN",
+    "statBased": "SITZ IN BOZEN",
     "figCaption": "ABB. 01 — LEONARDO PARISI",
     "photoAlt": "Leonardo Parisi"
   },
@@ -155,7 +162,7 @@
   "availability": {
     "one": "Verfügbar für Projekte",
     "two": "Freelance & Vertrag",
-    "three": "In Italien, remote überall"
+    "three": "In Bozen, remote überall"
   },
   "contact": {
     "kicker": "08 — SPRECHEN WIR",
