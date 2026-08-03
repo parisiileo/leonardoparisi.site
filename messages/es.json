@@ -138,17 +138,14 @@
     "headingA": "Construyo interfaces.",
     "headingB": "y cuido",
     "headingC": "los detalles.",
-    "lead": "Soy Leonardo Parisi, desarrollador front-end en Bolzano, Italia. Trabajo sobre todo con React y Next.js, en sitios web e interfaces — del diseño al desarrollo.",
-    "secondary": "Hasta ahora: algunos trabajos para clientes, unas prácticas en IT y seguridad, y muchas horas rehaciendo cosas hasta que funcionan como deben. Sigo aprendiendo, y me parece bien.",
+    "lead": "Soy Leonardo Parisi, desarrollador front-end. Trabajo sobre todo con React y Next.js, en sitios web, apps e interfaces.",
     "statStarted": "EN LA WEB DESDE",
     "statReply": "TIEMPO DE RESPUESTA",
     "statBased": "CON BASE EN BOLZANO",
-    "figCaption": "FIG. 01 — LEONARDO PARISI",
     "photoAlt": "Leonardo Parisi"
   },
   "stack": {
-    "heading": "El Stack",
-    "meta": "18 HERRAMIENTAS · LAS DIARIAS PRIMERO"
+    "heading": "El Stack"
   },
   "testimonials": {
     "heading": "Buenas palabras",

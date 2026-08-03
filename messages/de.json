@@ -138,17 +138,14 @@
     "headingA": "Ich baue Interfaces.",
     "headingB": "und achte auf",
     "headingC": "die Details.",
-    "lead": "Ich bin Leonardo Parisi, Frontend-Entwickler in Bozen, Südtirol. Ich arbeite vor allem mit React und Next.js, an Websites und Interfaces — vom Design bis zur Umsetzung.",
-    "secondary": "Bisher: ein paar Kundenprojekte, ein Praktikum in IT und Sicherheit, und viele Stunden damit verbracht, Dinge neu zu machen, bis sie so laufen, wie sie sollen. Ich lerne noch — und das ist gut so.",
+    "lead": "Ich bin Leonardo Parisi, Frontend-Entwickler. Ich arbeite vor allem mit React und Next.js, an Websites, Apps und Interfaces.",
     "statStarted": "IM WEB SEIT",
     "statReply": "ANTWORTZEIT",
     "statBased": "SITZ IN BOZEN",
-    "figCaption": "ABB. 01 — LEONARDO PARISI",
     "photoAlt": "Leonardo Parisi"
   },
   "stack": {
-    "heading": "Der Stack",
-    "meta": "18 TOOLS · TÄGLICHE ZUERST"
+    "heading": "Der Stack"
   },
   "testimonials": {
     "heading": "Schöne Worte",

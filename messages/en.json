@@ -105,11 +105,7 @@
         "tag": "STRUCTURE",
         "title": "Structure and design",
         "desc": "Page structure first, then the visual design in Figma. You see the screens before I write a line of code, so changes happen while they're still cheap.",
-        "deliverables": [
-          "Page structure",
-          "Figma design",
-          "Rounds of feedback"
-        ]
+        "deliverables": ["Page structure", "Figma design", "Rounds of feedback"]
       },
       "build": {
         "tag": "BUILD",
@@ -138,17 +134,14 @@
     "headingA": "I build interfaces.",
     "headingB": "and I mind",
     "headingC": "the details.",
-    "lead": "I'm Leonardo Parisi, a front-end developer based in Bolzano, Italy. I work mostly with React and Next.js, on websites and interfaces — from design through to build.",
-    "secondary": "So far: a handful of client jobs, an internship in IT and security, and a lot of hours spent redoing things until they work the way they should. Still learning, and that suits me fine.",
+    "lead": "I'm Leonardo Parisi, a front-end developer. I work mostly with React and Next.js, on websites, apps and interfaces.",
     "statStarted": "ON THE WEB SINCE",
     "statReply": "REPLY TIME",
     "statBased": "BASED IN BOLZANO",
-    "figCaption": "FIG. 01 — LEONARDO PARISI",
     "photoAlt": "Leonardo Parisi"
   },
   "stack": {
-    "heading": "The Stack",
-    "meta": "18 TOOLS · DAILY DRIVERS FIRST"
+    "heading": "The Stack"
   },
   "testimonials": {
     "heading": "Kind words",
