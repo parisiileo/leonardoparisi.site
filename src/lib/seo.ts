@@ -41,6 +41,9 @@ export const SEO_CONFIG = {
     "Leonardo Parisi is a front-end developer based in Bolzano (Bozen), Italy, building fast, accessible websites and interfaces with React, Next.js and TypeScript.",
   author: "Leonardo Parisi",
   email: data.contact.email,
+  // E.164, no spaces — what schema.org's `telephone` and Google's own
+  // validator expect; the spaced form stays in data.json for the UI.
+  phone: data.contact.phone.replace(/\s/g, ""),
   twitter: "@_leoparisi",
   // Piazza Walther — close enough to place the practice in the centre of
   // Bolzano for "near me" queries without publishing a home address to a map.
@@ -128,6 +131,7 @@ function personSchema(locale: string, jobTitle: string, description: string) {
     alternateName: ["Leo Parisi", "imleo"],
     description,
     email: `mailto:${SEO_CONFIG.email}`,
+    telephone: SEO_CONFIG.phone,
     url: SEO_CONFIG.baseUrl,
     mainEntityOfPage: localeUrl(locale),
     image: ogImage,
@@ -159,6 +163,7 @@ function businessSchema(name: string, description: string) {
     image: ogImage,
     logo: `${SEO_CONFIG.baseUrl}/icon.png`,
     email: `mailto:${SEO_CONFIG.email}`,
+    telephone: SEO_CONFIG.phone,
     founder: { "@id": ID.person },
     employee: { "@id": ID.person },
     address: postalAddress,
