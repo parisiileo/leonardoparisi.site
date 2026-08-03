@@ -66,7 +66,7 @@ export default function Loader() {
       }}
     >
       <div className="font-display text-[clamp(43px,9.9vw,133px)] leading-[0.82] font-extrabold tracking-[-0.05em]">
-        LEO
+        LEONARDO
         <br />
         PARISI
       </div>

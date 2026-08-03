@@ -81,6 +81,14 @@
       "piccolaitalia": {
         "role": "Diseño y desarrollo — sitio de restaurante",
         "desc": "Un sitio responsive con visuales cuidados y navegación sencilla, centrado en el menú, los contactos y la historia de la marca."
+      },
+      "teknoklima": {
+        "role": "Desarrollador front-end y diseñador web",
+        "desc": "Diseñé y construí el sitio de principio a fin, desde el layout hasta la interfaz terminada."
+      },
+      "enotecadaaldo": {
+        "role": "Desarrollador front-end y diseñador web",
+        "desc": "Diseñé y construí el sitio de principio a fin, desde el layout hasta la interfaz terminada."
       }
     },
     "visit": "VER EL SITIO"

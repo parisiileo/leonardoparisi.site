@@ -179,7 +179,7 @@ function WorkCard({
   return (
     <article
       data-work-panel
-      className="relative mr-[clamp(18px,2.4vw,34px)] flex w-[min(84vw,660px)] flex-none snap-start flex-col justify-between self-center overflow-hidden rounded-lg border p-[clamp(22px,3vw,40px)] transition-[border-color,background] duration-400 md:h-[min(62vh,560px)]"
+      className="relative mr-[clamp(18px,2.4vw,34px)] flex w-[min(84vw,660px)] flex-none snap-start flex-col justify-between overflow-hidden rounded-lg border p-[clamp(22px,3vw,40px)] transition-[border-color,background] duration-400 md:h-[min(62vh,560px)] md:self-center"
       style={{
         borderColor: active ? "var(--ac)" : "var(--color-line)",
         background: active

@@ -82,6 +82,14 @@
       "piccolaitalia": {
         "role": "Design & build — restaurant site",
         "desc": "A responsive site with polished visuals and easy navigation, built around the menu, contact details and the brand story."
+      },
+      "teknoklima": {
+        "role": "Front-end developer & web designer",
+        "desc": "Designed and built the site front to back, from layout to the finished interface."
+      },
+      "enotecadaaldo": {
+        "role": "Front-end developer & web designer",
+        "desc": "Designed and built the site front to back, from layout to the finished interface."
       }
     }
   },

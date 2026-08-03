@@ -147,6 +147,65 @@ const ART = {
     </>
   ),
 
+  // Climate control — a thermostat dial with airflow curling off it.
+  climate: (
+    <>
+      <circle {...LINE} cx={168} cy={200} r={104} opacity={0.8} />
+      <circle {...LINE} cx={168} cy={200} r={76} opacity={0.5} />
+      <g {...LINE}>
+        <path d="M168 200 L168 130" />
+        <path d="M168 200 L218 224" />
+      </g>
+      <circle cx={168} cy={200} r={7} fill="currentColor" />
+      <g {...LINE} opacity={0.45}>
+        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => {
+          const angle = (i / 12) * Math.PI * 2;
+          const x1 = round(168 + Math.cos(angle) * 112);
+          const y1 = round(200 + Math.sin(angle) * 112);
+          const x2 = round(168 + Math.cos(angle) * 122);
+          const y2 = round(200 + Math.sin(angle) * 122);
+          return <path key={i} d={`M${x1} ${y1} L${x2} ${y2}`} />;
+        })}
+      </g>
+      <g {...LINE} opacity={0.65}>
+        <path d="M288 118 q34 18 0 40 q-30 20 0 40 q34 18 0 40" />
+        <path d="M322 96 q34 22 0 46 q-30 22 0 46 q34 22 0 46" opacity={0.5} />
+      </g>
+    </>
+  ),
+
+  // Enoteca — a bottle, its glass, and the shelf of vintages behind them.
+  vineyard: (
+    <>
+      <g {...LINE} opacity={0.35}>
+        <path d="M40 76 H360" />
+        <path d="M40 150 H360" />
+        <path d="M40 224 H360" />
+        {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+          <path key={`b-${i}`} d={`M${64 + i * 46} 76 V54`} />
+        ))}
+        {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+          <path key={`t-${i}`} d={`M${86 + i * 46} 150 V128`} />
+        ))}
+      </g>
+      <g {...LINE}>
+        <path d="M186 300 V196 q0-14 12-14 h4 q12 0 12 14 v104 Z" opacity={0.9} />
+        <path d="M198 182 V150 h16 V182" opacity={0.9} />
+        <path d="M198 150 q0-18 8-18 q8 0 8 18" opacity={0.7} />
+      </g>
+      <g {...LINE} opacity={0.8}>
+        <path d="M270 210 L322 210 L296 268 Z" />
+        <path d="M296 268 V300" />
+        <path d="M276 300 H316" />
+      </g>
+      <path
+        d="M272 214 L320 214 L307 246 h-22 Z"
+        fill="currentColor"
+        opacity={0.14}
+      />
+    </>
+  ),
+
 } as const;
 
 export type CardArtName = keyof typeof ART;

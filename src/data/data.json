@@ -49,27 +49,10 @@
   ],
   "work": [
     {
-      "id": "acs",
-      "company": "ACS Data Systems",
-      "type": "internship",
-      "art": "network",
-      "from": "2025",
-      "to": "2025",
-      "url": "https://www.acs.it/it/",
-      "stack": [
-        "Kali Linux",
-        "Windows Server",
-        "Cryptography",
-        "Ethical Hacking"
-      ]
-    },
-    {
       "id": "fmshop",
       "company": "FM Shop",
       "type": "client",
       "art": "storefront",
-      "from": "2024",
-      "to": "2025",
       "url": "https://www.fm-shop.it",
       "stack": [
         "TypeScript",
@@ -84,8 +67,6 @@
       "company": "Markz3d Shop",
       "type": "client",
       "art": "layers",
-      "from": "2024",
-      "to": "2024",
       "url": "https://markz3d.com",
       "stack": [
         "TypeScript",
@@ -100,14 +81,49 @@
       "company": "Piccola Italia",
       "type": "client",
       "art": "dining",
-      "from": "2026",
-      "to": "2026",
       "url": "https://namastepiccolaitalia.it",
       "stack": [
         "Next.js",
         "Tailwind",
         "HTML",
         "CSS"
+      ]
+    },
+    {
+      "id": "teknoklima",
+      "company": "Tekno Klima",
+      "type": "client",
+      "art": "climate",
+      "url": "https://tekno-klima.vercel.app",
+      "stack": [
+        "Next.js",
+        "Tailwind",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": "enotecadaaldo",
+      "company": "Enoteca Da Aldo",
+      "type": "client",
+      "art": "vineyard",
+      "url": "https://enotecadaaldo.vercel.app",
+      "stack": [
+        "Next.js",
+        "Tailwind",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": "acs",
+      "company": "ACS Data Systems",
+      "type": "internship",
+      "art": "network",
+      "url": "https://www.acs.it/it/",
+      "stack": [
+        "Kali Linux",
+        "Windows Server",
+        "Cryptography",
+        "Ethical Hacking"
       ]
     }
   ],
