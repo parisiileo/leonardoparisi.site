@@ -112,7 +112,7 @@
       "design": {
         "tag": "STRUTTURA",
         "title": "Struttura e design",
-        "desc": "Prima l'organizzazione delle pagine, poi la grafica in Figma. Vedi le schermate prima che scriva una riga di codice, così le modifiche si fanno quando costano poco.",
+        "desc": "Prima la strategia per definire la mappa, poi il design d'interfaccia con Figma. Un processo agile che ti permette di convalidare e perfezionare ogni schermata in tempi rapidi, riducendo i costi di sviluppo.",
         "deliverables": [
           "Struttura delle pagine",
           "Design in Figma",

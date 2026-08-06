@@ -112,7 +112,7 @@
       "design": {
         "tag": "STRUCTURE",
         "title": "Structure and design",
-        "desc": "Page structure first, then the visual design in Figma. You see the screens before I write a line of code, so changes happen while they're still cheap.",
+        "desc": "Strategy first to define the site map, then interface design in Figma. An agile process that lets you validate and refine every screen quickly, cutting development costs.",
         "deliverables": [
           "Page structure",
           "Figma design",

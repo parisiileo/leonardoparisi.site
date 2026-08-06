@@ -112,7 +112,7 @@
       "design": {
         "tag": "STRUKTUR",
         "title": "Struktur und Design",
-        "desc": "Zuerst der Seitenaufbau, dann das Design in Figma. Du siehst die Screens, bevor ich eine Zeile Code schreibe — so sind Änderungen noch günstig.",
+        "desc": "Zuerst die Strategie zur Festlegung der Seitenstruktur, dann das Interface-Design mit Figma. Ein agiler Prozess, mit dem du jeden Screen schnell validieren und verfeinern kannst — das senkt die Entwicklungskosten.",
         "deliverables": [
           "Seitenaufbau",
           "Design in Figma",

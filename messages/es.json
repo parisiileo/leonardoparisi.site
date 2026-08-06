@@ -112,7 +112,7 @@
       "design": {
         "tag": "ESTRUCTURA",
         "title": "Estructura y diseño",
-        "desc": "Primero la estructura de las páginas, luego el diseño en Figma. Ves las pantallas antes de que escriba una línea de código, así los cambios se hacen cuando cuestan poco.",
+        "desc": "Primero la estrategia para definir el mapa del sitio, luego el diseño de interfaz con Figma. Un proceso ágil que te permite validar y perfeccionar cada pantalla en poco tiempo, reduciendo los costes de desarrollo.",
         "deliverables": [
           "Estructura de páginas",
           "Diseño en Figma",
