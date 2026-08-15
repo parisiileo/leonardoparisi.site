@@ -44,8 +44,6 @@
     "language": "Language"
   },
   "hero": {
-    "kicker": "PORTFOLIO / 2026",
-    "based": "BASED IN BOLZANO, ITALY · UTC+2",
     "available": "AVAILABLE FOR WORK",
     "intro": "Ciao, sono Leonardo. Progetto interfacce che prendono vita.",
     "cta": "SEE THE WORK",
@@ -55,7 +53,6 @@
     "h1": "Leonardo Parisi — Front-End Developer in Bolzano, Italy"
   },
   "work": {
-    "hint": "EXPERIENCE — DRAG SIDEWAYS AS YOU SCROLL",
     "headingLine1": "Work",
     "headingLine2": "Experience",
     "lead": "Two years of client work, internships and product builds — laid out on a timeline you scroll through sideways.",
@@ -96,8 +93,6 @@
   "process": {
     "headingLine1": "How I",
     "headingLine2": "Work",
-    "meta": "FOUR STEPS, FROM FIRST MESSAGE TO LIVE SITE",
-    "range": "03 — PROCESS",
     "items": {
       "brief": {
         "tag": "LISTENING",
@@ -142,7 +137,6 @@
     }
   },
   "about": {
-    "kicker": "04 — ABOUT ME",
     "headingA": "I build interfaces.",
     "headingB": "and I mind",
     "headingC": "the details.",
@@ -170,20 +164,18 @@
     "three": "Based in Bolzano, remote anywhere"
   },
   "contact": {
-    "kicker": "08 — LET'S TALK",
-    "replies": "REPLIES WITHIN 24H",
     "headingA": "Got an idea?",
     "headingB": "Let's build it.",
     "discord": "DISCORD",
     "form": {
       "header": "OR SEND IT STRAIGHT FROM HERE",
       "required": "ALL FIELDS REQUIRED",
-      "nameLabel": "01 — YOUR NAME",
+      "nameLabel": "YOUR NAME",
       "namePlaceholder": "Mario Rossi",
-      "emailLabel": "02 — EMAIL",
+      "emailLabel": "EMAIL",
       "emailPlaceholder": "you@company.com",
-      "kindLabel": "03 — WHAT IS IT",
-      "ideaLabel": "04 — THE IDEA",
+      "kindLabel": "WHAT IS IT",
+      "ideaLabel": "THE IDEA",
       "ideaPlaceholder": "A couple of lines about what you want to build, and when you need it.",
       "submit": "SEND IT",
       "kinds": {
@@ -214,7 +206,6 @@
   },
   "legal": {
     "meta": {
-      "kicker": "LEGAL",
       "updatedLabel": "LAST UPDATED",
       "back": "BACK TO THE SITE",
       "contactHeading": "Contact",

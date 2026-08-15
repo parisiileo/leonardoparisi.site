@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import CardArt, { type CardArtName } from "@/components/ui/CardArt";
 import Magnetic from "@/components/ui/Magnetic";
-import Scramble from "@/components/ui/Scramble";
 import data from "@/data/data.json";
 import { useIsWide } from "@/hooks/useMediaQuery";
 import { SECTION_HUES } from "@/lib/sections";
@@ -17,7 +16,6 @@ export default function Work() {
   const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
-  const labelRef = useRef<HTMLSpanElement>(null);
   const isWide = useIsWide();
   const [distance, setDistance] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -78,9 +76,6 @@ export default function Work() {
 
     const total = data.work.length;
     const index = Math.min(total - 1, Math.max(0, Math.ceil(p * total) - 1));
-    if (labelRef.current) {
-      labelRef.current.textContent = `${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
-    }
     setActiveIndex((current) => (current === index ? current : index));
   });
 
@@ -93,14 +88,7 @@ export default function Work() {
       className="bg-bg relative h-auto md:h-[420vh]"
     >
       <div className="relative flex flex-col md:sticky md:top-0 md:h-screen md:overflow-hidden">
-        <div className="text-mut flex items-center justify-between gap-4 px-[clamp(16px,3vw,40px)] pt-[clamp(74px,10vh,100px)] pb-4 font-mono text-[11px] tracking-[0.22em]">
-          <Scramble text={t("hint")} />
-          <span ref={labelRef} className="tabular-nums">
-            01 / {String(data.work.length).padStart(2, "0")}
-          </span>
-        </div>
-
-        <div className="bg-line relative mx-[clamp(16px,3vw,40px)] h-px">
+        <div className="bg-line relative mx-[clamp(16px,3vw,40px)] mt-[clamp(74px,10vh,100px)] h-px">
           <div
             ref={barRef}
             className="bg-ac absolute top-0 left-0 h-px w-0 transition-[width] duration-100 ease-linear"
@@ -121,9 +109,6 @@ export default function Work() {
             data-work-panel
             className="@container flex w-[min(88vw,720px)] flex-none snap-start flex-col justify-center pr-[clamp(24px,5vw,80px)]"
           >
-            <div className="text-ac mb-5 font-mono text-[11px] tracking-[0.22em]">
-              02
-            </div>
             <h2 className="font-display m-0 text-[clamp(34px,12cqw,88px)] leading-[0.86] font-black tracking-[-0.05em] uppercase">
               {t("headingLine1")}
               <br />
@@ -138,7 +123,6 @@ export default function Work() {
             <WorkCard
               key={item.id}
               item={item}
-              index={i}
               active={isWide && activeIndex === i}
             />
           ))}
@@ -167,11 +151,9 @@ export default function Work() {
 
 function WorkCard({
   item,
-  index,
   active,
 }: {
   item: WorkItem;
-  index: number;
   active: boolean;
 }) {
   const t = useTranslations("work");
@@ -196,10 +178,7 @@ function WorkCard({
 
       <div className="relative">
         <div className="text-mut font-mono text-[11px] tracking-[0.2em]">
-          <span>
-            {String(index + 1).padStart(2, "0")} —{" "}
-            {t(`types.${item.type}` as "types.client")}
-          </span>
+          <span>{t(`types.${item.type}` as "types.client")}</span>
         </div>
         {/* The live-site links used to live in the projects section; the title
             carries them now, which costs the card no vertical space. */}

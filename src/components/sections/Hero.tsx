@@ -99,12 +99,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="text-mut relative flex flex-wrap justify-between gap-[18px] font-mono text-[11px] tracking-[0.2em]">
-        <Scramble text={t("kicker")} />
-        <Scramble text={t("based")} />
-      </div>
-
-      <div className="relative flex flex-col gap-[clamp(10px,2vh,22px)] py-[clamp(24px,6vh,60px)]">
+      <div className="relative flex flex-1 flex-col justify-center gap-[clamp(10px,2vh,22px)] py-[clamp(24px,6vh,60px)]">
         <motion.p
           className="text-mut max-w-[34ch] text-[clamp(14px,1.5vw,19px)]"
           initial={{ opacity: 0, y: 24 }}
@@ -123,20 +118,14 @@ export default function Hero() {
               the layout can fit. */}
           <span className="sr-only">{t("h1")}</span>
           {HEADLINE.map((char, i) => (
-            <motion.span
+            <span
               key={`${char}-${i}`}
               aria-hidden
-              className={`inline-block ${char === "–" ? "text-ac" : ""}`}
-              initial={{ y: "110%" }}
-              animate={loaderDone ? { y: "0%" } : undefined}
-              transition={{
-                duration: 1,
-                delay: 0.05 + i * 0.06,
-                ease: EASE_OUT,
-              }}
+              className={`hero-rise inline-block ${char === "–" ? "text-ac" : ""}`}
+              style={{ "--i": i } as React.CSSProperties}
             >
               {char}
-            </motion.span>
+            </span>
           ))}
         </h1>
 
@@ -149,14 +138,14 @@ export default function Hero() {
               margin: "-0.14em -0.06em -0.2em 0",
             }}
           >
-            <motion.span
-              className="inline-block"
-              initial={{ y: "110%" }}
-              animate={loaderDone ? { y: "0%" } : undefined}
-              transition={{ duration: 1, delay: 0.6, ease: EASE_OUT }}
+            {/* Same reasoning as the headline: at up to 126px this is the
+                other credible LCP candidate, so it must not wait on JS. */}
+            <span
+              className="hero-rise inline-block"
+              style={{ "--i": 9 } as React.CSSProperties}
             >
               {ROLE}
-            </motion.span>
+            </span>
           </p>
 
           <motion.div

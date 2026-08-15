@@ -2,7 +2,11 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import { notFound } from "next/navigation";
 import Cursor from "@/components/layout/Cursor";
 import Header from "@/components/layout/Header";
@@ -146,6 +150,14 @@ export default async function LocaleLayout({
   const t = await getTranslations("nav");
   const meta = await getTranslations("meta");
 
+  // Left to itself the provider forwards *every* namespace into the RSC
+  // payload. `legal` alone is ~12KB of privacy/terms/cookie prose that only
+  // the three server-rendered legal pages read, and `meta` is consumed by
+  // generateMetadata — neither is reachable from a client component, so both
+  // are dropped here. Roughly two thirds of the messages payload on every
+  // page, in all four locales.
+  const { legal: _legal, meta: _meta, ...clientMessages } = await getMessages();
+
   const graph = generateGraph({
     locale,
     title: meta("title"),
@@ -164,7 +176,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider messages={clientMessages}>
           <UIProvider>
             {/* First stop for keyboard and screen-reader users: the header and
                 the overlay menu sit before the content in the DOM. */}

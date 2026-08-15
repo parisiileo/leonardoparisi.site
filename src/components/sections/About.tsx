@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import Counter from "@/components/ui/Counter";
 import FieldArt from "@/components/ui/FieldArt";
 import Reveal from "@/components/ui/Reveal";
-import Scramble from "@/components/ui/Scramble";
 import data from "@/data/data.json";
 import { SECTION_HUES } from "@/lib/sections";
 import portrait from "../../../assets/about_portrait.jpg";
@@ -22,9 +21,6 @@ export default function About() {
     >
       <div className="grid grid-cols-1 items-start gap-[clamp(24px,5vw,72px)] min-[860px]:grid-cols-[1.15fr_.85fr] min-[860px]:items-stretch">
         <div className="flex flex-col">
-          <div className="text-ac mb-[22px] font-mono text-[11px] tracking-[0.22em]">
-            <Scramble text={t("kicker")} />
-          </div>
           <h2 className="font-display m-0 mb-[26px] text-[clamp(36px,5.8vw,94px)] leading-[0.87] font-black tracking-[-0.05em] uppercase">
             {t("headingA")}
             <br />

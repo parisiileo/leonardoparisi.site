@@ -23,6 +23,12 @@ export const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains",
   display: "swap",
+  // Not preloaded on purpose. Four `<link rel=preload as=font>` tags fired at
+  // once — ~137KB — all compete with the stylesheet that actually blocks the
+  // first paint. Mono only ever sets 10–12px labels and kickers here, never a
+  // contentful-paint candidate, so it loads on demand and swaps in from the
+  // ui-monospace fallback.
+  preload: false,
 });
 
 export const fontVars = `${archivo.variable} ${grotesk.variable} ${jetbrains.variable}`;

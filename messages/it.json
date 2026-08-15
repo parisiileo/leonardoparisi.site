@@ -44,8 +44,6 @@
     "language": "Lingua"
   },
   "hero": {
-    "kicker": "PORTFOLIO / 2026",
-    "based": "DA BOLZANO, ITALIA · UTC+2",
     "available": "DISPONIBILE PER LAVORO",
     "intro": "Ciao, sono Leonardo. Progetto interfacce che prendono vita.",
     "cta": "GUARDA I LAVORI",
@@ -55,7 +53,6 @@
     "h1": "Leonardo Parisi — Sviluppatore Front-End a Bolzano"
   },
   "work": {
-    "hint": "ESPERIENZA — SCORRI DI LATO",
     "headingLine1": "Esperienza",
     "headingLine2": "Lavorativa",
     "lead": "Due anni tra lavori per clienti, tirocini e prodotti — su una timeline che scorri di lato.",
@@ -96,8 +93,6 @@
   "process": {
     "headingLine1": "Come",
     "headingLine2": "Lavoro",
-    "meta": "QUATTRO FASI, DAL PRIMO MESSAGGIO AL SITO ONLINE",
-    "range": "03 — PROCESSO",
     "items": {
       "brief": {
         "tag": "ASCOLTO",
@@ -142,7 +137,6 @@
     }
   },
   "about": {
-    "kicker": "04 — CHI SONO",
     "headingA": "Costruisco interfacce.",
     "headingB": "e curo",
     "headingC": "i dettagli.",
@@ -170,20 +164,18 @@
     "three": "A Bolzano, da remoto ovunque"
   },
   "contact": {
-    "kicker": "08 — PARLIAMONE",
-    "replies": "RISPONDO ENTRO 24H",
     "headingA": "Hai un'idea?",
     "headingB": "Costruiamola.",
     "discord": "DISCORD",
     "form": {
       "header": "OPPURE SCRIVIMI DA QUI",
       "required": "TUTTI I CAMPI OBBLIGATORI",
-      "nameLabel": "01 — IL TUO NOME",
+      "nameLabel": "IL TUO NOME",
       "namePlaceholder": "Mario Rossi",
-      "emailLabel": "02 — EMAIL",
+      "emailLabel": "EMAIL",
       "emailPlaceholder": "tu@azienda.com",
-      "kindLabel": "03 — DI COSA SI TRATTA",
-      "ideaLabel": "04 — L'IDEA",
+      "kindLabel": "DI COSA SI TRATTA",
+      "ideaLabel": "L'IDEA",
       "ideaPlaceholder": "Due righe su cosa vuoi costruire e quando ti serve.",
       "submit": "INVIA",
       "kinds": {
@@ -214,7 +206,6 @@
   },
   "legal": {
     "meta": {
-      "kicker": "NOTE LEGALI",
       "updatedLabel": "ULTIMO AGGIORNAMENTO",
       "back": "TORNA AL SITO",
       "contactHeading": "Contatti",

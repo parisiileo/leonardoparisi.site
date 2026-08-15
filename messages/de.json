@@ -44,8 +44,6 @@
     "language": "Sprache"
   },
   "hero": {
-    "kicker": "PORTFOLIO / 2026",
-    "based": "SITZ IN BOZEN, SÜDTIROL · UTC+2",
     "available": "VERFÜGBAR FÜR PROJEKTE",
     "intro": "Hi, ich bin Leonardo. Ich baue Interfaces, die sich bewegen.",
     "cta": "ARBEITEN ANSEHEN",
@@ -55,7 +53,6 @@
     "h1": "Leonardo Parisi — Frontend-Entwickler in Bozen, Südtirol"
   },
   "work": {
-    "hint": "ERFAHRUNG — SEITLICH SCROLLEN",
     "headingLine1": "Berufliche",
     "headingLine2": "Erfahrung",
     "lead": "Zwei Jahre Kundenprojekte, Praktika und Produktarbeit — auf einer Zeitachse, die seitlich scrollt.",
@@ -96,8 +93,6 @@
   "process": {
     "headingLine1": "So",
     "headingLine2": "Arbeite Ich",
-    "meta": "VIER SCHRITTE — VON DER ERSTEN NACHRICHT BIS ZUM START",
-    "range": "03 — ABLAUF",
     "items": {
       "brief": {
         "tag": "ZUHÖREN",
@@ -142,7 +137,6 @@
     }
   },
   "about": {
-    "kicker": "04 — ÜBER MICH",
     "headingA": "Ich baue Interfaces.",
     "headingB": "und achte auf",
     "headingC": "die Details.",
@@ -170,20 +164,18 @@
     "three": "In Bozen, remote überall"
   },
   "contact": {
-    "kicker": "08 — SPRECHEN WIR",
-    "replies": "ANTWORT INNERHALB 24H",
     "headingA": "Hast du eine Idee?",
     "headingB": "Bauen wir sie.",
     "discord": "DISCORD",
     "form": {
       "header": "ODER SCHREIB DIREKT HIER",
       "required": "ALLE FELDER ERFORDERLICH",
-      "nameLabel": "01 — DEIN NAME",
+      "nameLabel": "DEIN NAME",
       "namePlaceholder": "Max Mustermann",
-      "emailLabel": "02 — E-MAIL",
+      "emailLabel": "E-MAIL",
       "emailPlaceholder": "du@firma.de",
-      "kindLabel": "03 — WORUM GEHT ES",
-      "ideaLabel": "04 — DIE IDEE",
+      "kindLabel": "WORUM GEHT ES",
+      "ideaLabel": "DIE IDEE",
       "ideaPlaceholder": "Zwei Sätze dazu, was du bauen willst und wann du es brauchst.",
       "submit": "ABSENDEN",
       "kinds": {
@@ -214,7 +206,6 @@
   },
   "legal": {
     "meta": {
-      "kicker": "RECHTLICHES",
       "updatedLabel": "ZULETZT AKTUALISIERT",
       "back": "ZURÜCK ZUR SEITE",
       "contactHeading": "Kontakt",

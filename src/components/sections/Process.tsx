@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 import ProcessArt, { type ProcessArtName } from "@/components/ui/ProcessArt";
-import Scramble from "@/components/ui/Scramble";
 import data from "@/data/data.json";
 import { useIsDesktop } from "@/hooks/useMediaQuery";
 import { SECTION_HUES } from "@/lib/sections";
@@ -26,16 +25,11 @@ export default function Process() {
           <br />
           {t("headingLine2")}
         </h2>
-        <div className="text-mut max-w-[30ch] font-mono text-[11px] leading-[1.9] tracking-[0.2em]">
-          <Scramble text={t("meta")} />
-          <br />
-          {t("range")}
-        </div>
       </div>
 
       <div className="pt-[clamp(30px,6vh,70px)]">
-        {data.process.map((step, i) => (
-          <StepCard key={step.id} step={step} index={i} />
+        {data.process.map((step) => (
+          <StepCard key={step.id} step={step} />
         ))}
       </div>
 
@@ -44,11 +38,10 @@ export default function Process() {
   );
 }
 
-function StepCard({ step, index }: { step: Step; index: number }) {
+function StepCard({ step }: { step: Step }) {
   const t = useTranslations("process");
   const ref = useRef<HTMLElement>(null);
   const isDesktop = useIsDesktop();
-  const number = String(index + 1).padStart(2, "0");
 
   // Copy lives in the messages files; `raw` is how next-intl hands back the
   // deliverables array untouched.
@@ -85,8 +78,7 @@ function StepCard({ step, index }: { step: Step; index: number }) {
         step.mediaFirst ? "min-[860px]:order-2" : ""
       }`}
     >
-      <div className="text-mut flex justify-between font-mono text-[11px] tracking-[0.2em]">
-        <span>{number}</span>
+      <div className="text-mut flex justify-end font-mono text-[11px] tracking-[0.2em]">
         <span className="text-ac">
           {t(`items.${step.id}.tag` as "items.brief.tag")}
         </span>
@@ -123,15 +115,7 @@ function StepCard({ step, index }: { step: Step; index: number }) {
       }}
     >
       {/* A generated scene instead of a screenshot — a step has nothing to
-          photograph. It comes alive on hover; the outlined numeral sits
-          behind it as a watermark. */}
-      <span
-        aria-hidden
-        className="font-display text-[clamp(120px,20vw,300px)] leading-none font-black tracking-[-0.06em] text-transparent opacity-60"
-        style={{ WebkitTextStroke: "1.5px var(--color-line2)" }}
-      >
-        {number}
-      </span>
+          photograph. It comes alive on hover. */}
       <div className="absolute inset-[9%]">
         <ProcessArt name={step.id as ProcessArtName} className="text-ink/50" />
       </div>

@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import Magnetic from "@/components/ui/Magnetic";
-import Scramble from "@/components/ui/Scramble";
 import data from "@/data/data.json";
 import { Link } from "@/i18n/navigation";
 import { SECTION_HUES } from "@/lib/sections";
@@ -30,11 +29,6 @@ export default function Contact() {
         className="pointer-events-none absolute top-[60%] left-1/2 h-[min(80vw,900px)] w-[min(80vw,900px)] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.09] blur-[30px]"
         style={{ background: "radial-gradient(circle, var(--ac), transparent 62%)" }}
       />
-
-      <div className="text-mut relative flex flex-wrap justify-between gap-4 font-mono text-[11px] tracking-[0.2em]">
-        <Scramble text={t("kicker")} />
-        <span>{t("replies")}</span>
-      </div>
 
       <div className="relative py-[clamp(30px,6vh,70px)]">
         <h2 className="font-display m-0 text-[clamp(41px,9.5vw,162px)] leading-[0.84] font-black tracking-[-0.055em] uppercase">

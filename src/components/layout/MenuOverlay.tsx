@@ -92,14 +92,7 @@ export default function MenuOverlay() {
                 },
                 className:
                   "font-display hover:text-ac flex items-baseline gap-[18px] text-[clamp(38px,8.1vw,112px)] leading-[0.94] font-extrabold tracking-[-0.045em] transition-colors",
-                children: (
-                  <>
-                    <span className="text-ac font-mono text-[12px] font-normal tracking-[0.2em]">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    {t(item.id)}
-                  </>
-                ),
+                children: t(item.id),
               };
 
               return onHome ? (

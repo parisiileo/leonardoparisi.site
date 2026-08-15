@@ -80,6 +80,34 @@
    `pathLength="100"`, so the dash maths never depends on real geometry.
    ------------------------------------------------------------------ */
 @layer components {
+  /* ----------------------------------------------------------------
+     Hero headline reveal.
+
+     Deliberately a keyframe rather than a framer-motion `animate` gated
+     on `loaderDone`. That <h1> is the page's Largest Contentful Paint
+     element, and driving it from React meant it sat at translateY(110%)
+     — clipped by the overflow-hidden mask, so never *painted* — until
+     the whole client bundle had downloaded, parsed and hydrated. LCP
+     could not fire before hydration finished, whatever the network did.
+
+     As CSS it starts from the first paint instead, with a delay timed to
+     the curtain that covers it. Stagger comes from an inline `--i`,
+     matching the convention the process artwork already uses.
+     ---------------------------------------------------------------- */
+  .hero-rise {
+    animation: hero-rise 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(0.66s + var(--i, 0) * 0.06s);
+  }
+
+  @keyframes hero-rise {
+    from {
+      transform: translateY(110%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
   /* Parallax shell. --px/--py are written by the card's tilt handler. */
   .art-parallax {
     transform: translate3d(
@@ -280,5 +308,10 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    /* Without this the hero reveal would still hold its pre-curtain delay,
+       leaving a blank headline for two thirds of a second for exactly the
+       users who opted out of waiting on motion. */
+    animation-delay: 0s !important;
+    transition-delay: 0s !important;
   }
 }

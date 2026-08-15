@@ -41,9 +41,6 @@ export default async function LegalPage({ doc }: { doc: LegalDoc }) {
         suppressHydrationWarning
       />
       <header className="border-line flex flex-col gap-4 border-b pb-[clamp(22px,4vh,38px)]">
-        <span className="text-ac font-mono text-[11px] tracking-[0.22em]">
-          {tMeta("kicker")}
-        </span>
         <h1 className="font-display m-0 text-[clamp(38px,7vw,86px)] leading-[0.87] font-black tracking-[-0.05em] uppercase">
           {t("title")}
         </h1>
@@ -56,12 +53,9 @@ export default async function LegalPage({ doc }: { doc: LegalDoc }) {
       </header>
 
       <div className="flex flex-col gap-[clamp(26px,4vh,44px)]">
-        {sections.map((section, index) => (
+        {sections.map((section) => (
           <section key={section.heading} className="flex flex-col gap-[14px]">
-            <h2 className="font-display m-0 flex items-baseline gap-3 text-[clamp(20px,2.4vw,29px)] leading-[1.1] font-extrabold tracking-[-0.03em]">
-              <span className="text-mut2 font-mono text-[12px] font-normal tracking-[0.16em] tabular-nums">
-                {String(index + 1).padStart(2, "0")}
-              </span>
+            <h2 className="font-display m-0 text-[clamp(20px,2.4vw,29px)] leading-[1.1] font-extrabold tracking-[-0.03em]">
               {section.heading}
             </h2>
 

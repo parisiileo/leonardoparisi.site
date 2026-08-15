@@ -1,8 +1,9 @@
-"use client";
-
 /**
  * The list is rendered twice inside a `max-content` row translating 0 → -50%,
  * so the loop closes seamlessly without measuring anything.
+ *
+ * No `"use client"`: the scroll is a pure CSS keyframe and there is no state,
+ * so keeping it on the server leaves its markup out of the hydration tree.
  */
 export default function Marquee({
   items,

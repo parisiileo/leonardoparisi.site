@@ -44,8 +44,6 @@
     "language": "Idioma"
   },
   "hero": {
-    "kicker": "PORTFOLIO / 2026",
-    "based": "CON BASE EN BOLZANO, ITALIA · UTC+2",
     "available": "DISPONIBLE PARA TRABAJAR",
     "intro": "Hola, soy Leonardo. Construyo interfaces que se mueven.",
     "cta": "VER LOS TRABAJOS",
@@ -55,7 +53,6 @@
     "h1": "Leonardo Parisi — Desarrollador Front-End en Bolzano, Italia"
   },
   "work": {
-    "hint": "EXPERIENCIA — DESLIZA DE LADO",
     "headingLine1": "Experiencia",
     "headingLine2": "Laboral",
     "lead": "Dos años de proyectos para clientes, prácticas y producto — en una línea de tiempo que se desliza de lado.",
@@ -96,8 +93,6 @@
   "process": {
     "headingLine1": "Cómo",
     "headingLine2": "Trabajo",
-    "meta": "CUATRO FASES, DEL PRIMER MENSAJE AL SITIO EN LÍNEA",
-    "range": "03 — PROCESO",
     "items": {
       "brief": {
         "tag": "ESCUCHA",
@@ -142,7 +137,6 @@
     }
   },
   "about": {
-    "kicker": "04 — SOBRE MÍ",
     "headingA": "Construyo interfaces.",
     "headingB": "y cuido",
     "headingC": "los detalles.",
@@ -170,20 +164,18 @@
     "three": "En Bolzano, remoto donde sea"
   },
   "contact": {
-    "kicker": "08 — HABLEMOS",
-    "replies": "RESPONDO EN 24H",
     "headingA": "¿Tienes una idea?",
     "headingB": "Construyámosla.",
     "discord": "DISCORD",
     "form": {
       "header": "O ESCRÍBEME DESDE AQUÍ",
       "required": "TODOS LOS CAMPOS OBLIGATORIOS",
-      "nameLabel": "01 — TU NOMBRE",
+      "nameLabel": "TU NOMBRE",
       "namePlaceholder": "Juan Pérez",
-      "emailLabel": "02 — EMAIL",
+      "emailLabel": "EMAIL",
       "emailPlaceholder": "tu@empresa.com",
-      "kindLabel": "03 — DE QUÉ SE TRATA",
-      "ideaLabel": "04 — LA IDEA",
+      "kindLabel": "DE QUÉ SE TRATA",
+      "ideaLabel": "LA IDEA",
       "ideaPlaceholder": "Dos líneas sobre qué quieres construir y cuándo lo necesitas.",
       "submit": "ENVIAR",
       "kinds": {
@@ -214,7 +206,6 @@
   },
   "legal": {
     "meta": {
-      "kicker": "AVISO LEGAL",
       "updatedLabel": "ÚLTIMA ACTUALIZACIÓN",
       "back": "VOLVER AL SITIO",
       "contactHeading": "Contacto",

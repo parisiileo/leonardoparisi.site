@@ -7,6 +7,7 @@ import {
   useMemo,
   useState,
 } from "react";
+import { useCurtainSeen } from "@/hooks/useCurtainSeen";
 import { usePrefersReducedMotion } from "@/hooks/useMediaQuery";
 import type { SectionId } from "@/lib/sections";
 
@@ -37,10 +38,12 @@ export default function UIProvider({ children }: { children: ReactNode }) {
   const [curtainLifted, setLoaderDone] = useState(false);
   const [activeSection, setActiveSection] = useState<SectionId>("hero");
 
-  // With reduced motion there is no curtain to wait on, so the hero is free
-  // to render immediately — derived here rather than set from an effect.
+  // With reduced motion there is no curtain to wait on, and on a second view
+  // in the same tab it never plays at all, so the hero is free to render
+  // immediately — both derived here rather than set from an effect.
   const reduced = usePrefersReducedMotion();
-  const loaderDone = curtainLifted || reduced;
+  const curtainSeen = useCurtainSeen();
+  const loaderDone = curtainLifted || reduced || curtainSeen;
 
   const value = useMemo(
     () => ({
