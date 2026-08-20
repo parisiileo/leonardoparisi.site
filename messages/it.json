@@ -45,7 +45,7 @@
   },
   "hero": {
     "available": "DISPONIBILE PER LAVORO",
-    "intro": "Ciao, sono Leonardo. Progetto interfacce che prendono vita.",
+    "intro": "Ciao, sono Leonardo.",
     "cta": "GUARDA I LAVORI",
     "statYears": "ANNI DI PROGETTI",
     "statProjects": "PROGETTI ONLINE",
@@ -166,7 +166,6 @@
   "contact": {
     "headingA": "Hai un'idea?",
     "headingB": "Costruiamola.",
-    "discord": "DISCORD",
     "form": {
       "header": "OPPURE SCRIVIMI DA QUI",
       "required": "TUTTI I CAMPI OBBLIGATORI",

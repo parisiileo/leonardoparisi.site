@@ -38,8 +38,7 @@ function ItalyClock() {
 
 export default function Header() {
   const t = useTranslations("nav");
-  const tSections = useTranslations("sections");
-  const { menuOpen, setMenuOpen, loaderDone, activeSection } = useUI();
+  const { menuOpen, setMenuOpen, loaderDone } = useUI();
   const onHome = usePathname() === "/";
   const LogoTag = onHome ? "a" : Link;
   const isWide = useIsWide();
@@ -52,8 +51,8 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // The section chip tracks the scrolling page, so it means nothing on the
-  // legal routes — those have no [data-sec] for the observer to follow.
+  // Header meta belongs to the scrolling page only — the legal routes get a
+  // bare header.
   const showMeta = isWide && loaderDone && onHome;
 
   return (
@@ -90,11 +89,6 @@ export default function Header() {
       </Magnetic>
 
       <div className="flex items-center gap-[26px]">
-        {showMeta && (
-          <span className="text-mut font-mono text-[11px] tracking-[0.22em]">
-            {tSections(activeSection)}
-          </span>
-        )}
         {showMeta && <ItalyClock />}
 
         <LanguageSwitcher />

@@ -49,16 +49,6 @@ export default function Contact() {
           </Magnetic>
           <Magnetic>
             <a
-              href={data.contact.discord}
-              target="_blank"
-              rel="noreferrer"
-              className="border-line text-mut hover:text-ink flex items-center gap-3 rounded-full border px-[26px] py-[17px] font-mono text-[12.5px] tracking-[0.16em] transition-colors"
-            >
-              {t("discord")} →
-            </a>
-          </Magnetic>
-          <Magnetic>
-            <a
               href={`tel:${data.contact.phone.replace(/\s/g, "")}`}
               className="border-line text-mut hover:text-ink flex items-center gap-3 rounded-full border px-[26px] py-[17px] font-mono text-[12.5px] tracking-[0.16em] transition-colors"
             >

@@ -45,7 +45,7 @@
   },
   "hero": {
     "available": "VERFÜGBAR FÜR PROJEKTE",
-    "intro": "Hi, ich bin Leonardo. Ich baue Interfaces, die sich bewegen.",
+    "intro": "Hi, ich bin Leonardo.",
     "cta": "ARBEITEN ANSEHEN",
     "statYears": "JAHRE IM EINSATZ",
     "statProjects": "PROJEKTE LIVE",
@@ -166,7 +166,6 @@
   "contact": {
     "headingA": "Hast du eine Idee?",
     "headingB": "Bauen wir sie.",
-    "discord": "DISCORD",
     "form": {
       "header": "ODER SCHREIB DIREKT HIER",
       "required": "ALLE FELDER ERFORDERLICH",

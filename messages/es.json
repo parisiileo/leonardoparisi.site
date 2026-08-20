@@ -45,7 +45,7 @@
   },
   "hero": {
     "available": "DISPONIBLE PARA TRABAJAR",
-    "intro": "Hola, soy Leonardo. Construyo interfaces que se mueven.",
+    "intro": "Hola, soy Leonardo.",
     "cta": "VER LOS TRABAJOS",
     "statYears": "AÑOS PUBLICANDO",
     "statProjects": "PROYECTOS ONLINE",
@@ -166,7 +166,6 @@
   "contact": {
     "headingA": "¿Tienes una idea?",
     "headingB": "Construyámosla.",
-    "discord": "DISCORD",
     "form": {
       "header": "O ESCRÍBEME DESDE AQUÍ",
       "required": "TODOS LOS CAMPOS OBLIGATORIOS",

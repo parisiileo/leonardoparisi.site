@@ -45,7 +45,7 @@
   },
   "hero": {
     "available": "AVAILABLE FOR WORK",
-    "intro": "Ciao, sono Leonardo. Progetto interfacce che prendono vita.",
+    "intro": "Ciao, sono Leonardo.",
     "cta": "SEE THE WORK",
     "statYears": "YEARS SHIPPING",
     "statProjects": "PROJECTS LIVE",
@@ -166,7 +166,6 @@
   "contact": {
     "headingA": "Got an idea?",
     "headingB": "Let's build it.",
-    "discord": "DISCORD",
     "form": {
       "header": "OR SEND IT STRAIGHT FROM HERE",
       "required": "ALL FIELDS REQUIRED",

@@ -2,7 +2,6 @@
   "contact": {
     "email": "parisii.leonardo@gmail.com",
     "phone": "+39 345 735 4180",
-    "discord": "https://discord.com/users/657671413947301959",
     "domain": "imleo.it",
     "vat": "03356630214"
   },
@@ -10,10 +9,6 @@
     {
       "name": "GITHUB",
       "url": "https://github.com/parisiileo"
-    },
-    {
-      "name": "X",
-      "url": "https://twitter.com/_leoparisi"
     },
     {
       "name": "LINKEDIN",
@@ -27,7 +22,7 @@
   "stats": {
     "yearsShipping": 2,
     "projectsLive": 12,
-    "startedCoding": 2022
+    "startedCoding": 2023
   },
   "nav": [
     {

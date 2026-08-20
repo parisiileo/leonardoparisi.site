@@ -9,15 +9,12 @@ import {
 } from "react";
 import { useCurtainSeen } from "@/hooks/useCurtainSeen";
 import { usePrefersReducedMotion } from "@/hooks/useMediaQuery";
-import type { SectionId } from "@/lib/sections";
 
 type UIState = {
   menuOpen: boolean;
   setMenuOpen: (open: boolean) => void;
   loaderDone: boolean;
   setLoaderDone: (done: boolean) => void;
-  activeSection: SectionId;
-  setActiveSection: (id: SectionId) => void;
 };
 
 const UIContext = createContext<UIState | null>(null);
@@ -29,14 +26,13 @@ export function useUI() {
 }
 
 /**
- * The header, menu overlay and hero all need to agree on three things:
- * whether the curtain has lifted, whether the menu is open, and which
- * section owns the viewport. Small enough to keep in one context.
+ * The header, menu overlay and hero all need to agree on two things:
+ * whether the curtain has lifted and whether the menu is open. Small enough
+ * to keep in one context.
  */
 export default function UIProvider({ children }: { children: ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [curtainLifted, setLoaderDone] = useState(false);
-  const [activeSection, setActiveSection] = useState<SectionId>("hero");
 
   // With reduced motion there is no curtain to wait on, and on a second view
   // in the same tab it never plays at all, so the hero is free to render
@@ -51,10 +47,8 @@ export default function UIProvider({ children }: { children: ReactNode }) {
       setMenuOpen,
       loaderDone,
       setLoaderDone,
-      activeSection,
-      setActiveSection,
     }),
-    [menuOpen, loaderDone, activeSection],
+    [menuOpen, loaderDone],
   );
 
   return <UIContext.Provider value={value}>{children}</UIContext.Provider>;
